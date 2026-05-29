@@ -115,12 +115,12 @@ function Index() {
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-6">
           <div>
             <span className="font-mono text-[10px] uppercase text-primary mb-2 block tracking-widest">01 // The Lineup</span>
-            <h2 className="font-display text-5xl md:text-6xl uppercase">The Four Events</h2>
+            <h2 className="font-display text-5xl md:text-6xl uppercase">The Five Events</h2>
           </div>
-          <p className="text-muted-foreground max-w-sm text-sm">Four distinct tracks built to test strategy, creativity, judgement, and nerve.</p>
+          <p className="text-muted-foreground max-w-sm text-sm">Five distinct tracks built to test strategy, creativity, judgement, and nerve.</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-foreground/10 border border-foreground/10 overflow-hidden">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-foreground/10 border border-foreground/10 overflow-hidden">
           {events.map((e) => (
             <Link
               key={e.n}
@@ -129,7 +129,7 @@ function Index() {
               className="group bg-background p-8 aspect-[4/5] flex flex-col justify-between hover:bg-surface transition-colors"
             >
               <div className="flex items-center justify-between font-mono text-xs text-muted-foreground">
-                <span>{e.n} / 04</span>
+                <span>{e.n} / 05</span>
                 <span className="opacity-0 group-hover:opacity-100 transition-opacity text-primary">View →</span>
               </div>
               <div>
@@ -164,7 +164,7 @@ function Index() {
             </p>
             <div className="grid grid-cols-3 gap-8 border-t border-foreground/10 pt-12">
               <div>
-                <div className="font-display text-4xl mb-2">04</div>
+                <div className="font-display text-4xl mb-2">05</div>
                 <div className="font-mono text-[10px] uppercase text-muted-foreground">Events</div>
               </div>
               <div>
