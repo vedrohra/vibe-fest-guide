@@ -72,8 +72,8 @@ function Index() {
 
       {/* Hero */}
       <header className="relative h-[88vh] flex flex-col items-center justify-center overflow-hidden border-b border-foreground/10">
-        <div className="absolute inset-0 z-0 opacity-[0.06] overflow-hidden pointer-events-none flex items-center justify-center">
-          <div className="font-display text-[40vw] leading-none uppercase tracking-tighter text-foreground select-none">VIBE</div>
+        <div className="absolute inset-0 z-0 opacity-20 overflow-hidden pointer-events-none flex items-center justify-center">
+          <div className="font-display text-[40vw] leading-none uppercase tracking-tighter text-primary select-none">VIBE</div>
         </div>
 
         <div className="relative z-10 text-center px-4 max-w-5xl">
