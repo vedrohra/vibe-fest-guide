@@ -1,5 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import skyline from "@/assets/skyline.jpg";
+import vibeLogo from "@/assets/vibe-logo.png";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -59,7 +61,10 @@ function Index() {
     <main className="min-h-screen bg-background text-foreground font-body">
       {/* Nav */}
       <nav className="sticky top-0 z-50 flex items-center justify-between px-6 py-4 bg-background/80 backdrop-blur-md border-b border-foreground/5">
-        <span className="font-display text-2xl tracking-tighter uppercase">Vibe</span>
+        <div className="flex items-center gap-3">
+          <img src={vibeLogo} alt="VIBE logo" className="h-10 w-auto" />
+          <span className="hidden sm:inline font-mono text-[10px] uppercase tracking-widest text-muted-foreground">By Vaels International School</span>
+        </div>
         <div className="hidden md:flex gap-8 text-[10px] font-mono uppercase tracking-widest">
           <a href="#events" className="hover:text-primary transition-colors">The Events</a>
           <a href="#about" className="hover:text-primary transition-colors">About</a>
@@ -70,26 +75,32 @@ function Index() {
         </a>
       </nav>
 
+
       {/* Hero */}
-      <header className="relative h-[88vh] flex flex-col items-center justify-center overflow-hidden border-b border-foreground/10">
+      <header className="relative h-[92vh] flex flex-col items-center justify-center overflow-hidden border-b border-foreground/10">
         <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none flex items-center justify-center">
-          <div className="font-display text-[40vw] leading-none uppercase tracking-tighter text-primary select-none">VIBE</div>
+          <div className="font-display text-[40vw] leading-none uppercase tracking-tighter select-none opacity-20">
+            <span style={{ color: 'var(--vibe-green)' }}>V</span><span style={{ color: 'var(--vibe-red)' }}>I</span><span style={{ color: 'var(--vibe-yellow)' }}>B</span><span style={{ color: 'var(--vibe-blue)' }}>E</span>
+          </div>
         </div>
 
         <div className="relative z-10 text-center px-4 max-w-5xl">
-          <div className="animate-reveal">
-            <p className="font-mono text-xs uppercase tracking-[0.4em] text-primary mb-6">School Business Summit · 2025</p>
-            <h1 className="font-display text-7xl md:text-[11rem] leading-[0.85] uppercase tracking-tighter opacity-30">
-              Where <span className="text-primary">Business</span><br/>Comes Alive
+          <div className="animate-reveal flex flex-col items-center">
+            <img src={vibeLogo} alt="VIBE — Vaels International Business Excellence" className="w-full max-w-md md:max-w-2xl mb-8" />
+            <p className="font-mono text-xs uppercase tracking-[0.4em] text-primary mb-6">Innovation · Synergy · Strategy</p>
+            <h1 className="font-display text-6xl md:text-[9rem] leading-[0.85] uppercase tracking-tighter text-foreground">
+              Where <span style={{ color: 'var(--vibe-yellow)' }}>Business</span><br/>Comes Alive
             </h1>
           </div>
           <div className="mt-10 animate-reveal [animation-delay:200ms]">
             <p className="max-w-[52ch] mx-auto text-muted-foreground text-base md:text-lg text-pretty">
-              VIBE is our school's flagship business event. Four high-pressure tracks. One day to outthink, outpitch and outtrade everyone in the room.
+              VIBE is Vaels International School's flagship business event. Four high-pressure tracks. One day to outthink, outpitch and outtrade everyone in the room.
             </p>
+            <p className="mt-6 font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground">By Vaels International School</p>
           </div>
         </div>
       </header>
+
 
       {/* Events */}
       <section id="events" className="py-24 px-6 max-w-7xl mx-auto">
