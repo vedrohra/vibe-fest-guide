@@ -72,14 +72,14 @@ function Index() {
 
       {/* Hero */}
       <header className="relative h-[88vh] flex flex-col items-center justify-center overflow-hidden border-b border-foreground/10">
-        <div className="absolute inset-0 z-0 opacity-20 overflow-hidden pointer-events-none flex items-center justify-center">
+        <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none flex items-center justify-center">
           <div className="font-display text-[40vw] leading-none uppercase tracking-tighter text-primary select-none">VIBE</div>
         </div>
 
         <div className="relative z-10 text-center px-4 max-w-5xl">
           <div className="animate-reveal">
             <p className="font-mono text-xs uppercase tracking-[0.4em] text-primary mb-6">School Business Summit · 2025</p>
-            <h1 className="font-display text-7xl md:text-[11rem] leading-[0.85] uppercase tracking-tighter">
+            <h1 className="font-display text-7xl md:text-[11rem] leading-[0.85] uppercase tracking-tighter opacity-30">
               Where <span className="text-primary">Business</span><br/>Comes Alive
             </h1>
           </div>
