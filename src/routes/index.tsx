@@ -68,23 +68,26 @@ function Index() {
   return (
     <main className="min-h-screen bg-background text-foreground font-body">
       {/* Nav */}
-      <nav className="sticky top-0 z-50 flex items-center justify-between px-6 py-4 bg-background/80 backdrop-blur-md border-b border-foreground/5">
-        <div className="flex items-center gap-3">
-          <img src={vibeLogo} alt="VIBE logo" className="h-10 w-auto" />
-          <span className="hidden sm:inline font-mono text-[10px] uppercase tracking-widest text-muted-foreground">By Vaels International School</span>
+      <nav className="sticky top-0 z-50 flex items-center justify-between gap-4 px-6 py-4 bg-background/80 backdrop-blur-md border-b border-foreground/5">
+        <div className="flex flex-col">
+          <span className="font-display text-2xl leading-none tracking-tighter uppercase">Vibe</span>
+          <span className="hidden sm:inline font-mono text-[9px] uppercase tracking-widest text-muted-foreground mt-1">By Vaels International School</span>
         </div>
         <div className="hidden md:flex gap-8 text-[10px] font-mono uppercase tracking-widest">
           <a href="#events" className="hover:text-primary transition-colors">The Events</a>
           <a href="#about" className="hover:text-primary transition-colors">About</a>
           <a href="#schedule" className="hover:text-primary transition-colors">Schedule</a>
         </div>
-        <a href="#register" className="px-4 py-1.5 bg-primary text-primary-foreground font-mono text-[11px] font-bold uppercase tracking-wider hover:bg-foreground transition-colors">
-          Register
-        </a>
+        <div className="flex items-center gap-4">
+          <a href="#register" className="px-4 py-1.5 bg-primary text-primary-foreground font-mono text-[11px] font-bold uppercase tracking-wider hover:bg-foreground transition-colors">
+            Register
+          </a>
+          <img src={vibeLogo} alt="VIBE logo" className="h-12 md:h-14 w-auto" />
+        </div>
       </nav>
 
       {/* Hero */}
-      <header className="relative min-h-[92vh] flex flex-col items-center justify-start pt-12 md:pt-16 pb-16 overflow-hidden border-b border-foreground/10">
+      <header className="relative min-h-[92vh] flex flex-col items-center justify-center pt-12 md:pt-16 pb-16 overflow-hidden border-b border-foreground/10">
 
         <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none flex items-center justify-center">
           <div className="font-display text-[40vw] leading-none uppercase tracking-tighter select-none opacity-20">
@@ -94,7 +97,6 @@ function Index() {
 
         <div className="relative z-10 text-center px-4 max-w-5xl">
           <div className="animate-reveal flex flex-col items-center">
-            <img src={vibeLogo} alt="VIBE — Vaels International Business Excellence" className="w-full max-w-md md:max-w-2xl mb-8" />
             <p className="font-mono text-xs uppercase tracking-[0.4em] text-primary mb-6">Innovation · Synergy · Strategy</p>
             <h1 className="font-display text-6xl md:text-[9rem] leading-[0.85] uppercase tracking-tighter text-foreground">
               Where <span style={{ color: 'var(--vibe-yellow)' }}>Business</span><br/>Comes Alive
