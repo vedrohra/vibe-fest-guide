@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import skyline from "@/assets/skyline.jpg";
 
 export const Route = createFileRoute("/")({
@@ -21,25 +21,29 @@ export const Route = createFileRoute("/")({
 const events = [
   {
     n: "01",
+    slug: "vaels-stock-exchange",
     name: "Vaels Stock Exchange",
     desc: "A live mock stock exchange. Trade with rival participants in real time and build the highest-value portfolio before the bell.",
   },
   {
     n: "02",
+    slug: "crisis",
     name: "Crisis",
     desc: "Your team inherits a company in trouble. Diagnose the problem, weigh the trade-offs, and ship the smartest recovery plan under the clock.",
   },
   {
     n: "03",
+    slug: "trivia",
     name: "Trivia",
     desc: "A rapid-fire quiz across markets, brands, founders, and the moments that shaped modern business. Sharp minds only.",
   },
   {
     n: "04",
+    slug: "shark-tank",
     name: "Shark Tank",
     desc: "Invent a product, build the pitch, and defend it in front of the sharks. Just like the show — only louder.",
   },
-];
+] as const;
 
 const schedule = [
   { time: "09:00", title: "Registration & Check-in", room: "Atrium" },
@@ -99,13 +103,21 @@ function Index() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-foreground/10 border border-foreground/10 overflow-hidden">
           {events.map((e) => (
-            <article key={e.n} className="group bg-background p-8 aspect-[4/5] flex flex-col justify-between hover:bg-surface transition-colors">
-              <div className="font-mono text-xs text-muted-foreground">{e.n} / 04</div>
+            <Link
+              key={e.n}
+              to="/events/$slug"
+              params={{ slug: e.slug }}
+              className="group bg-background p-8 aspect-[4/5] flex flex-col justify-between hover:bg-surface transition-colors"
+            >
+              <div className="flex items-center justify-between font-mono text-xs text-muted-foreground">
+                <span>{e.n} / 04</span>
+                <span className="opacity-0 group-hover:opacity-100 transition-opacity text-primary">View →</span>
+              </div>
               <div>
                 <h3 className="font-display text-3xl uppercase mb-4 leading-none group-hover:text-primary transition-colors">{e.name}</h3>
                 <p className="text-sm text-muted-foreground">{e.desc}</p>
               </div>
-            </article>
+            </Link>
           ))}
         </div>
       </section>
