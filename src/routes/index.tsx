@@ -75,9 +75,9 @@ function Index() {
         </a>
       </nav>
 
-
       {/* Hero */}
-      <header className="relative h-[92vh] flex flex-col items-center justify-center overflow-hidden border-b border-foreground/10">
+      <header className="relative min-h-[92vh] flex flex-col items-center justify-start pt-12 md:pt-16 pb-16 overflow-hidden border-b border-foreground/10">
+
         <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none flex items-center justify-center">
           <div className="font-display text-[40vw] leading-none uppercase tracking-tighter select-none opacity-20">
             <span style={{ color: 'var(--vibe-green)' }}>V</span><span style={{ color: 'var(--vibe-red)' }}>I</span><span style={{ color: 'var(--vibe-yellow)' }}>B</span><span style={{ color: 'var(--vibe-blue)' }}>E</span>
