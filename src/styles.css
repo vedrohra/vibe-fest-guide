@@ -34,31 +34,40 @@
 }
 
 :root {
-  --background: oklch(0.16 0.04 265);
-  --foreground: oklch(0.985 0 0);
-  --surface: oklch(0.22 0.05 265);
-  --primary: oklch(0.7 0.18 250);
-  --primary-foreground: oklch(0.12 0.04 265);
-  --muted: oklch(0.3 0.04 265);
-  --muted-foreground: oklch(0.75 0.03 265);
-  --border: oklch(0.3 0.04 265);
-  --input: oklch(0.3 0.04 265);
-  --ring: oklch(0.7 0.18 250);
-  --card: oklch(0.22 0.05 265);
-  --card-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.3 0.04 265);
-  --secondary-foreground: oklch(0.985 0 0);
-  --accent: oklch(0.75 0.18 145);
-  --accent-foreground: oklch(0.12 0.04 265);
+  --background: oklch(0.14 0.05 270);
+  --foreground: oklch(0.98 0.005 250);
+  --surface: oklch(0.21 0.06 268);
+  --primary: oklch(0.74 0.17 240);
+  --primary-foreground: oklch(0.12 0.05 270);
+  --muted: oklch(0.32 0.05 268);
+  --muted-foreground: oklch(0.78 0.025 260);
+  --border: oklch(0.32 0.05 268);
+  --input: oklch(0.32 0.05 268);
+  --ring: oklch(0.74 0.17 240);
+  --card: oklch(0.21 0.06 268);
+  --card-foreground: oklch(0.98 0.005 250);
+  --secondary: oklch(0.32 0.05 268);
+  --secondary-foreground: oklch(0.98 0.005 250);
+  --accent: oklch(0.82 0.17 90);
+  --accent-foreground: oklch(0.12 0.05 270);
   --destructive: oklch(0.65 0.24 25);
-  --destructive-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.22 0.05 265);
-  --popover-foreground: oklch(0.985 0 0);
-  --vibe-green: oklch(0.78 0.18 145);
-  --vibe-red: oklch(0.65 0.22 25);
+  --destructive-foreground: oklch(0.98 0.005 250);
+  --popover: oklch(0.21 0.06 268);
+  --popover-foreground: oklch(0.98 0.005 250);
+  --vibe-green: oklch(0.78 0.18 150);
+  --vibe-red: oklch(0.68 0.22 25);
   --vibe-yellow: oklch(0.85 0.17 90);
-  --vibe-blue: oklch(0.7 0.18 250);
+  --vibe-blue: oklch(0.74 0.18 240);
+  --vibe-purple: oklch(0.65 0.2 305);
+  --gradient-hero: radial-gradient(ellipse at top, oklch(0.25 0.1 268) 0%, oklch(0.14 0.05 270) 60%);
   --radius: 0.5rem;
+}
+
+@layer base {
+  body {
+    background: var(--gradient-hero);
+    background-attachment: fixed;
+  }
 }
 
 
