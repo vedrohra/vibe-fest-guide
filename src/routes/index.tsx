@@ -71,7 +71,8 @@ function Index() {
           <a href="#schedule" className="hover:text-primary transition-colors">Schedule</a>
         </div>
         <a href="#register" className="px-4 py-1.5 bg-primary text-primary-foreground font-mono text-[11px] font-bold uppercase tracking-wider hover:bg-foreground transition-colors">
-          Register
+      <header className="relative min-h-[92vh] flex flex-col items-center justify-start pt-12 md:pt-16 pb-16 overflow-hidden border-b border-foreground/10">
+
         </a>
       </nav>
 
