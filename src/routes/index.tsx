@@ -21,25 +21,29 @@ export const Route = createFileRoute("/")({
 const events = [
   {
     n: "01",
+    slug: "vaels-stock-exchange",
     name: "Vaels Stock Exchange",
     desc: "A live mock stock exchange. Trade with rival participants in real time and build the highest-value portfolio before the bell.",
   },
   {
     n: "02",
+    slug: "crisis",
     name: "Crisis",
     desc: "Your team inherits a company in trouble. Diagnose the problem, weigh the trade-offs, and ship the smartest recovery plan under the clock.",
   },
   {
     n: "03",
+    slug: "trivia",
     name: "Trivia",
     desc: "A rapid-fire quiz across markets, brands, founders, and the moments that shaped modern business. Sharp minds only.",
   },
   {
     n: "04",
+    slug: "shark-tank",
     name: "Shark Tank",
     desc: "Invent a product, build the pitch, and defend it in front of the sharks. Just like the show — only louder.",
   },
-];
+] as const;
 
 const schedule = [
   { time: "09:00", title: "Registration & Check-in", room: "Atrium" },
