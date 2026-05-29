@@ -39,9 +39,9 @@ export const Route = createFileRoute("/events/$slug")({
 export const events = {
   "vaels-stock-exchange": {
     n: "01",
-    name: "Vaels Stock Exchange",
-    tagline: "A live mock stock exchange. Trade. Outsmart. Cash out on top.",
-    desc: "Participants step onto a live trading floor and act as their own traders. Market events drop in real time, prices move with every trade, and the team with the highest-value portfolio at closing bell wins.",
+    name: "Stock Exchange Simulation",
+    tagline: "A real-world-style trading floor. Strategy, instinct, adaptability.",
+    desc: "Participants step onto a live trading floor that evaluates their financial strategy and adaptability. Market events drop in real time, prices move with every trade, and the team with the highest-value portfolio at closing bell wins.",
     format: "Teams of 2–3",
     duration: "90 minutes",
     venue: "Trading Floor",
@@ -54,9 +54,9 @@ export const events = {
   },
   "crisis": {
     n: "02",
-    name: "Crisis",
-    tagline: "A company on fire. A clock ticking. Your move.",
-    desc: "Your team takes over a business facing an unexpected crisis — a PR meltdown, supply collapse, a competitor's blow. You'll diagnose the situation, weigh the trade-offs, and present a recovery plan to the judges.",
+    name: "Crisis Management",
+    tagline: "Sharp decision-making and quick adaptability under pressure.",
+    desc: "Your team takes over a business facing an unexpected crisis. You will diagnose the situation, weigh the trade-offs, and present a recovery plan that tests sharp decision-making and adaptability when everything is on the line.",
     format: "Teams of 3–4",
     duration: "60 minutes prep + 5 minute pitch",
     venue: "Boardroom A",
@@ -69,8 +69,8 @@ export const events = {
   },
   "trivia": {
     n: "03",
-    name: "Trivia",
-    tagline: "Markets, brands, founders. Sharp minds only.",
+    name: "Trivia Challenge",
+    tagline: "Fast-paced rounds of business knowledge and quick recall.",
     desc: "A rapid-fire quiz spanning the world of business — global markets, iconic brands, the founders who built them, and the moments that shaped modern commerce. Speed and accuracy both matter.",
     format: "Teams of 2",
     duration: "45 minutes",
@@ -84,20 +84,36 @@ export const events = {
   },
   "shark-tank": {
     n: "04",
-    name: "Shark Tank",
-    tagline: "Invent it. Pitch it. Defend it.",
-    desc: "Just like the show. Teams invent a product or service, build the brand, and pitch it to a panel of judges playing the sharks. Be ready for hard questions about your market, your numbers, and your edge.",
+    name: "Pitch Perfect",
+    tagline: "Present innovative entrepreneurial ideas. Defend the vision.",
+    desc: "A platform for students to present their innovative entrepreneurial and business ideas to a panel of judges. Be ready for hard questions about your market, your numbers, and your edge.",
     format: "Teams of 3–4",
     duration: "3 hour build + 7 minute pitch",
     venue: "Main Hall",
     rules: [
-      "Product can be physical or digital — no category restrictions.",
+      "Idea can be a product or service — no category restrictions.",
       "Pitch deck and a prototype/mockup are required.",
-      "Sharks will grill you on TAM, business model, and unit economics.",
+      "Judges will grill you on TAM, business model, and unit economics.",
       "Judged on originality, viability, and pitch quality.",
     ],
   },
+  "product-development": {
+    n: "05",
+    name: "Product Development",
+    tagline: "A creative hub for prototypes that solve real market problems.",
+    desc: "A creative hub where students design and present innovative prototypes and solutions to real market problems. From insight to artifact — define the problem, build the solution, and ship the demo.",
+    format: "Teams of 3–4",
+    duration: "2 hour build + 5 minute demo",
+    venue: "Studio",
+    rules: [
+      "Solutions can be physical mockups, digital prototypes, or service blueprints.",
+      "Teams must define the target user and the market problem upfront.",
+      "Working demo or clickable prototype required at presentation.",
+      "Judged on insight, originality, and execution quality.",
+    ],
+  },
 } as const;
+
 
 function EventPage() {
   const { slug } = Route.useParams();
@@ -130,7 +146,7 @@ function EventPage() {
         <div className="relative max-w-7xl mx-auto">
           <div className="animate-reveal">
             <p className="font-mono text-xs uppercase tracking-[0.4em] text-primary mb-6">
-              Event {event.n} / 04
+              Event {event.n} / 05
             </p>
             <h1 className="font-display text-6xl md:text-[9rem] leading-[0.85] uppercase tracking-tighter mb-8">
               {event.name}

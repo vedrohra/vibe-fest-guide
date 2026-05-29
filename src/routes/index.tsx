@@ -24,36 +24,44 @@ const events = [
   {
     n: "01",
     slug: "vaels-stock-exchange",
-    name: "Vaels Stock Exchange",
-    desc: "A live mock stock exchange. Trade with rival participants in real time and build the highest-value portfolio before the bell.",
+    name: "Stock Exchange Simulation",
+    desc: "A real-world-style trading floor that puts students' financial strategy, instinct, and adaptability to the test.",
   },
   {
     n: "02",
     slug: "crisis",
-    name: "Crisis",
-    desc: "Your team inherits a company in trouble. Diagnose the problem, weigh the trade-offs, and ship the smartest recovery plan under the clock.",
+    name: "Crisis Management",
+    desc: "High-pressure scenarios that test sharp decision-making and quick adaptability when everything is on the line.",
   },
   {
     n: "03",
     slug: "trivia",
-    name: "Trivia",
-    desc: "A rapid-fire quiz across markets, brands, founders, and the moments that shaped modern business. Sharp minds only.",
+    name: "Trivia Challenge",
+    desc: "Fast-paced rounds of business knowledge — markets, brands, founders, and the moments that shaped modern commerce.",
   },
   {
     n: "04",
     slug: "shark-tank",
-    name: "Shark Tank",
-    desc: "Invent a product, build the pitch, and defend it in front of the sharks. Just like the show — only louder.",
+    name: "Pitch Perfect",
+    desc: "A platform for students to present innovative entrepreneurial and business ideas and defend them against the judges.",
+  },
+  {
+    n: "05",
+    slug: "product-development",
+    name: "Product Development",
+    desc: "A creative hub where students design and present innovative prototypes and solutions to real market problems.",
   },
 ] as const;
+
 
 const schedule = [
   { time: "09:00", title: "Registration & Check-in", room: "Atrium" },
   { time: "10:00", title: "Opening Ceremony", room: "Main Hall" },
-  { time: "11:00", title: "Vaels Stock Exchange — Opens", room: "Trading Floor" },
-  { time: "13:30", title: "Crisis — Round 1", room: "Boardroom A" },
-  { time: "15:00", title: "Trivia — Prelims", room: "Auditorium" },
-  { time: "16:30", title: "Shark Tank — Finale", room: "Main Hall" },
+  { time: "11:00", title: "Stock Exchange — Opens", room: "Trading Floor" },
+  { time: "12:30", title: "Product Development — Build", room: "Studio" },
+  { time: "13:30", title: "Crisis Management — Round 1", room: "Boardroom A" },
+  { time: "15:00", title: "Trivia Challenge — Prelims", room: "Auditorium" },
+  { time: "16:30", title: "Pitch Perfect — Finale", room: "Main Hall" },
 ];
 
 function Index() {
@@ -107,12 +115,12 @@ function Index() {
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-6">
           <div>
             <span className="font-mono text-[10px] uppercase text-primary mb-2 block tracking-widest">01 // The Lineup</span>
-            <h2 className="font-display text-5xl md:text-6xl uppercase">The Four Events</h2>
+            <h2 className="font-display text-5xl md:text-6xl uppercase">The Five Events</h2>
           </div>
-          <p className="text-muted-foreground max-w-sm text-sm">Four distinct tracks built to test strategy, creativity, judgement, and nerve.</p>
+          <p className="text-muted-foreground max-w-sm text-sm">Five distinct tracks built to test strategy, creativity, judgement, and nerve.</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-foreground/10 border border-foreground/10 overflow-hidden">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-foreground/10 border border-foreground/10 overflow-hidden">
           {events.map((e) => (
             <Link
               key={e.n}
@@ -121,7 +129,7 @@ function Index() {
               className="group bg-background p-8 aspect-[4/5] flex flex-col justify-between hover:bg-surface transition-colors"
             >
               <div className="flex items-center justify-between font-mono text-xs text-muted-foreground">
-                <span>{e.n} / 04</span>
+                <span>{e.n} / 05</span>
                 <span className="opacity-0 group-hover:opacity-100 transition-opacity text-primary">View →</span>
               </div>
               <div>
@@ -156,7 +164,7 @@ function Index() {
             </p>
             <div className="grid grid-cols-3 gap-8 border-t border-foreground/10 pt-12">
               <div>
-                <div className="font-display text-4xl mb-2">04</div>
+                <div className="font-display text-4xl mb-2">05</div>
                 <div className="font-mono text-[10px] uppercase text-muted-foreground">Events</div>
               </div>
               <div>
