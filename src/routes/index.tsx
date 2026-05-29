@@ -24,36 +24,44 @@ const events = [
   {
     n: "01",
     slug: "vaels-stock-exchange",
-    name: "Vaels Stock Exchange",
-    desc: "A live mock stock exchange. Trade with rival participants in real time and build the highest-value portfolio before the bell.",
+    name: "Stock Exchange Simulation",
+    desc: "A real-world-style trading floor that puts students' financial strategy, instinct, and adaptability to the test.",
   },
   {
     n: "02",
     slug: "crisis",
-    name: "Crisis",
-    desc: "Your team inherits a company in trouble. Diagnose the problem, weigh the trade-offs, and ship the smartest recovery plan under the clock.",
+    name: "Crisis Management",
+    desc: "High-pressure scenarios that test sharp decision-making and quick adaptability when everything is on the line.",
   },
   {
     n: "03",
     slug: "trivia",
-    name: "Trivia",
-    desc: "A rapid-fire quiz across markets, brands, founders, and the moments that shaped modern business. Sharp minds only.",
+    name: "Trivia Challenge",
+    desc: "Fast-paced rounds of business knowledge — markets, brands, founders, and the moments that shaped modern commerce.",
   },
   {
     n: "04",
     slug: "shark-tank",
-    name: "Shark Tank",
-    desc: "Invent a product, build the pitch, and defend it in front of the sharks. Just like the show — only louder.",
+    name: "Pitch Perfect",
+    desc: "A platform for students to present innovative entrepreneurial and business ideas and defend them against the judges.",
+  },
+  {
+    n: "05",
+    slug: "product-development",
+    name: "Product Development",
+    desc: "A creative hub where students design and present innovative prototypes and solutions to real market problems.",
   },
 ] as const;
+
 
 const schedule = [
   { time: "09:00", title: "Registration & Check-in", room: "Atrium" },
   { time: "10:00", title: "Opening Ceremony", room: "Main Hall" },
-  { time: "11:00", title: "Vaels Stock Exchange — Opens", room: "Trading Floor" },
-  { time: "13:30", title: "Crisis — Round 1", room: "Boardroom A" },
-  { time: "15:00", title: "Trivia — Prelims", room: "Auditorium" },
-  { time: "16:30", title: "Shark Tank — Finale", room: "Main Hall" },
+  { time: "11:00", title: "Stock Exchange — Opens", room: "Trading Floor" },
+  { time: "12:30", title: "Product Development — Build", room: "Studio" },
+  { time: "13:30", title: "Crisis Management — Round 1", room: "Boardroom A" },
+  { time: "15:00", title: "Trivia Challenge — Prelims", room: "Auditorium" },
+  { time: "16:30", title: "Pitch Perfect — Finale", room: "Main Hall" },
 ];
 
 function Index() {
