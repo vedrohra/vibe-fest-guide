@@ -187,7 +187,7 @@ function Index() {
           <h2 className="font-display text-6xl md:text-9xl uppercase tracking-tighter mb-8 leading-[0.85]">Claim Your Spot</h2>
           <p className="max-w-[50ch] mx-auto mb-10 text-primary-foreground/80">Registration is open to all students. Form your team of four and pick your tracks before slots fill up.</p>
           <div className="flex flex-col md:flex-row items-center justify-center gap-4">
-            <a href="mailto:vibe@school.edu" className="w-full md:w-auto px-12 py-6 border-2 border-primary-foreground font-display text-xl uppercase hover:bg-primary-foreground hover:text-primary transition-all">
+            <a href="mailto:vibe@vaelsinternationalschool.com" className="w-full md:w-auto px-12 py-6 border-2 border-primary-foreground font-display text-xl uppercase hover:bg-primary-foreground hover:text-primary transition-all">
               Register Team
             </a>
             <a href="#events" className="w-full md:w-auto px-12 py-6 bg-primary-foreground text-primary font-display text-xl uppercase hover:bg-foreground hover:text-primary-foreground transition-all">
@@ -197,7 +197,7 @@ function Index() {
           <div className="mt-24 grid grid-cols-1 md:grid-cols-3 gap-4 border-t border-primary-foreground/20 pt-12 text-[10px] font-mono uppercase tracking-widest">
             <span>VIBE Organising Committee</span>
             <span>© 2025 · School Business Council</span>
-            <a href="mailto:vibe@school.edu" className="underline">vibe@school.edu</a>
+            <a href="mailto:vibe@vaelsinternationalschool.com" className="underline">vibe@vaelsinternationalschool.com</a>
           </div>
         </div>
       </footer>
