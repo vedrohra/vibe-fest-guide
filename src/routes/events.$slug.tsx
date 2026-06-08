@@ -94,13 +94,17 @@ export const events = {
       "A maximum of 1 team will be permitted per school.",
       "Each team must consist of 2\u20135 members.",
       "Teams get 2 minutes to pitch their products, 7 minutes to introduce the company and an additional 3 minutes to answer the judges' questions.",
-      "Content: follow a regular Shark-Tank introduction; clearly state the problem; present your idea as the solution.",
-      "Content: explain how you plan to make profits and sustain the business.",
-      "Content: provide target market, competition, financials, and funding requirements.",
-      "Judging: ideas must be unique, innovative, and understandable; visual aids should be professional and easy to understand.",
-      "Judging: a clear problem must be addressed and the solution must be practical and realistic.",
-      "Judging: target market identified with analysis of potential competitors.",
-      "Judging: realistic execution plan with the resources required to bring it to market.",
+    ],
+    content: [
+      "Follow a regular Shark-Tank introduction; clearly state the problem; present your idea as the solution.",
+      "Explain how you plan to make profits and sustain the business.",
+      "Provide target market, competition, financials, and funding requirements.",
+    ],
+    judging: [
+      "Ideas must be unique, innovative, and understandable; visual aids should be professional and easy to understand.",
+      "A clear problem must be addressed and the solution must be practical and realistic.",
+      "Target market identified with analysis of potential competitors.",
+      "Realistic execution plan with the resources required to bring it to market.",
     ],
   },
   "product-development": {
@@ -115,13 +119,17 @@ export const events = {
       "Maximum of 1 team only per school.",
       "All teams must consist of 2\u20135 members.",
       "Each team is given 10 minutes to present their chosen topic and an additional 5 minutes to answer the judges' questions.",
-      "Content: introduce the topic and the objectives of the presentation.",
-      "Content: provide analysis with relevant data, case studies, or real-world examples.",
-      "Content: offer practical solutions and a clear conclusion; keep it well organised and easy to follow.",
-      "Judging: high overall presentation quality \u2014 visually appealing with adequate content; charts, models, and graphs appreciated.",
-      "Judging: solid economic/business understanding through analysis and use of key terms.",
-      "Judging: delivery, body language, and speech must be clear, confident, and engaging.",
-      "Judging: presenters answer challenging questions calmly and professionally; team cooperates well and adheres to the time limit.",
+    ],
+    content: [
+      "Introduce the topic and the objectives of the presentation.",
+      "Provide analysis with relevant data, case studies, or real-world examples.",
+      "Offer practical solutions and a clear conclusion; keep it well organised and easy to follow.",
+    ],
+    judging: [
+      "High overall presentation quality \u2014 visually appealing with adequate content; charts, models, and graphs appreciated.",
+      "Solid economic/business understanding through analysis and use of key terms.",
+      "Delivery, body language, and speech must be clear, confident, and engaging.",
+      "Presenters answer challenging questions calmly and professionally; team cooperates well and adheres to the time limit.",
     ],
   },
 
@@ -204,18 +212,35 @@ function EventPage() {
             <span className="font-mono text-[10px] uppercase text-primary tracking-widest mb-4 block">How it works</span>
             <h2 className="font-display text-5xl uppercase leading-none">Rules &amp; Format</h2>
           </div>
-          <div className="md:col-span-8">
-            <ol className="space-y-px bg-foreground/10 border border-foreground/10">
-              {event.rules.map((r, i) => (
-                <li key={i} className="bg-background p-6 flex gap-6">
-                  <span className="font-mono text-xs text-primary shrink-0">{String(i + 1).padStart(2, "0")}</span>
-                  <span className="text-base md:text-lg">{r}</span>
-                </li>
-              ))}
-            </ol>
+          <div className="md:col-span-8 space-y-12">
+            {([
+              { label: "Rules", items: event.rules },
+              { label: "Content Requirements", items: (event as any).content as readonly string[] | undefined },
+              { label: "Judging Criteria", items: (event as any).judging as readonly string[] | undefined },
+            ] as const).map((group) =>
+              group.items && group.items.length ? (
+                <div key={group.label}>
+                  <div className="flex items-baseline justify-between mb-4 pb-3 border-b-2 border-primary">
+                    <h3 className="font-display text-2xl md:text-3xl uppercase tracking-tight">{group.label}</h3>
+                    <span className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
+                      {String(group.items.length).padStart(2, "0")} items
+                    </span>
+                  </div>
+                  <ol className="space-y-px bg-foreground/10 border border-foreground/10">
+                    {group.items.map((r, i) => (
+                      <li key={i} className="bg-background p-6 flex gap-6">
+                        <span className="font-mono text-xs text-primary shrink-0">{String(i + 1).padStart(2, "0")}</span>
+                        <span className="text-base md:text-lg">{r}</span>
+                      </li>
+                    ))}
+                  </ol>
+                </div>
+              ) : null
+            )}
           </div>
         </div>
       </section>
+
 
       {/* Next event + CTA */}
       <section className="py-24 px-6">
