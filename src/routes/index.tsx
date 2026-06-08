@@ -59,10 +59,11 @@ const schedule = [
   { time: "09:00", title: "Registration & Check-in", room: "Atrium" },
   { time: "10:00", title: "Opening Ceremony", room: "Main Hall" },
   { time: "11:00", title: "Stock Exchange — Opens", room: "Trading Floor" },
-  { time: "12:30", title: "Product Development — Build", room: "Studio" },
+  { time: "12:30", title: "Business & Economics Presentation", room: "Studio" },
   { time: "13:30", title: "Crisis Management — Round 1", room: "Boardroom A" },
-  { time: "15:00", title: "Trivia Challenge — Prelims", room: "Auditorium" },
-  { time: "16:30", title: "Pitch Perfect — Finale", room: "Main Hall" },
+  { time: "15:00", title: "Group Quiz — Prelims", room: "Auditorium" },
+  { time: "16:30", title: "Innovator's Hive — Finale", room: "Main Hall" },
+
 ];
 
 function Index() {
