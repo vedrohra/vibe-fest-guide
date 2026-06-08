@@ -36,21 +36,22 @@ const events = [
   {
     n: "03",
     slug: "trivia",
-    name: "Trivia Challenge",
-    desc: "Fast-paced rounds of business knowledge — markets, brands, founders, and the moments that shaped modern commerce.",
+    name: "Group Quiz",
+    desc: "Team rounds of business knowledge — markets, brands, founders. Pen-and-paper prelims, then a live final for the top 6.",
   },
   {
     n: "04",
     slug: "shark-tank",
-    name: "Pitch Perfect",
-    desc: "A platform for students to present innovative entrepreneurial and business ideas and defend them against the judges.",
+    name: "Innovator's Hive",
+    desc: "Shark-Tank style pitches. Introduce the company, present the product, and defend the business against the judges.",
   },
   {
     n: "05",
     slug: "product-development",
-    name: "Product Development",
-    desc: "A creative hub where students design and present innovative prototypes and solutions to real market problems.",
+    name: "Business & Economics Presentation",
+    desc: "Pick a business or economics topic, analyse it with real data and case studies, and defend your thinking under Q&A.",
   },
+
 ] as const;
 
 
@@ -58,10 +59,11 @@ const schedule = [
   { time: "09:00", title: "Registration & Check-in", room: "Atrium" },
   { time: "10:00", title: "Opening Ceremony", room: "Main Hall" },
   { time: "11:00", title: "Stock Exchange — Opens", room: "Trading Floor" },
-  { time: "12:30", title: "Product Development — Build", room: "Studio" },
+  { time: "12:30", title: "Business & Economics Presentation", room: "Studio" },
   { time: "13:30", title: "Crisis Management — Round 1", room: "Boardroom A" },
-  { time: "15:00", title: "Trivia Challenge — Prelims", room: "Auditorium" },
-  { time: "16:30", title: "Pitch Perfect — Finale", room: "Main Hall" },
+  { time: "15:00", title: "Group Quiz — Prelims", room: "Auditorium" },
+  { time: "16:30", title: "Innovator's Hive — Finale", room: "Main Hall" },
+
 ];
 
 function Index() {
