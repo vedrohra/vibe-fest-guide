@@ -36,21 +36,22 @@ const events = [
   {
     n: "03",
     slug: "trivia",
-    name: "Trivia Challenge",
-    desc: "Fast-paced rounds of business knowledge — markets, brands, founders, and the moments that shaped modern commerce.",
+    name: "Group Quiz",
+    desc: "Team rounds of business knowledge — markets, brands, founders. Pen-and-paper prelims, then a live final for the top 6.",
   },
   {
     n: "04",
     slug: "shark-tank",
-    name: "Pitch Perfect",
-    desc: "A platform for students to present innovative entrepreneurial and business ideas and defend them against the judges.",
+    name: "Innovator's Hive",
+    desc: "Shark-Tank style pitches. Introduce the company, present the product, and defend the business against the judges.",
   },
   {
     n: "05",
     slug: "product-development",
-    name: "Product Development",
-    desc: "A creative hub where students design and present innovative prototypes and solutions to real market problems.",
+    name: "Business & Economics Presentation",
+    desc: "Pick a business or economics topic, analyse it with real data and case studies, and defend your thinking under Q&A.",
   },
+
 ] as const;
 
 
