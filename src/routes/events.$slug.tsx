@@ -69,7 +69,7 @@ export const events = {
   },
   "trivia": {
     n: "03",
-    name: "Group Quiz",
+    name: "Trivia",
     tagline: "Team rounds of business knowledge. Pen-and-paper prelims, live finals.",
     desc: "A team-format business quiz spanning markets, brands, founders, and the moments that shaped modern commerce. Teams battle through a written prelim, and the top 6 advance to the live final.",
     format: "Teams of 3",
@@ -105,7 +105,7 @@ export const events = {
   },
   "product-development": {
     n: "05",
-    name: "Business & Economics Presentation",
+    name: "Product Development",
     tagline: "Pick a topic. Analyse it. Present it. Defend it.",
     desc: "Teams choose a business or economics topic and deliver a structured presentation \u2014 introduction, analysis with data and real-world examples, and practical conclusions. Be ready to defend your thinking under judges' questions.",
     format: "Teams of 2\u20135",
