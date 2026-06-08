@@ -36,7 +36,7 @@ const events = [
   {
     n: "03",
     slug: "trivia",
-    name: "Group Quiz",
+    name: "Trivia",
     desc: "Team rounds of business knowledge — markets, brands, founders. Pen-and-paper prelims, then a live final for the top 6.",
   },
   {
@@ -48,7 +48,7 @@ const events = [
   {
     n: "05",
     slug: "product-development",
-    name: "Business & Economics Presentation",
+    name: "Product Development",
     desc: "Pick a business or economics topic, analyse it with real data and case studies, and defend your thinking under Q&A.",
   },
 
@@ -59,9 +59,9 @@ const schedule = [
   { time: "09:00", title: "Registration & Check-in", room: "Atrium" },
   { time: "10:00", title: "Opening Ceremony", room: "Main Hall" },
   { time: "11:00", title: "Stock Exchange — Opens", room: "Trading Floor" },
-  { time: "12:30", title: "Business & Economics Presentation", room: "Studio" },
+  { time: "12:30", title: "Product Development", room: "Studio" },
   { time: "13:30", title: "Crisis Management — Round 1", room: "Boardroom A" },
-  { time: "15:00", title: "Group Quiz — Prelims", room: "Auditorium" },
+  { time: "15:00", title: "Trivia — Prelims", room: "Auditorium" },
   { time: "16:30", title: "Innovator's Hive — Finale", room: "Main Hall" },
 
 ];
