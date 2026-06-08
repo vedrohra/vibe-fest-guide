@@ -212,18 +212,35 @@ function EventPage() {
             <span className="font-mono text-[10px] uppercase text-primary tracking-widest mb-4 block">How it works</span>
             <h2 className="font-display text-5xl uppercase leading-none">Rules &amp; Format</h2>
           </div>
-          <div className="md:col-span-8">
-            <ol className="space-y-px bg-foreground/10 border border-foreground/10">
-              {event.rules.map((r, i) => (
-                <li key={i} className="bg-background p-6 flex gap-6">
-                  <span className="font-mono text-xs text-primary shrink-0">{String(i + 1).padStart(2, "0")}</span>
-                  <span className="text-base md:text-lg">{r}</span>
-                </li>
-              ))}
-            </ol>
+          <div className="md:col-span-8 space-y-12">
+            {([
+              { label: "Rules", items: event.rules },
+              { label: "Content Requirements", items: (event as any).content as readonly string[] | undefined },
+              { label: "Judging Criteria", items: (event as any).judging as readonly string[] | undefined },
+            ] as const).map((group) =>
+              group.items && group.items.length ? (
+                <div key={group.label}>
+                  <div className="flex items-baseline justify-between mb-4 pb-3 border-b-2 border-primary">
+                    <h3 className="font-display text-2xl md:text-3xl uppercase tracking-tight">{group.label}</h3>
+                    <span className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
+                      {String(group.items.length).padStart(2, "0")} items
+                    </span>
+                  </div>
+                  <ol className="space-y-px bg-foreground/10 border border-foreground/10">
+                    {group.items.map((r, i) => (
+                      <li key={i} className="bg-background p-6 flex gap-6">
+                        <span className="font-mono text-xs text-primary shrink-0">{String(i + 1).padStart(2, "0")}</span>
+                        <span className="text-base md:text-lg">{r}</span>
+                      </li>
+                    ))}
+                  </ol>
+                </div>
+              ) : null
+            )}
           </div>
         </div>
       </section>
+
 
       {/* Next event + CTA */}
       <section className="py-24 px-6">
