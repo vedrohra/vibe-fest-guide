@@ -159,28 +159,17 @@ function Index() {
         </div>
       </section>
 
-      {/* Stage Banner */}
-      <section className="relative w-full overflow-hidden border-t border-foreground/10">
-        <img
-          src={vibeStage}
-          alt="VIBE event — Vaels International School welcomes the audience"
-          loading="lazy"
-          className="w-full h-[40vh] md:h-[60vh] object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/30 via-transparent to-background" />
-      </section>
-
       {/* About */}
       <section id="about" className="bg-surface py-24 px-6 border-y border-foreground/5">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12">
           <div className="md:col-span-5">
             <img
-              src={skyline}
-              alt="Modern skyscraper glass facade at night"
-              width={800}
-              height={1024}
+              src={vibeStage}
+              alt="VIBE event — Vaels International School welcomes the audience"
+              width={1280}
+              height={853}
               loading="lazy"
-              className="w-full aspect-[4/5] object-cover border border-white/5 grayscale"
+              className="w-full aspect-[4/5] object-cover border border-white/5"
             />
           </div>
           <div className="md:col-span-7 flex flex-col justify-center">
