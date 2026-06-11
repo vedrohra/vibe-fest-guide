@@ -133,13 +133,24 @@ function Index() {
               key={e.n}
               to="/events/$slug"
               params={{ slug: e.slug }}
-              className="group bg-background p-8 aspect-[4/5] flex flex-col justify-between hover:bg-surface transition-colors"
+              className="group relative bg-background p-8 aspect-[4/5] flex flex-col justify-between hover:bg-surface transition-colors overflow-hidden"
             >
-              <div className="flex items-center justify-between font-mono text-xs text-muted-foreground">
+              {(e as any).image && (
+                <>
+                  <img
+                    src={(e as any).image}
+                    alt={e.name}
+                    loading="lazy"
+                    className="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-60 transition-opacity"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-background/20" />
+                </>
+              )}
+              <div className="relative flex items-center justify-between font-mono text-xs text-muted-foreground">
                 <span>{e.n} / 05</span>
                 <span className="opacity-0 group-hover:opacity-100 transition-opacity text-primary">View →</span>
               </div>
-              <div>
+              <div className="relative">
                 <h3 className="font-display text-3xl uppercase mb-4 leading-none group-hover:text-primary transition-colors">{e.name}</h3>
                 <p className="text-sm text-muted-foreground">{e.desc}</p>
               </div>
