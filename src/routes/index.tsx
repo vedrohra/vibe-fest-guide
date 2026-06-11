@@ -141,9 +141,9 @@ function Index() {
                     src={(e as any).image}
                     alt={e.name}
                     loading="lazy"
-                    className="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-60 transition-opacity"
+                    className="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-background/20" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
                 </>
               )}
               <div className="relative flex items-center justify-between font-mono text-xs text-muted-foreground">
