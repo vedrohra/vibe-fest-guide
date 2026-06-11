@@ -1,6 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import skyline from "@/assets/skyline.jpg";
 import vibeLogo from "@/assets/vibe-logo.png";
+import vibeStage from "@/assets/vibe-stage.jpg";
+import crisisEvent from "@/assets/crisis-event.jpg.asset.json";
 
 
 export const Route = createFileRoute("/")({
@@ -32,6 +34,7 @@ const events = [
     slug: "crisis",
     name: "Crisis Management",
     desc: "High-pressure scenarios that test sharp decision-making and quick adaptability when everything is on the line.",
+    image: crisisEvent.url,
   },
   {
     n: "03",
@@ -130,19 +133,41 @@ function Index() {
               key={e.n}
               to="/events/$slug"
               params={{ slug: e.slug }}
-              className="group bg-background p-8 aspect-[4/5] flex flex-col justify-between hover:bg-surface transition-colors"
+              className="group relative bg-background p-8 aspect-[4/5] flex flex-col justify-between hover:bg-surface transition-colors overflow-hidden"
             >
-              <div className="flex items-center justify-between font-mono text-xs text-muted-foreground">
+              {(e as any).image && (
+                <>
+                  <img
+                    src={(e as any).image}
+                    alt={e.name}
+                    loading="lazy"
+                    className="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-60 transition-opacity"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-background/20" />
+                </>
+              )}
+              <div className="relative flex items-center justify-between font-mono text-xs text-muted-foreground">
                 <span>{e.n} / 05</span>
                 <span className="opacity-0 group-hover:opacity-100 transition-opacity text-primary">View →</span>
               </div>
-              <div>
+              <div className="relative">
                 <h3 className="font-display text-3xl uppercase mb-4 leading-none group-hover:text-primary transition-colors">{e.name}</h3>
                 <p className="text-sm text-muted-foreground">{e.desc}</p>
               </div>
             </Link>
           ))}
         </div>
+      </section>
+
+      {/* Stage Banner */}
+      <section className="relative w-full overflow-hidden border-t border-foreground/10">
+        <img
+          src={vibeStage}
+          alt="VIBE event — Vaels International School welcomes the audience"
+          loading="lazy"
+          className="w-full h-[40vh] md:h-[60vh] object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/30 via-transparent to-background" />
       </section>
 
       {/* About */}
