@@ -151,7 +151,7 @@ function EventPage() {
       {/* Nav */}
       <nav className="sticky top-0 z-50 flex items-center justify-between px-6 py-4 bg-background/80 backdrop-blur-md border-b border-foreground/5">
         <Link to="/" className="font-display text-2xl tracking-tighter uppercase">Vibe</Link>
-        <Link to="/" className="font-mono text-[10px] uppercase tracking-widest hover:text-primary transition-colors">
+        <Link to="/" className="px-4 py-1.5 border border-foreground/20 bg-background font-mono text-[11px] font-bold uppercase tracking-widest hover:bg-foreground hover:text-background transition-colors">
           ← All Events
         </Link>
         <Link to="/" hash="register" className="px-4 py-1.5 bg-primary text-primary-foreground font-mono text-[11px] font-bold uppercase tracking-wider hover:bg-foreground transition-colors">
