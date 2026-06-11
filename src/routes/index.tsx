@@ -1,6 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import skyline from "@/assets/skyline.jpg";
 import vibeLogo from "@/assets/vibe-logo.png";
+import vibeStage from "@/assets/vibe-stage.jpg";
+import crisisEvent from "@/assets/crisis-event.jpg.asset.json";
 
 
 export const Route = createFileRoute("/")({
@@ -32,6 +34,7 @@ const events = [
     slug: "crisis",
     name: "Crisis Management",
     desc: "High-pressure scenarios that test sharp decision-making and quick adaptability when everything is on the line.",
+    image: crisisEvent.url,
   },
   {
     n: "03",
