@@ -175,7 +175,7 @@ function Index() {
           <div className="md:col-span-7 flex flex-col justify-center">
             <span className="font-mono text-[10px] uppercase text-primary mb-4 tracking-widest">Why VIBE</span>
             <h2 className="font-display text-5xl md:text-6xl uppercase leading-none mb-8">
-              Ambitious by<br/><span className="text-muted-foreground italic font-body">design</span>
+              WHERE VISION MEETS<br/><span className="text-muted-foreground italic font-body">VENTURE</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-xl mb-12">
               VIBE isn't a lecture or a workshop. It's a day where students step into the shoes of traders, founders, and crisis managers — and have to actually deliver. Built by students, for students who want more than a textbook.
