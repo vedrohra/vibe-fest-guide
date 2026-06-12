@@ -231,6 +231,11 @@ function Index() {
               View Events
             </a>
           </div>
+          <div className="mt-6 flex justify-center">
+            <Link to="/about" className="w-full md:w-auto px-12 py-4 border border-primary-foreground/40 font-display text-lg uppercase hover:bg-primary-foreground hover:text-primary transition-all">
+              About VIBE
+            </Link>
+          </div>
           <div className="mt-24 grid grid-cols-1 md:grid-cols-3 gap-4 border-t border-primary-foreground/20 pt-12 text-[10px] font-mono uppercase tracking-widest">
             <span>VIBE Organising Committee</span>
             <span>© 2025 · School Business Council</span>
