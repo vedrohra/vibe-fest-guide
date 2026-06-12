@@ -141,10 +141,8 @@ function EventPage() {
   const event = events[slug as keyof typeof events];
   if (!event) return null;
 
-  const slugs = Object.keys(events) as Array<keyof typeof events>;
-  const idx = slugs.indexOf(slug as keyof typeof events);
-  const nextSlug = slugs[(idx + 1) % slugs.length];
-  const next = events[nextSlug];
+
+
 
   return (
     <main className="min-h-screen bg-background text-foreground font-body">
