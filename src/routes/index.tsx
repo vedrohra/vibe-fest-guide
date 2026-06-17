@@ -3,6 +3,11 @@ import skyline from "@/assets/skyline.jpg";
 import vibeLogo from "@/assets/vibe-logo.png";
 import vibeStage from "@/assets/vibe-stage.jpg";
 import crisisEvent from "@/assets/crisis-event.jpg.asset.json";
+import stockExchange from "@/assets/stock-exchange.jpg.asset.json";
+import trivia from "@/assets/trivia.jpg.asset.json";
+import innovatorsHive from "@/assets/innovators-hive.jpg.asset.json";
+import productDevelopment from "@/assets/product-development.jpg.asset.json";
+
 
 
 export const Route = createFileRoute("/")({
