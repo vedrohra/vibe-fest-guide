@@ -33,6 +33,7 @@ const events = [
     slug: "vaels-stock-exchange",
     name: "Stock Exchange Simulation",
     desc: "A real-world-style trading floor that puts students' financial strategy, instinct, and adaptability to the test.",
+    image: stockExchange.url,
   },
   {
     n: "02",
@@ -46,18 +47,21 @@ const events = [
     slug: "trivia",
     name: "Trivia",
     desc: "Team rounds of business knowledge — markets, brands, founders. Pen-and-paper prelims, then a live final for the top 6.",
+    image: trivia.url,
   },
   {
     n: "04",
     slug: "shark-tank",
     name: "Innovator's Hive",
     desc: "Shark-Tank style pitches. Introduce the company, present the product, and defend the business against the judges.",
+    image: innovatorsHive.url,
   },
   {
     n: "05",
     slug: "product-development",
     name: "Product Development",
     desc: "Pick a business or economics topic, analyse it with real data and case studies, and defend your thinking under Q&A.",
+    image: productDevelopment.url,
   },
 
 ] as const;
