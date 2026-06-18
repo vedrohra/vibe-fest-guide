@@ -44,10 +44,10 @@ const events = [
   },
   {
     n: "03",
-    slug: "trivia",
-    name: "Trivia",
-    desc: "Team rounds of business knowledge — markets, brands, founders. Pen-and-paper prelims, then a live final for the top 6.",
-    image: trivia.url,
+    slug: "product-development",
+    name: "Product Development",
+    desc: "Pick a business or economics topic, analyse it with real data and case studies, and defend your thinking under Q&A.",
+    image: productDevelopment.url,
   },
   {
     n: "04",
@@ -58,10 +58,10 @@ const events = [
   },
   {
     n: "05",
-    slug: "product-development",
-    name: "Product Development",
-    desc: "Pick a business or economics topic, analyse it with real data and case studies, and defend your thinking under Q&A.",
-    image: productDevelopment.url,
+    slug: "trivia",
+    name: "Trivia",
+    desc: "Team rounds of business knowledge — markets, brands, founders. Pen-and-paper prelims, then a live final for the top 6.",
+    image: trivia.url,
   },
 
 ] as const;
