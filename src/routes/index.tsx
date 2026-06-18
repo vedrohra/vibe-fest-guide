@@ -37,10 +37,10 @@ const events = [
   },
   {
     n: "02",
-    slug: "crisis",
-    name: "Crisis Management",
-    desc: "High-pressure scenarios that test sharp decision-making and quick adaptability when everything is on the line.",
-    image: crisisEvent.url,
+    slug: "shark-tank",
+    name: "Innovator's Hive",
+    desc: "Shark-Tank style pitches. Introduce the company, present the product, and defend the business against the judges.",
+    image: innovatorsHive.url,
   },
   {
     n: "03",
@@ -51,10 +51,10 @@ const events = [
   },
   {
     n: "04",
-    slug: "shark-tank",
-    name: "Innovator's Hive",
-    desc: "Shark-Tank style pitches. Introduce the company, present the product, and defend the business against the judges.",
-    image: innovatorsHive.url,
+    slug: "crisis",
+    name: "Crisis Management",
+    desc: "High-pressure scenarios that test sharp decision-making and quick adaptability when everything is on the line.",
+    image: crisisEvent.url,
   },
   {
     n: "05",
