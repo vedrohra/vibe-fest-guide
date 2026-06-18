@@ -62,6 +62,99 @@ function AboutPage() {
         </div>
       </section>
 
+      {/* Journey of VIBE */}
+      <section className="py-24 px-6 border-b border-foreground/10 bg-foreground/[0.02]">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex items-baseline justify-between mb-12 pb-3 border-b-2 border-primary">
+            <h2 className="font-display text-4xl md:text-5xl uppercase tracking-tight">Journey of VIBE</h2>
+            <span className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground">Behind the scenes</span>
+          </div>
+
+          <p className="text-lg text-muted-foreground max-w-2xl mb-16">
+            From the first spark of an idea to event day — here's how the team brought VIBE to life across four phases.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-foreground/10 border border-foreground/10">
+            {[
+              {
+                num: "01",
+                phase: "Idea",
+                color: "text-sky-400",
+                tagline: "Cooking up the unthinkable.",
+                moments: [
+                  "Plotting and scheming",
+                  "Coming up with fun, quirky ideas",
+                  "So much dedication and focus",
+                  "Pinpointing the theme in our sleepless week",
+                ],
+              },
+              {
+                num: "02",
+                phase: "Making",
+                color: "text-orange-400",
+                tagline: "Behind the scenes — the chart makers.",
+                moments: [
+                  "Plotting the unthinkable",
+                  "Time. Less. Redundancies.",
+                  "Hard-working ladies meeting",
+                  "Important discussions",
+                  "None of these were staged, I swear!",
+                ],
+              },
+              {
+                num: "03",
+                phase: "Marketing",
+                color: "text-emerald-400",
+                tagline: "Getting the word out.",
+                moments: [
+                  "Shark Tank the panel",
+                  "Product development developing problems",
+                  "Taking pictures of taking pictures",
+                  "Our 'manager' managing",
+                ],
+              },
+              {
+                num: "04",
+                phase: "Execution",
+                color: "text-yellow-400",
+                tagline: "Show time.",
+                moments: [
+                  "The whole gang putting in the work",
+                  "On our way to spread VIBE",
+                  "Spreading VIBE across schools",
+                  "P.S. Us trying to get famous",
+                ],
+              },
+            ].map((step) => (
+              <div key={step.num} className="bg-background p-8 flex flex-col">
+                <div className="flex items-baseline gap-4 mb-6">
+                  <span className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground">Phase {step.num}</span>
+                  <span className="flex-1 h-px bg-foreground/10" />
+                </div>
+                <h3 className={`font-display text-5xl md:text-6xl uppercase tracking-tighter mb-3 ${step.color}`}>
+                  {step.phase}
+                </h3>
+                <p className="font-display text-xl uppercase text-foreground/80 mb-6">{step.tagline}</p>
+                <ul className="space-y-2 mt-auto">
+                  {step.moments.map((m) => (
+                    <li key={m} className="flex gap-3 text-sm text-muted-foreground">
+                      <span className="font-mono text-primary text-[10px] mt-1">▸</span>
+                      <span>{m}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-12 text-center">
+            <p className="font-display text-3xl md:text-5xl uppercase tracking-tighter">
+              Go <span className="text-primary">find</span> out!
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Testimonials */}
       <section className="py-24 px-6">
         <div className="max-w-7xl mx-auto">
