@@ -1,4 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import ideaImg from "@/assets/journey-idea.jpg.asset.json";
+import makingImg from "@/assets/journey-making.jpg.asset.json";
+import marketingImg from "@/assets/journey-marketing.jpg.asset.json";
+import executionImg from "@/assets/journey-execution.jpg.asset.json";
+import posterImg from "@/assets/journey-poster.jpg.asset.json";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -81,6 +86,7 @@ function AboutPage() {
                 phase: "Idea",
                 color: "text-sky-400",
                 tagline: "Cooking up the unthinkable.",
+                image: ideaImg.url,
                 moments: [
                   "Plotting and scheming",
                   "Coming up with fun, quirky ideas",
@@ -93,6 +99,7 @@ function AboutPage() {
                 phase: "Making",
                 color: "text-orange-400",
                 tagline: "Behind the scenes — the chart makers.",
+                image: makingImg.url,
                 moments: [
                   "Plotting the unthinkable",
                   "Time. Less. Redundancies.",
@@ -106,6 +113,7 @@ function AboutPage() {
                 phase: "Marketing",
                 color: "text-emerald-400",
                 tagline: "Getting the word out.",
+                image: marketingImg.url,
                 moments: [
                   "Shark Tank the panel",
                   "Product development developing problems",
@@ -118,6 +126,7 @@ function AboutPage() {
                 phase: "Execution",
                 color: "text-yellow-400",
                 tagline: "Show time.",
+                image: executionImg.url,
                 moments: [
                   "The whole gang putting in the work",
                   "On our way to spread VIBE",
@@ -126,25 +135,41 @@ function AboutPage() {
                 ],
               },
             ].map((step) => (
-              <div key={step.num} className="bg-background p-8 flex flex-col">
-                <div className="flex items-baseline gap-4 mb-6">
-                  <span className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground">Phase {step.num}</span>
-                  <span className="flex-1 h-px bg-foreground/10" />
+              <div key={step.num} className="bg-background flex flex-col">
+                <div className="relative aspect-[4/3] overflow-hidden border-b border-foreground/10">
+                  <img src={step.image} alt={`${step.phase} phase of VIBE`} className="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/10 to-transparent" />
+                  <div className="absolute top-3 left-4">
+                    <span className="font-mono text-[10px] uppercase tracking-widest text-foreground bg-background/80 px-2 py-1">Phase {step.num}</span>
+                  </div>
                 </div>
-                <h3 className={`font-display text-5xl md:text-6xl uppercase tracking-tighter mb-3 ${step.color}`}>
-                  {step.phase}
-                </h3>
-                <p className="font-display text-xl uppercase text-foreground/80 mb-6">{step.tagline}</p>
-                <ul className="space-y-2 mt-auto">
-                  {step.moments.map((m) => (
-                    <li key={m} className="flex gap-3 text-sm text-muted-foreground">
-                      <span className="font-mono text-primary text-[10px] mt-1">▸</span>
-                      <span>{m}</span>
-                    </li>
-                  ))}
-                </ul>
+                <div className="p-8 flex flex-col flex-1">
+                  <h3 className={`font-display text-5xl md:text-6xl uppercase tracking-tighter mb-3 ${step.color}`}>
+                    {step.phase}
+                  </h3>
+                  <p className="font-display text-xl uppercase text-foreground/80 mb-6">{step.tagline}</p>
+                  <ul className="space-y-2 mt-auto">
+                    {step.moments.map((m) => (
+                      <li key={m} className="flex gap-3 text-sm text-muted-foreground">
+                        <span className="font-mono text-primary text-[10px] mt-1">▸</span>
+                        <span>{m}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             ))}
+          </div>
+
+          <div className="mt-16">
+            <div className="flex items-baseline gap-4 mb-6">
+              <span className="font-mono text-[10px] uppercase tracking-widest text-primary">Original</span>
+              <span className="font-display text-lg uppercase">The poster that started it</span>
+              <span className="flex-1 h-px bg-foreground/10" />
+            </div>
+            <div className="border border-foreground/10 overflow-hidden">
+              <img src={posterImg.url} alt="Hand-made Journey of VIBE poster" className="w-full h-auto" loading="lazy" />
+            </div>
           </div>
 
           <div className="mt-12 text-center">
