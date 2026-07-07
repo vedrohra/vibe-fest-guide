@@ -246,8 +246,60 @@ function EventPage() {
       </section>
 
 
+      {/* Contact */}
+      <section className="py-24 px-6">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 items-start">
+          <div className="md:col-span-4">
+            <span className="font-mono text-[10px] uppercase text-primary tracking-widest mb-4 block">Get in touch</span>
+            <h2 className="font-display text-5xl uppercase leading-none">Contact</h2>
+            <p className="mt-4 text-sm text-muted-foreground max-w-xs">Questions about this event? Reach out to the event director directly.</p>
+          </div>
+          <div className="md:col-span-8">
+            {(event as any).contact ? (
+              <div className="relative border border-foreground/10 bg-surface p-10 md:p-12 overflow-hidden">
+                <div className="absolute top-0 left-0 h-1 w-24 bg-primary" />
+                <div className="absolute -top-8 -right-6 font-display text-[10rem] leading-none uppercase text-foreground/5 select-none pointer-events-none">
+                  {event.n}
+                </div>
+                <div className="relative">
+                  <div className="font-mono text-[10px] uppercase tracking-[0.3em] text-primary mb-6">
+                    {(event as any).contact.role}
+                  </div>
+                  <div className="font-display text-5xl md:text-6xl uppercase leading-none tracking-tight mb-8">
+                    {(event as any).contact.name}
+                  </div>
+                  <div className="pt-8 border-t border-foreground/10 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
+                    <div>
+                      <div className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground mb-2">Phone</div>
+                      <a
+                        href={`tel:${(event as any).contact.phone}`}
+                        className="font-mono text-2xl md:text-3xl text-foreground hover:text-primary transition-colors tracking-wider"
+                      >
+                        {(event as any).contact.phone}
+                      </a>
+                    </div>
+                    <a
+                      href={`tel:${(event as any).contact.phone}`}
+                      className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary text-primary-foreground font-mono text-[11px] font-bold uppercase tracking-widest hover:bg-foreground transition-colors self-start sm:self-auto"
+                    >
+                      Call now →
+                    </a>
+                  </div>
+                </div>
+              </div>
+            ) : (
+              <div className="border border-dashed border-foreground/15 p-10 text-center">
+                <div className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground mb-2">Contact</div>
+                <p className="font-display text-2xl uppercase">Details coming soon</p>
+              </div>
+            )}
+          </div>
+        </div>
+      </section>
+
       {/* Footer nav */}
       <section className="py-24 px-6 border-t border-foreground/10">
+
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-px bg-foreground/10 border border-foreground/10">
           <Link
             to="/about"
