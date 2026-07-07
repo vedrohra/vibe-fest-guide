@@ -167,11 +167,8 @@ function Index() {
               <div className="relative">
                 <h3 className="font-display text-3xl uppercase mb-4 leading-none group-hover:text-primary transition-colors">{e.name}</h3>
                 <p className="text-sm text-muted-foreground">{e.desc}</p>
-                <div className="mt-5 pt-5 border-t border-foreground/10">
-                  <span className="font-mono text-[10px] uppercase tracking-widest text-primary block mb-1">Contact us</span>
-                  <p className="text-sm text-foreground/80">{e.contact}</p>
-                </div>
               </div>
+
             </Link>
           ))}
         </div>
