@@ -39,7 +39,7 @@ export const Route = createFileRoute("/events/$slug")({
 export const events = {
   "vaels-stock-exchange": {
     n: "01",
-    name: "Stock Exchange Simulation",
+    name: "VAELS STOCK EXCHANGE\u00a0\n\n",
     tagline: "A real-world-style trading floor. Strategy, instinct, adaptability.",
     desc: "Participants step onto a live trading floor that evaluates their financial strategy and adaptability. Market events drop in real time, prices move with every trade, and the team with the highest-value portfolio at closing bell wins.",
     format: "Teams of 2–3",
