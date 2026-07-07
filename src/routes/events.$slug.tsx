@@ -171,7 +171,7 @@ function EventPage() {
         <div className="relative max-w-7xl mx-auto">
           <div className="animate-reveal">
             <p className="font-mono text-xs uppercase tracking-[0.4em] text-primary mb-6">
-              Event {event.n} / 05
+              Event {event.n} / 06
             </p>
             <h1 className="font-display text-6xl md:text-[9rem] leading-[0.85] uppercase tracking-tighter mb-8">
               {event.name}
