@@ -51,7 +51,13 @@ export const events = {
       "Live news drops will impact stock values throughout the round.",
       "Final portfolio is valued at the closing market price.",
     ],
+    contact: {
+      role: "Director of VSE",
+      name: "Seungho Lim",
+      phone: "9940021531",
+    },
   },
+
   "crisis": {
     n: "02",
     name: "Crisis Management",
