@@ -7,6 +7,7 @@ import stockExchange from "@/assets/stock-exchange.jpg.asset.json";
 import trivia from "@/assets/trivia.jpg.asset.json";
 import innovatorsHive from "@/assets/innovators-hive.jpg.asset.json";
 import productDevelopment from "@/assets/product-development.jpg.asset.json";
+import supplyChain from "@/assets/supply-chain.jpg";
 
 
 
@@ -66,6 +67,14 @@ const events = [
     name: "Trivia",
     desc: "Team rounds of business knowledge — markets, brands, founders. Pen-and-paper prelims, then a live final for the top 6.",
     image: trivia.url,
+    contact: "Contact us",
+  },
+  {
+    n: "06",
+    slug: "supply-chain-management",
+    name: "Supply Chain Management",
+    desc: "A strategic simulation that challenges teams to design, optimise, and manage a supply chain from source to delivery under real-world constraints.",
+    image: supplyChain,
     contact: "Contact us",
   },
 
@@ -161,7 +170,7 @@ function Index() {
                 </>
               )}
               <div className="relative flex items-center justify-between font-mono text-xs text-muted-foreground">
-                <span>{e.n} / 05</span>
+                <span>{e.n} / 06</span>
                 <span className="opacity-0 group-hover:opacity-100 transition-opacity text-primary">View →</span>
               </div>
               <div className="relative">
