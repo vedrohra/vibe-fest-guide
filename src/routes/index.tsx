@@ -34,6 +34,7 @@ const events = [
     name: "Stock Exchange Simulation",
     desc: "A real-world-style trading floor that puts students' financial strategy, instinct, and adaptability to the test.",
     image: stockExchange.url,
+    contact: "Director of VSE Seungho Lim - 9940021531",
   },
   {
     n: "02",
@@ -41,6 +42,7 @@ const events = [
     name: "Innovator's Hive",
     desc: "Shark-Tank style pitches. Introduce the company, present the product, and defend the business against the judges.",
     image: innovatorsHive.url,
+    contact: "Contact us",
   },
   {
     n: "03",
@@ -48,6 +50,7 @@ const events = [
     name: "Product Development",
     desc: "Pick a business or economics topic, analyse it with real data and case studies, and defend your thinking under Q&A.",
     image: productDevelopment.url,
+    contact: "Contact us",
   },
   {
     n: "04",
@@ -55,6 +58,7 @@ const events = [
     name: "Crisis Management",
     desc: "High-pressure scenarios that test sharp decision-making and quick adaptability when everything is on the line.",
     image: crisisEvent.url,
+    contact: "Contact us",
   },
   {
     n: "05",
@@ -62,6 +66,7 @@ const events = [
     name: "Trivia",
     desc: "Team rounds of business knowledge — markets, brands, founders. Pen-and-paper prelims, then a live final for the top 6.",
     image: trivia.url,
+    contact: "Contact us",
   },
 
 ] as const;
@@ -162,6 +167,10 @@ function Index() {
               <div className="relative">
                 <h3 className="font-display text-3xl uppercase mb-4 leading-none group-hover:text-primary transition-colors">{e.name}</h3>
                 <p className="text-sm text-muted-foreground">{e.desc}</p>
+                <div className="mt-5 pt-5 border-t border-foreground/10">
+                  <span className="font-mono text-[10px] uppercase tracking-widest text-primary block mb-1">Contact us</span>
+                  <p className="text-sm text-foreground/80">{e.contact}</p>
+                </div>
               </div>
             </Link>
           ))}
