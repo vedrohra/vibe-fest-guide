@@ -31,7 +31,7 @@ const events = [
   {
     n: "01",
     slug: "vaels-stock-exchange",
-    name: "Stock Exchange Simulation",
+    name: "VAELS STOCK EXCHANGE\u00a0\n\n",
     desc: "A real-world-style trading floor that puts students' financial strategy, instinct, and adaptability to the test.",
     image: stockExchange.url,
     contact: "Director of VSE Seungho Lim - 9940021531",
