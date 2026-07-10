@@ -145,9 +145,9 @@ function Index() {
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-6">
           <div>
             <span className="font-mono text-[10px] uppercase text-primary mb-2 block tracking-widest">01 // The Lineup</span>
-            <h2 className="font-display text-5xl md:text-6xl uppercase">The Five Events</h2>
+            <h2 className="font-display text-5xl md:text-6xl uppercase">THE SIX EVENTS</h2>
           </div>
-          <p className="text-muted-foreground max-w-sm text-sm">Five distinct tracks built to test strategy, creativity, judgement, and nerve.</p>
+          <p className="text-muted-foreground max-w-sm text-sm">Six distinct tracks built to test strategy, creativity, judgement, and nerve.</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-foreground/10 border border-foreground/10 overflow-hidden">
@@ -206,7 +206,7 @@ function Index() {
             </p>
             <div className="grid grid-cols-3 gap-8 border-t border-foreground/10 pt-12">
               <div>
-                <div className="font-display text-4xl mb-2">05</div>
+                <div className="font-display text-4xl mb-2">06</div>
                 <div className="font-mono text-[10px] uppercase text-muted-foreground">Events</div>
               </div>
               <div>
