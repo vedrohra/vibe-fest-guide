@@ -226,7 +226,7 @@ function Index() {
       <section id="schedule" className="py-24">
         <div className="px-6 max-w-7xl mx-auto mb-12 flex items-end justify-between">
           <div>
-            <span className="font-mono text-[10px] uppercase text-primary mb-2 block tracking-widest">02 // Logistics</span>
+            <span className="font-mono text-[10px] uppercase text-primary mb-2 block tracking-widest">02 //&nbsp;</span>
             <h2 className="font-display text-5xl md:text-6xl uppercase">Day Schedule</h2>
           </div>
         </div>
