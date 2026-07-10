@@ -206,7 +206,7 @@ function Index() {
             </p>
             <div className="grid grid-cols-3 gap-8 border-t border-foreground/10 pt-12">
               <div>
-                <div className="font-display text-4xl mb-2">05</div>
+                <div className="font-display text-4xl mb-2">06</div>
                 <div className="font-mono text-[10px] uppercase text-muted-foreground">Events</div>
               </div>
               <div>
