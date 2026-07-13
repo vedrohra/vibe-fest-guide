@@ -117,6 +117,11 @@ export const events = {
       "Target market identified with analysis of potential competitors.",
       "Realistic execution plan with the resources required to bring it to market.",
     ],
+    contact: {
+      role: "Director of Innovator's Hive",
+      name: "Ayush Mishra",
+      phone: "7358249609",
+    },
   },
   "product-development": {
     n: "05",
