@@ -147,6 +147,11 @@ export const events = {
       "Delivery, body language, and speech must be clear, confident, and engaging.",
       "Presenters answer challenging questions calmly and professionally; team cooperates well and adheres to the time limit.",
     ],
+    contact: {
+      role: "Director of Product Development",
+      name: "Zoya Hassan",
+      phone: "7200074702",
+    },
   },
   "supply-chain-management": {
     n: "06",
