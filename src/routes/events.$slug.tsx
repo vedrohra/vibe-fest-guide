@@ -87,6 +87,11 @@ export const events = {
       "Teams answer questions in rounds.",
       "A preliminary pen and paper round will be conducted, and the top 6 teams will move to the finals.",
     ],
+    contact: {
+      role: "Director of Trivia",
+      name: "Thrivid Narain",
+      phone: "9380562232",
+    },
   },
   "shark-tank": {
     n: "04",
