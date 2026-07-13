@@ -167,6 +167,11 @@ export const events = {
       "Live disruption cards will force teams to adapt their plan during the round.",
       "Final strategy is judged on cost, resilience, and presentation clarity.",
     ],
+    contact: {
+      role: "Director of Supply Chain Management",
+      name: "Aditi Kartik",
+      phone: "6380487841",
+    },
   },
 
 } as const;
