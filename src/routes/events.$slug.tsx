@@ -53,8 +53,8 @@ export const events = {
     ],
     contact: {
       role: "Director of VSE",
-      name: "Seungho Lim",
-      phone: "9940021531",
+      name: "Sahana Anand",
+      phone: "9361738808",
     },
   },
 
