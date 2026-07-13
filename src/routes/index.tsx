@@ -35,7 +35,7 @@ const events = [
     name: "VAELS STOCK EXCHANGE\u00a0\n\n",
     desc: "A real-world-style trading floor that puts students' financial strategy, instinct, and adaptability to the test.",
     image: stockExchange.url,
-    contact: "Director of VSE Seungho Lim - 9940021531",
+    contact: "Sahana Anand - 9361738808",
   },
   {
     n: "02",
@@ -43,7 +43,7 @@ const events = [
     name: "Innovator's Hive",
     desc: "Shark-Tank style pitches. Introduce the company, present the product, and defend the business against the judges.",
     image: innovatorsHive.url,
-    contact: "Contact us",
+    contact: "Ayush Mishra - 7358249609",
   },
   {
     n: "03",
@@ -51,7 +51,7 @@ const events = [
     name: "Product Development",
     desc: "Pick a business or economics topic, analyse it with real data and case studies, and defend your thinking under Q&A.",
     image: productDevelopment.url,
-    contact: "Contact us",
+    contact: "Zoya Hassan - 7200074702",
   },
   {
     n: "04",
@@ -67,7 +67,7 @@ const events = [
     name: "Trivia",
     desc: "Team rounds of business knowledge — markets, brands, founders. Pen-and-paper prelims, then a live final for the top 6.",
     image: trivia.url,
-    contact: "Contact us",
+    contact: "Thrivid Narain - 9380562232",
   },
   {
     n: "06",
@@ -75,7 +75,7 @@ const events = [
     name: "Supply Chain Management",
     desc: "A strategic simulation that challenges teams to design, optimise, and manage a supply chain from source to delivery under real-world constraints.",
     image: supplyChain,
-    contact: "Contact us",
+    contact: "Aditi Kartik - 6380487841",
   },
 
 ] as const;
