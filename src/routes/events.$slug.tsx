@@ -53,8 +53,8 @@ export const events = {
     ],
     contact: {
       role: "Director of VSE",
-      name: "Seungho Lim",
-      phone: "9940021531",
+      name: "Sahana Anand",
+      phone: "9361738808",
     },
   },
 
@@ -87,6 +87,11 @@ export const events = {
       "Teams answer questions in rounds.",
       "A preliminary pen and paper round will be conducted, and the top 6 teams will move to the finals.",
     ],
+    contact: {
+      role: "Director of Trivia",
+      name: "Thrivid Narain",
+      phone: "9380562232",
+    },
   },
   "shark-tank": {
     n: "04",
@@ -112,6 +117,11 @@ export const events = {
       "Target market identified with analysis of potential competitors.",
       "Realistic execution plan with the resources required to bring it to market.",
     ],
+    contact: {
+      role: "Director of Innovator's Hive",
+      name: "Ayush Mishra",
+      phone: "7358249609",
+    },
   },
   "product-development": {
     n: "05",
@@ -137,6 +147,11 @@ export const events = {
       "Delivery, body language, and speech must be clear, confident, and engaging.",
       "Presenters answer challenging questions calmly and professionally; team cooperates well and adheres to the time limit.",
     ],
+    contact: {
+      role: "Director of Product Development",
+      name: "Zoya Hassan",
+      phone: "7200074702",
+    },
   },
   "supply-chain-management": {
     n: "06",
@@ -152,6 +167,11 @@ export const events = {
       "Live disruption cards will force teams to adapt their plan during the round.",
       "Final strategy is judged on cost, resilience, and presentation clarity.",
     ],
+    contact: {
+      role: "Director of Supply Chain Management",
+      name: "Aditi Kartik",
+      phone: "6380487841",
+    },
   },
 
 } as const;
