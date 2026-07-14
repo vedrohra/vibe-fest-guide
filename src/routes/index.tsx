@@ -7,7 +7,7 @@ import stockExchange from "@/assets/stock-exchange.jpg.asset.json";
 import trivia from "@/assets/trivia.jpg.asset.json";
 import innovatorsHive from "@/assets/innovators-hive.jpg.asset.json";
 import productDevelopment from "@/assets/product-development.jpg.asset.json";
-import supplyChain from "@/assets/supply-chain.jpg";
+import supplyChain from "@/assets/supply-chain.jpg.asset.json";
 
 
 
