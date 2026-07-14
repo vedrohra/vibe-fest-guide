@@ -195,6 +195,13 @@ function EventPage() {
   const event = events[slug as keyof typeof events];
   if (!event) return null;
 
+  const slugs = Object.keys(events) as (keyof typeof events)[];
+  const idx = slugs.indexOf(slug as keyof typeof events);
+  const nextSlug = slugs[(idx + 1) % slugs.length];
+  const nextEvent = events[nextSlug];
+
+
+
 
 
 
@@ -349,7 +356,15 @@ function EventPage() {
       {/* Footer nav */}
       <section className="py-24 px-6 border-t border-foreground/10">
 
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-px bg-foreground/10 border border-foreground/10">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-px bg-foreground/10 border border-foreground/10">
+          <Link
+            to="/events/$slug"
+            params={{ slug: nextSlug as string }}
+            className="group block p-10 bg-background hover:bg-surface transition-colors"
+          >
+            <div className="font-mono text-[10px] uppercase text-muted-foreground tracking-widest mb-4">Next event {nextEvent.n} →</div>
+            <div className="font-display text-3xl uppercase group-hover:text-primary transition-colors">{nextEvent.name}</div>
+          </Link>
           <Link
             to="/about"
             className="group block p-10 bg-background hover:bg-surface transition-colors"
