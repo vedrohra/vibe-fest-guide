@@ -74,7 +74,7 @@ const events = [
     slug: "supply-chain-management",
     name: "Supply Chain Management",
     desc: "A strategic simulation that challenges teams to design, optimise, and manage a supply chain from source to delivery under real-world constraints.",
-    image: supplyChain,
+    image: supplyChain.url,
     contact: "Aditi Kartik - 6380487841",
   },
 
