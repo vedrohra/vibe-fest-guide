@@ -72,6 +72,11 @@ export const events = {
       "Pitch must cover the diagnosis, the plan, and the trade-offs.",
       "Judged on clarity, feasibility, and creativity of the response.",
     ],
+    contact: {
+      role: "Director of Crisis Management",
+      name: "Sahana Suryaprakash",
+      phone: "9025727419",
+    },
   },
   "trivia": {
     n: "03",
