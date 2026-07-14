@@ -7,7 +7,7 @@ import stockExchange from "@/assets/stock-exchange.jpg.asset.json";
 import trivia from "@/assets/trivia.jpg.asset.json";
 import innovatorsHive from "@/assets/innovators-hive.jpg.asset.json";
 import productDevelopment from "@/assets/product-development.jpg.asset.json";
-import supplyChain from "@/assets/supply-chain.jpg";
+import supplyChain from "@/assets/supply-chain.jpg.asset.json";
 
 
 
@@ -74,7 +74,7 @@ const events = [
     slug: "supply-chain-management",
     name: "Supply Chain Management",
     desc: "A strategic simulation that challenges teams to design, optimise, and manage a supply chain from source to delivery under real-world constraints.",
-    image: supplyChain,
+    image: supplyChain.url,
     contact: "Aditi Kartik - 6380487841",
   },
 
