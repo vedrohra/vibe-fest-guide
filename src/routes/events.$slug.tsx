@@ -55,6 +55,10 @@ export const events = {
       "The absolute winner of the Vaels Stock Exchange is not decided simply by who accumulates the most cash. Instead, a unified scoring matrix evaluates teams across two balanced dimensions: Return Optimization and Persona Alignment.",
       "You will be graded on your ability to maximize the value of your portfolio relative to your direct peers, while strictly operating within the risk boundaries and strategic objectives dictated by your client's profile at the closing bell.",
     ],
+    info: [
+      "Each team must consist of 2 members.",
+      "Company performance updates are announced at the start of each round, allowing teams to trade ahead of the shifting market. The actual price changes triggered by the news are calculated and revealed only after the round ends.",
+    ],
     contact: {
       role: "Director of VSE",
       name: "Sahana Anand",
@@ -263,6 +267,7 @@ function EventPage() {
           <div className="md:col-span-8 space-y-12">
             {([
               { label: "Rules", items: event.rules },
+              { label: "Information", items: (event as any).info as readonly string[] | undefined },
               { label: "Content Requirements", items: (event as any).content as readonly string[] | undefined },
               { label: "Judging Criteria", items: (event as any).judging as readonly string[] | undefined },
             ] as const).map((group) =>
