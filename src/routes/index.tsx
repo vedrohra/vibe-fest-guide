@@ -59,7 +59,7 @@ const events = [
     name: "Crisis Management",
     desc: "High-pressure scenarios that test sharp decision-making and quick adaptability when everything is on the line.",
     image: crisisEvent.url,
-    contact: "Contact us",
+    contact: "Sahana Suryaprakash - 9025727419",
   },
   {
     n: "05",
