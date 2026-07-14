@@ -267,6 +267,7 @@ function EventPage() {
           <div className="md:col-span-8 space-y-12">
             {([
               { label: "Rules", items: event.rules },
+              { label: "Information", items: (event as any).info as readonly string[] | undefined },
               { label: "Content Requirements", items: (event as any).content as readonly string[] | undefined },
               { label: "Judging Criteria", items: (event as any).judging as readonly string[] | undefined },
             ] as const).map((group) =>
