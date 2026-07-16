@@ -359,13 +359,30 @@ function EventPage() {
       <section className="py-24 px-6 border-t border-foreground/10">
 
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-px bg-foreground/10 border border-foreground/10">
+          <div className="grid grid-cols-2 bg-background">
+            <Link
+              to="/events/$slug"
+              params={{ slug: prevSlug as string }}
+              className="group block px-6 py-5 border-r border-foreground/10 hover:bg-surface transition-colors"
+            >
+              <div className="font-mono text-[9px] uppercase text-muted-foreground tracking-widest mb-1.5">← Prev {prevEvent.n}</div>
+              <div className="font-display text-sm md:text-base uppercase truncate group-hover:text-primary transition-colors">{prevEvent.name}</div>
+            </Link>
+            <Link
+              to="/events/$slug"
+              params={{ slug: nextSlug as string }}
+              className="group block px-6 py-5 hover:bg-surface transition-colors text-right"
+            >
+              <div className="font-mono text-[9px] uppercase text-muted-foreground tracking-widest mb-1.5">Next {nextEvent.n} →</div>
+              <div className="font-display text-sm md:text-base uppercase truncate group-hover:text-primary transition-colors">{nextEvent.name}</div>
+            </Link>
+          </div>
           <Link
-            to="/events/$slug"
-            params={{ slug: nextSlug as string }}
+            to="/about"
             className="group block p-10 bg-background hover:bg-surface transition-colors"
           >
-            <div className="font-mono text-[10px] uppercase text-muted-foreground tracking-widest mb-4">Next event {nextEvent.n} →</div>
-            <div className="font-display text-3xl uppercase group-hover:text-primary transition-colors">{nextEvent.name}</div>
+            <div className="font-mono text-[10px] uppercase text-muted-foreground tracking-widest mb-4">Learn more →</div>
+            <div className="font-display text-3xl uppercase group-hover:text-primary transition-colors">About VIBE</div>
           </Link>
           <Link
             to="/about"
