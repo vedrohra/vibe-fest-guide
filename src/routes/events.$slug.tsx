@@ -42,9 +42,9 @@ export const events = {
     name: "VAELS STOCK EXCHANGE\u00a0\n\n",
     tagline: "A real-world-style trading floor. Strategy, instinct, adaptability.",
     desc: "The Vaels Stock Exchange is an intensive, live trading floor that evaluates your financial strategy and adaptability under pressure. Teams operate as asset management firms bound to a specific client persona with unique financial goals and strict risk tolerances. Market events drop in real time, shifting asset values instantly through unexpected, correlated ripples, and forcing teams to barter strategically via physical chits to optimize their positions.",
-    format: "Teams of 2–3",
+    format: "Teams of 2",
     duration: "90 minutes",
-    venue: "Trading Floor",
+    venue: "Physics Lab",
     rules: [
       "The Starting Line: Every team receives a unique client persona and an identical, diversified starter pack of stock chits and seed capital.",
       "Live News Drops: Market events drop in real time at the start of every round, altering asset values and shifting the board instantly.",
