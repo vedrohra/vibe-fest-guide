@@ -260,10 +260,29 @@ function Index() {
               About VIBE
             </Link>
           </div>
-          <div className="mt-24 grid grid-cols-1 md:grid-cols-3 gap-4 border-t border-primary-foreground/20 pt-12 text-[10px] font-mono uppercase tracking-widest">
-            <span>VIBE Organising Committee</span>
-            <span>© 2025 · School Business Council</span>
-            <a href="mailto:vibe@vaelsinternationalschool.com" className="underline">vibe@vaelsinternationalschool.com</a>
+          <div className="mt-24 border-t border-primary-foreground/20 pt-12">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-[10px] font-mono uppercase tracking-widest mb-10">
+              <div className="flex flex-col gap-1">
+                <span className="text-primary-foreground/50">CEO</span>
+                <span>Ved Rohra</span>
+                <span className="text-primary-foreground/70">9345990041</span>
+              </div>
+              <div className="flex flex-col gap-1">
+                <span className="text-primary-foreground/50">COO</span>
+                <span>Sahana Suryaprakash</span>
+                <span className="text-primary-foreground/70">9025727419</span>
+              </div>
+              <div className="flex flex-col gap-1">
+                <span className="text-primary-foreground/50">CFO</span>
+                <span>Thrivid Narain</span>
+                <span className="text-primary-foreground/70">9380562232</span>
+              </div>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-[10px] font-mono uppercase tracking-widest border-t border-primary-foreground/20 pt-8">
+              <span>VIBE Organising Committee</span>
+              <span>© 2026 · School Business Council</span>
+              <a href="mailto:vibe@vaelsinternationalschool.com" className="underline">vibe@vaelsinternationalschool.com</a>
+            </div>
           </div>
         </div>
       </footer>
