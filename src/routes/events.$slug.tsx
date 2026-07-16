@@ -198,7 +198,9 @@ function EventPage() {
   const slugs = Object.keys(events) as (keyof typeof events)[];
   const idx = slugs.indexOf(slug as keyof typeof events);
   const nextSlug = slugs[(idx + 1) % slugs.length];
+  const prevSlug = slugs[(idx - 1 + slugs.length) % slugs.length];
   const nextEvent = events[nextSlug];
+  const prevEvent = events[prevSlug];
 
 
 
