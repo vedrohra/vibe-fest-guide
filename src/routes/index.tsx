@@ -35,7 +35,7 @@ const events = [
     name: "VAELS STOCK EXCHANGE\u00a0\n\n",
     desc: "A real-world-style trading floor that puts students' financial strategy, instinct, and adaptability to the test.",
     image: stockExchange.url,
-    contact: "Sahana Anand - 9361738808",
+    contact: "Ved Rohra - 9345990041",
   },
   {
     n: "02",
