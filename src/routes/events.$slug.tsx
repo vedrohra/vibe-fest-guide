@@ -385,13 +385,6 @@ function EventPage() {
             <div className="font-display text-3xl uppercase group-hover:text-primary transition-colors">About VIBE</div>
           </Link>
           <Link
-            to="/about"
-            className="group block p-10 bg-background hover:bg-surface transition-colors"
-          >
-            <div className="font-mono text-[10px] uppercase text-muted-foreground tracking-widest mb-4">Learn more →</div>
-            <div className="font-display text-3xl uppercase group-hover:text-primary transition-colors">About VIBE</div>
-          </Link>
-          <Link
             to="/"
             hash="register"
             className="group block p-10 bg-primary text-primary-foreground hover:bg-foreground transition-colors"
