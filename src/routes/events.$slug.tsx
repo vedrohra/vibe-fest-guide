@@ -61,8 +61,8 @@ export const events = {
     ],
     contact: {
       role: "Director of VSE",
-      name: "Sahana Anand",
-      phone: "9361738808",
+      name: "Ved Rohra",
+      phone: "9345990041",
     },
   },
 
