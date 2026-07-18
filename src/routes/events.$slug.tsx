@@ -1,5 +1,4 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
-import vseRop from "@/assets/VSE_ROP.pdf.asset.json";
 
 
 export const Route = createFileRoute("/events/$slug")({
