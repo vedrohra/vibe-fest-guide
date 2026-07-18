@@ -15,9 +15,9 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "VIBE — School Business Event" },
-      { name: "description", content: "VIBE is the premier student-led business event with four high-stakes tracks: Vaels Stock Exchange, Crisis, Trivia, and Shark Tank." },
+      { name: "description", content: "VIBE Event Hub is a website showcasing four distinct business-themed events for a school organization." },
       { property: "og:title", content: "VIBE — School Business Event" },
-      { property: "og:description", content: "VIBE is the premier student-led business event with four high-stakes tracks: Vaels Stock Exchange, Crisis, Trivia, and Shark Tank." },
+      { property: "og:description", content: "VIBE Event Hub is a website showcasing four distinct business-themed events for a school organization." },
     ],
     links: [
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
