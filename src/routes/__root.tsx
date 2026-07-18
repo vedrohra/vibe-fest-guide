@@ -72,14 +72,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
+      { title: "VIBE — School Business Event" },
+      { name: "description", content: "VIBE is the premier student-led business event with four high-stakes tracks: Vaels Stock Exchange, Crisis, Trivia, and Shark Tank." },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { property: "og:title", content: "VIBE — School Business Event" },
+      { property: "og:description", content: "VIBE is the premier student-led business event with four high-stakes tracks: Vaels Stock Exchange, Crisis, Trivia, and Shark Tank." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "VIBE — School Business Event" },
+      { name: "twitter:description", content: "VIBE is the premier student-led business event with four high-stakes tracks: Vaels Stock Exchange, Crisis, Trivia, and Shark Tank." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/b35bca30-83fe-4397-ba12-e1c085d40ba6/id-preview-8f38760a--d3a54d9e-6078-4bf1-b498-4a793d654c48.lovable.app-1784347449021.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/b35bca30-83fe-4397-ba12-e1c085d40ba6/id-preview-8f38760a--d3a54d9e-6078-4bf1-b498-4a793d654c48.lovable.app-1784347449021.png" },
     ],
     links: [
       {
