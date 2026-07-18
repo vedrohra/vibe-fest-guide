@@ -1,4 +1,6 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
+import vseRop from "@/assets/VSE_ROP.pdf.asset.json";
+
 
 export const Route = createFileRoute("/events/$slug")({
   head: ({ params }) => {
@@ -262,9 +264,20 @@ function EventPage() {
           </div>
           <div className="md:col-span-8">
             <p className="text-2xl md:text-3xl font-display uppercase leading-tight">{event.desc}</p>
+            {slug === "vaels-stock-exchange" && (
+              <a
+                href={vseRop.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-10 inline-flex items-center gap-3 px-6 py-3 bg-primary text-primary-foreground font-mono text-[11px] font-bold uppercase tracking-widest hover:bg-foreground transition-colors"
+              >
+                For full information about the event — click here →
+              </a>
+            )}
           </div>
         </div>
       </section>
+
 
       {/* Rules */}
       <section className="bg-surface py-24 px-6 border-y border-foreground/5">
