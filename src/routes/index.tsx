@@ -152,18 +152,19 @@ function Index() {
 
 
       {/* Events */}
-      <section id="events" className="py-24 px-6 max-w-7xl mx-auto">
-        <div data-reveal className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-6">
+      <section id="events" className="py-32 md:py-40">
+        <div data-reveal className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-start md:items-end mb-20 gap-6">
           <div>
-            <span className="font-mono text-[10px] uppercase text-primary mb-2 block tracking-widest">01 // The Lineup</span>
-            <h2 className="font-display text-5xl md:text-6xl uppercase">THE <span className="stroke-red">SIX EVENTS</span></h2>
+            <span className="font-mono text-[10px] uppercase text-primary mb-4 block tracking-widest">01 // The Lineup</span>
+            <h2 className="font-display text-6xl md:text-8xl lg:text-9xl uppercase leading-[0.9]">THE <span className="stroke-red">SIX EVENTS</span></h2>
           </div>
-          <p className="text-muted-foreground max-w-sm text-sm">Six distinct tracks built to test strategy, creativity, judgement, and nerve.</p>
+          <p className="text-muted-foreground max-w-sm text-sm px-6 md:px-0">Six distinct tracks built to test strategy, creativity, judgement, and nerve.</p>
         </div>
+
 
         <div
           data-reveal
-          className="events-track relative -mx-6 px-6 overflow-x-auto overflow-y-hidden cursor-grab active:cursor-grabbing select-none"
+          className="events-track relative px-6 md:px-12 overflow-x-auto overflow-y-hidden cursor-grab active:cursor-grabbing select-none"
           ref={(el) => {
             if (!el || (el as any).__dragBound) return;
             (el as any).__dragBound = true;
@@ -195,9 +196,9 @@ function Index() {
               if (moved) { e.preventDefault(); e.stopPropagation(); }
             }, true);
           }}
-          style={{ scrollSnapType: 'x mandatory', scrollbarWidth: 'none' }}
+          style={{ scrollbarWidth: 'none' }}
         >
-          <div className="flex gap-4 pb-4" style={{ width: 'max-content' }}>
+          <div className="flex gap-6 md:gap-8 pb-4" style={{ width: 'max-content' }}>
             {events.map((e, i) => (
               <Link
                 key={e.n}
@@ -206,8 +207,7 @@ function Index() {
                 data-reveal
                 data-reveal-delay={String(((i % 3) + 1) * 100)}
                 draggable={false}
-                className="group relative bg-background border border-foreground/10 p-8 flex flex-col justify-between hover:bg-surface transition-colors overflow-hidden w-[80vw] sm:w-[380px] aspect-[4/5] shrink-0"
-                style={{ scrollSnapAlign: 'center' }}
+                className="group relative bg-background border border-foreground/10 p-10 flex flex-col justify-between hover:bg-surface transition-colors overflow-hidden w-[85vw] sm:w-[520px] md:w-[560px] aspect-[4/5] shrink-0"
               >
                 {(e as any).image && (
                   <>
@@ -226,8 +226,8 @@ function Index() {
                   <span className="opacity-0 group-hover:opacity-100 transition-opacity text-primary">View →</span>
                 </div>
                 <div className="relative">
-                  <h3 className="font-display text-3xl uppercase mb-4 leading-none group-hover:text-primary transition-colors">{e.name}</h3>
-                  <p className="text-sm text-muted-foreground">{e.desc}</p>
+                  <h3 className="font-display text-4xl md:text-5xl uppercase mb-4 leading-none group-hover:text-primary transition-colors">{e.name}</h3>
+                  <p className="text-base text-muted-foreground">{e.desc}</p>
                 </div>
               </Link>
             ))}
