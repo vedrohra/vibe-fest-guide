@@ -110,7 +110,7 @@ function Index() {
           <a href="#register" className="px-4 py-1.5 bg-primary text-primary-foreground font-mono text-[11px] font-bold uppercase tracking-wider hover:bg-foreground transition-colors">
             Register
           </a>
-          <img src={vibeLogo} alt="VIBE logo" className="h-12 md:h-14 w-auto" />
+          <img src={vibeLogo.url} alt="VIBE logo" className="h-12 md:h-14 w-auto" />
         </div>
       </nav>
 
