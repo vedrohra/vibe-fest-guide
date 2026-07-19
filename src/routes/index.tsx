@@ -226,8 +226,8 @@ function Index() {
                   <span className="opacity-0 group-hover:opacity-100 transition-opacity text-primary">View →</span>
                 </div>
                 <div className="relative">
-                  <h3 className="font-display text-3xl uppercase mb-4 leading-none group-hover:text-primary transition-colors">{e.name}</h3>
-                  <p className="text-sm text-muted-foreground">{e.desc}</p>
+                  <h3 className="font-display text-4xl md:text-5xl uppercase mb-4 leading-none group-hover:text-primary transition-colors">{e.name}</h3>
+                  <p className="text-base text-muted-foreground">{e.desc}</p>
                 </div>
               </Link>
             ))}
