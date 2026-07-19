@@ -196,9 +196,9 @@ function Index() {
               if (moved) { e.preventDefault(); e.stopPropagation(); }
             }, true);
           }}
-          style={{ scrollSnapType: 'x mandatory', scrollbarWidth: 'none' }}
+          style={{ scrollbarWidth: 'none' }}
         >
-          <div className="flex gap-4 pb-4" style={{ width: 'max-content' }}>
+          <div className="flex gap-6 md:gap-8 pb-4" style={{ width: 'max-content' }}>
             {events.map((e, i) => (
               <Link
                 key={e.n}
@@ -207,8 +207,7 @@ function Index() {
                 data-reveal
                 data-reveal-delay={String(((i % 3) + 1) * 100)}
                 draggable={false}
-                className="group relative bg-background border border-foreground/10 p-8 flex flex-col justify-between hover:bg-surface transition-colors overflow-hidden w-[80vw] sm:w-[380px] aspect-[4/5] shrink-0"
-                style={{ scrollSnapAlign: 'center' }}
+                className="group relative bg-background border border-foreground/10 p-10 flex flex-col justify-between hover:bg-surface transition-colors overflow-hidden w-[85vw] sm:w-[520px] md:w-[560px] aspect-[4/5] shrink-0"
               >
                 {(e as any).image && (
                   <>
