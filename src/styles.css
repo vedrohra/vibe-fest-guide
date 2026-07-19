@@ -34,17 +34,17 @@
 }
 
 :root {
-  --background: oklch(0.14 0.05 270);
+  --background: oklch(0.12 0.05 275);
   --foreground: oklch(0.98 0.005 250);
-  --surface: oklch(0.21 0.06 268);
-  --primary: oklch(0.74 0.17 240);
-  --primary-foreground: oklch(0.12 0.05 270);
+  --surface: oklch(0.18 0.07 272);
+  --primary: oklch(0.66 0.24 25);
+  --primary-foreground: oklch(0.98 0.005 250);
   --muted: oklch(0.32 0.05 268);
   --muted-foreground: oklch(0.78 0.025 260);
   --border: oklch(0.32 0.05 268);
   --input: oklch(0.32 0.05 268);
-  --ring: oklch(0.74 0.17 240);
-  --card: oklch(0.21 0.06 268);
+  --ring: oklch(0.66 0.24 25);
+  --card: oklch(0.18 0.07 272);
   --card-foreground: oklch(0.98 0.005 250);
   --secondary: oklch(0.32 0.05 268);
   --secondary-foreground: oklch(0.98 0.005 250);
@@ -52,14 +52,14 @@
   --accent-foreground: oklch(0.12 0.05 270);
   --destructive: oklch(0.65 0.24 25);
   --destructive-foreground: oklch(0.98 0.005 250);
-  --popover: oklch(0.21 0.06 268);
+  --popover: oklch(0.18 0.07 272);
   --popover-foreground: oklch(0.98 0.005 250);
-  --vibe-green: oklch(0.78 0.18 150);
-  --vibe-red: oklch(0.68 0.22 25);
-  --vibe-yellow: oklch(0.85 0.17 90);
-  --vibe-blue: oklch(0.74 0.18 240);
+  --vibe-green: oklch(0.82 0.18 150);
+  --vibe-red: oklch(0.7 0.24 25);
+  --vibe-yellow: oklch(0.88 0.17 90);
+  --vibe-blue: oklch(0.76 0.18 240);
   --vibe-purple: oklch(0.65 0.2 305);
-  --gradient-hero: radial-gradient(ellipse at top, oklch(0.25 0.1 268) 0%, oklch(0.14 0.05 270) 60%);
+  --gradient-hero: radial-gradient(ellipse 90% 55% at 50% 0%, oklch(0.4 0.24 25 / 0.55) 0%, transparent 60%), radial-gradient(ellipse 80% 70% at 100% 100%, oklch(0.28 0.18 270 / 0.65) 0%, transparent 55%), linear-gradient(180deg, oklch(0.10 0.06 275) 0%, oklch(0.08 0.05 270) 100%);
   --radius: 0.5rem;
 }
 
@@ -137,4 +137,13 @@
   color: transparent;
   -webkit-text-stroke: 1.5px var(--color-primary);
   text-shadow: 0 0 22px hsl(from var(--color-primary) h s l / 0.7), 0 0 44px hsl(from var(--color-primary) h s l / 0.4);
+}
+
+.vibe-letter {
+  color: transparent;
+  -webkit-text-stroke: 2px var(--glow);
+  text-shadow:
+    0 0 28px color-mix(in oklab, var(--glow) 80%, transparent),
+    0 0 70px color-mix(in oklab, var(--glow) 55%, transparent),
+    0 0 140px color-mix(in oklab, var(--glow) 35%, transparent);
 }
