@@ -118,26 +118,62 @@ function Index() {
 
       {/* Hero */}
       <header className="relative min-h-[92vh] flex flex-col items-center justify-center pt-12 md:pt-16 pb-16 overflow-hidden border-b border-foreground/10">
+        {/* Glow blobs */}
+        <div className="absolute -top-24 -left-24 w-96 h-96 rounded-full bg-[color:var(--vibe-blue)]/30 animate-pulse-glow pointer-events-none" />
+        <div className="absolute -bottom-24 -right-24 w-96 h-96 rounded-full bg-[color:var(--vibe-red)]/25 animate-pulse-glow [animation-delay:1.5s] pointer-events-none" />
 
         <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none flex items-center justify-center">
-          <div className="font-display text-[40vw] leading-none uppercase tracking-tighter select-none opacity-20">
-            <span style={{ color: 'var(--vibe-green)' }}>V</span><span style={{ color: 'var(--vibe-red)' }}>I</span><span style={{ color: 'var(--vibe-yellow)' }}>B</span><span style={{ color: 'var(--vibe-blue)' }}>E</span>
+          <div className="font-display text-[40vw] leading-none uppercase tracking-tighter select-none opacity-20 flex">
+            {[
+              { l: "V", c: "var(--vibe-green)" },
+              { l: "I", c: "var(--vibe-red)" },
+              { l: "B", c: "var(--vibe-yellow)" },
+              { l: "E", c: "var(--vibe-blue)" },
+            ].map((ch, i) => (
+              <motion.span
+                key={ch.l}
+                style={{ color: ch.c, display: "inline-block" }}
+                initial={{ y: "110%", opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ duration: 1.1, delay: 0.15 + i * 0.12, ease: [0.16, 1, 0.3, 1] }}
+              >
+                {ch.l}
+              </motion.span>
+            ))}
           </div>
         </div>
 
         <div className="relative z-10 text-center px-4 max-w-5xl">
-          <div className="animate-reveal flex flex-col items-center">
+          <motion.div
+            className="flex flex-col items-center"
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.9, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
+          >
             <p className="font-mono text-xs uppercase tracking-[0.4em] text-primary mb-6">Innovation · Synergy · Strategy</p>
             <h1 className="font-display text-6xl md:text-[9rem] leading-[0.85] uppercase tracking-tighter text-foreground">
-              Where <span style={{ color: 'var(--vibe-yellow)' }}>Business</span><br/>Comes Alive
+              Where <span style={{ color: 'var(--vibe-yellow)' }} className="inline-block animate-float-slow">Business</span><br/>Comes Alive
             </h1>
-          </div>
-          <div className="mt-10 animate-reveal [animation-delay:200ms]">
+          </motion.div>
+          <motion.div
+            className="mt-10"
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.9, delay: 0.7, ease: [0.16, 1, 0.3, 1] }}
+          >
             <p className="max-w-[52ch] mx-auto text-muted-foreground text-base md:text-lg text-pretty">
               VIBE is Vaels International School's flagship business event. Six high-pressure tracks. One day to outthink, outpitch and outtrade everyone in the room.
             </p>
             <p className="mt-6 font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground">By Vaels International School</p>
-          </div>
+          </motion.div>
+          <motion.div
+            className="mt-16 font-mono text-[10px] uppercase tracking-[0.4em] text-muted-foreground"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1.4, duration: 1 }}
+          >
+            <span className="inline-block animate-float-slow">↓ Scroll</span>
+          </motion.div>
         </div>
       </header>
 
