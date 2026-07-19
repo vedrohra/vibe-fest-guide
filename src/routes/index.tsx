@@ -164,7 +164,7 @@ function Index() {
 
         <div
           data-reveal
-          className="events-track relative -mx-6 px-6 overflow-x-auto overflow-y-hidden cursor-grab active:cursor-grabbing select-none"
+          className="events-track relative px-6 md:px-12 overflow-x-auto overflow-y-hidden cursor-grab active:cursor-grabbing select-none"
           ref={(el) => {
             if (!el || (el as any).__dragBound) return;
             (el as any).__dragBound = true;
