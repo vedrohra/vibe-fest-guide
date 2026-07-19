@@ -180,43 +180,51 @@ function Index() {
 
       {/* Events */}
       <section id="events" className="py-24 px-6 max-w-7xl mx-auto">
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-6">
-          <div>
-            <span className="font-mono text-[10px] uppercase text-primary mb-2 block tracking-widest">01 // The Lineup</span>
-            <h2 className="font-display text-5xl md:text-6xl uppercase">THE SIX EVENTS</h2>
+        <Reveal>
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-6">
+            <div>
+              <span className="font-mono text-[10px] uppercase text-primary mb-2 block tracking-widest">01 // The Lineup</span>
+              <h2 className="font-display text-5xl md:text-6xl uppercase">THE SIX EVENTS</h2>
+            </div>
+            <p className="text-muted-foreground max-w-sm text-sm">Six distinct tracks built to test strategy, creativity, judgement, and nerve.</p>
           </div>
-          <p className="text-muted-foreground max-w-sm text-sm">Six distinct tracks built to test strategy, creativity, judgement, and nerve.</p>
-        </div>
+        </Reveal>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-foreground/10 border border-foreground/10 overflow-hidden">
-          {events.map((e) => (
-            <Link
+          {events.map((e, i) => (
+            <motion.div
               key={e.n}
-              to="/events/$slug"
-              params={{ slug: e.slug }}
-              className="group relative bg-background p-8 aspect-[4/5] flex flex-col justify-between hover:bg-surface transition-colors overflow-hidden"
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.15 }}
+              transition={{ duration: 0.7, delay: (i % 3) * 0.12, ease: [0.16, 1, 0.3, 1] }}
             >
-              {(e as any).image && (
-                <>
-                  <img
-                    src={(e as any).image}
-                    alt={e.name}
-                    loading="lazy"
-                    className="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
-                </>
-              )}
-              <div className="relative flex items-center justify-between font-mono text-xs text-muted-foreground">
-                <span>{e.n} / 06</span>
-                <span className="opacity-0 group-hover:opacity-100 transition-opacity text-primary">View →</span>
-              </div>
-              <div className="relative">
-                <h3 className="font-display text-3xl uppercase mb-4 leading-none group-hover:text-primary transition-colors">{e.name}</h3>
-                <p className="text-sm text-muted-foreground">{e.desc}</p>
-              </div>
-
-            </Link>
+              <Link
+                to="/events/$slug"
+                params={{ slug: e.slug }}
+                className="card-tilt group relative bg-background p-8 aspect-[4/5] flex flex-col justify-between hover:bg-surface overflow-hidden"
+              >
+                {(e as any).image && (
+                  <>
+                    <img
+                      src={(e as any).image}
+                      alt={e.name}
+                      loading="lazy"
+                      className="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
+                  </>
+                )}
+                <div className="relative flex items-center justify-between font-mono text-xs text-muted-foreground">
+                  <span>{e.n} / 06</span>
+                  <span className="translate-x-2 opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-500 text-primary">View →</span>
+                </div>
+                <div className="relative">
+                  <h3 className="font-display text-3xl uppercase mb-4 leading-none group-hover:text-primary transition-colors">{e.name}</h3>
+                  <p className="text-sm text-muted-foreground">{e.desc}</p>
+                </div>
+              </Link>
+            </motion.div>
           ))}
         </div>
       </section>
@@ -224,17 +232,17 @@ function Index() {
       {/* About */}
       <section id="about" className="bg-surface py-24 px-6 border-y border-foreground/5">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12">
-          <div className="md:col-span-5">
+          <Reveal direction="right" className="md:col-span-5">
             <img
               src={vibeStage}
               alt="VIBE event — Vaels International School welcomes the audience"
               width={1280}
               height={853}
               loading="lazy"
-              className="w-full aspect-[4/5] object-cover border border-white/5"
+              className="w-full aspect-[4/5] object-cover border border-white/5 hover:scale-[1.02] transition-transform duration-700"
             />
-          </div>
-          <div className="md:col-span-7 flex flex-col justify-center">
+          </Reveal>
+          <Reveal direction="left" delay={0.15} className="md:col-span-7 flex flex-col justify-center">
             <span className="font-mono text-[10px] uppercase text-primary mb-4 tracking-widest">Why VIBE</span>
             <h2 className="font-display text-5xl md:text-6xl uppercase leading-none mb-8">
               WHERE VISION MEETS<br/><span className="text-muted-foreground italic font-body">VENTURE</span>
@@ -243,20 +251,24 @@ function Index() {
               VIBE isn't a lecture or a workshop. It's a day where students step into the shoes of traders, founders, and crisis managers — and have to actually deliver. Built by students, for students who want more than a textbook.
             </p>
             <div className="grid grid-cols-3 gap-8 border-t border-foreground/10 pt-12">
-              <div>
-                <div className="font-display text-4xl mb-2">06</div>
-                <div className="font-mono text-[10px] uppercase text-muted-foreground">Events</div>
-              </div>
-              <div>
-                <div className="font-display text-4xl mb-2">200+</div>
-                <div className="font-mono text-[10px] uppercase text-muted-foreground">Participants</div>
-              </div>
-              <div>
-                <div className="font-display text-4xl mb-2">01</div>
-                <div className="font-mono text-[10px] uppercase text-muted-foreground">Day to Win</div>
-              </div>
+              {[
+                { n: "06", l: "Events" },
+                { n: "200+", l: "Participants" },
+                { n: "01", l: "Day to Win" },
+              ].map((s, i) => (
+                <motion.div
+                  key={s.l}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.3 + i * 0.12, ease: [0.16, 1, 0.3, 1] }}
+                >
+                  <div className="font-display text-4xl mb-2">{s.n}</div>
+                  <div className="font-mono text-[10px] uppercase text-muted-foreground">{s.l}</div>
+                </motion.div>
+              ))}
             </div>
-          </div>
+          </Reveal>
         </div>
       </section>
 
