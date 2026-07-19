@@ -110,7 +110,7 @@ function Index() {
           <a href="#schedule" className="hover:text-primary transition-colors">Schedule</a>
         </div>
         <div className="flex items-center gap-4">
-          <a href="#register" className="px-4 py-1.5 bg-primary text-primary-foreground font-mono text-[11px] font-bold uppercase tracking-wider hover:bg-foreground transition-colors">
+          <a href="https://docs.google.com/forms/d/10c97a4SHLpRkLieEP4qdQ9HTjMZNzIxao587kxrfamE/viewform?ts=6a58c3ca&edit_requested=true" target="_blank" rel="noopener noreferrer" className="px-4 py-1.5 bg-primary text-primary-foreground font-mono text-[11px] font-bold uppercase tracking-wider hover:bg-foreground transition-colors">
             Register
           </a>
           <img src={vibeLogo.url} alt="VIBE logo" className="h-12 md:h-14 w-auto" />
@@ -302,7 +302,7 @@ function Index() {
           <h2 className="font-display text-6xl md:text-9xl uppercase tracking-tighter mb-8 leading-[0.85]">Claim Your Spot</h2>
           <p className="max-w-[50ch] mx-auto mb-10 text-primary-foreground/80">Registration is open to all students from Cambridge and IB curriculums. Form your team of four and pick your tracks before slots fill up.</p>
           <div className="flex flex-col md:flex-row items-center justify-center gap-4">
-            <a href="mailto:vibe@vaelsinternationalschool.com" className="w-full md:w-auto px-12 py-6 border-2 border-primary-foreground font-display text-xl uppercase hover:bg-primary-foreground hover:text-primary transition-all">
+            <a href="https://docs.google.com/forms/d/10c97a4SHLpRkLieEP4qdQ9HTjMZNzIxao587kxrfamE/viewform?ts=6a58c3ca&edit_requested=true" target="_blank" rel="noopener noreferrer" className="w-full md:w-auto px-12 py-6 border-2 border-primary-foreground font-display text-xl uppercase hover:bg-primary-foreground hover:text-primary transition-all">
               Register Team
             </a>
             <a href="#events" className="w-full md:w-auto px-12 py-6 bg-primary-foreground text-primary font-display text-xl uppercase hover:bg-foreground hover:text-primary-foreground transition-all">
