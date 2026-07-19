@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { useRevealOnScroll } from "@/hooks/use-reveal-on-scroll";
 import skyline from "@/assets/skyline.jpg";
 import vibeLogo from "@/assets/vibe-logo-new.jpeg.asset.json";
 import vibeStage from "@/assets/vibe-stage.jpg";
@@ -93,8 +94,10 @@ const schedule = [
 ];
 
 function Index() {
+  useRevealOnScroll();
   return (
     <main className="min-h-screen bg-background text-foreground font-body">
+
       {/* Nav */}
       <nav className="sticky top-0 z-50 flex items-center justify-between gap-4 px-6 py-4 bg-background/80 backdrop-blur-md border-b border-foreground/5">
         <div className="flex flex-col">
@@ -150,7 +153,7 @@ function Index() {
 
       {/* Events */}
       <section id="events" className="py-24 px-6 max-w-7xl mx-auto">
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-6">
+        <div data-reveal className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-6">
           <div>
             <span className="font-mono text-[10px] uppercase text-primary mb-2 block tracking-widest">01 // The Lineup</span>
             <h2 className="font-display text-5xl md:text-6xl uppercase">THE SIX EVENTS</h2>
@@ -159,11 +162,13 @@ function Index() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-foreground/10 border border-foreground/10 overflow-hidden">
-          {events.map((e) => (
+          {events.map((e, i) => (
             <Link
               key={e.n}
               to="/events/$slug"
               params={{ slug: e.slug }}
+              data-reveal
+              data-reveal-delay={String(((i % 3) + 1) * 100)}
               className="group relative bg-background p-8 aspect-[4/5] flex flex-col justify-between hover:bg-surface transition-colors overflow-hidden"
             >
               {(e as any).image && (
@@ -194,7 +199,7 @@ function Index() {
       {/* About */}
       <section id="about" className="bg-surface py-24 px-6 border-y border-foreground/5">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12">
-          <div className="md:col-span-5">
+          <div className="md:col-span-5" data-reveal>
             <img
               src={vibeStage}
               alt="VIBE event — Vaels International School welcomes the audience"
@@ -204,7 +209,7 @@ function Index() {
               className="w-full aspect-[4/5] object-cover border border-white/5"
             />
           </div>
-          <div className="md:col-span-7 flex flex-col justify-center">
+          <div className="md:col-span-7 flex flex-col justify-center" data-reveal data-reveal-delay="200">
             <span className="font-mono text-[10px] uppercase text-primary mb-4 tracking-widest">Why VIBE</span>
             <h2 className="font-display text-5xl md:text-6xl uppercase leading-none mb-8">
               WHERE VISION MEETS<br/><span className="text-muted-foreground italic font-body">VENTURE</span>
@@ -232,7 +237,7 @@ function Index() {
 
       {/* Schedule */}
       <section id="schedule" className="py-24">
-        <div className="px-6 max-w-7xl mx-auto mb-12 flex items-end justify-between">
+        <div className="px-6 max-w-7xl mx-auto mb-12 flex items-end justify-between" data-reveal>
           <div>
             <span className="font-mono text-[10px] uppercase text-primary mb-2 block tracking-widest">02 //&nbsp;</span>
             <h2 className="font-display text-5xl md:text-6xl uppercase">Day Schedule</h2>
@@ -240,7 +245,7 @@ function Index() {
         </div>
         <div className="border-t border-foreground/10 max-w-7xl mx-auto">
           {schedule.map((s) => (
-            <div key={s.time} className="grid grid-cols-[80px_1fr_auto] md:grid-cols-[120px_1fr_140px] items-center gap-4 px-6 py-6 border-b border-foreground/5 group hover:bg-primary transition-colors cursor-default">
+            <div key={s.time} data-reveal className="grid grid-cols-[80px_1fr_auto] md:grid-cols-[120px_1fr_140px] items-center gap-4 px-6 py-6 border-b border-foreground/5 group hover:bg-primary transition-colors cursor-default">
               <span className="font-mono text-sm text-muted-foreground group-hover:text-primary-foreground">{s.time}</span>
               <span className="font-display text-xl md:text-2xl uppercase group-hover:text-primary-foreground">{s.title}</span>
               <span className="font-mono text-[10px] uppercase text-muted-foreground text-right group-hover:text-primary-foreground">{s.room}</span>
