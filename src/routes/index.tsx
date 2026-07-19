@@ -281,12 +281,19 @@ function Index() {
           </div>
         </div>
         <div className="border-t border-foreground/10 max-w-7xl mx-auto">
-          {schedule.map((s) => (
-            <div key={s.time} className="grid grid-cols-[80px_1fr_auto] md:grid-cols-[120px_1fr_140px] items-center gap-4 px-6 py-6 border-b border-foreground/5 group hover:bg-primary transition-colors cursor-default">
+          {schedule.map((s, i) => (
+            <motion.div
+              key={s.time}
+              initial={{ opacity: 0, x: -40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, amount: 0.4 }}
+              transition={{ duration: 0.55, delay: i * 0.06, ease: [0.16, 1, 0.3, 1] }}
+              className="grid grid-cols-[80px_1fr_auto] md:grid-cols-[120px_1fr_140px] items-center gap-4 px-6 py-6 border-b border-foreground/5 group hover:bg-primary hover:pl-10 transition-all duration-500 cursor-default"
+            >
               <span className="font-mono text-sm text-muted-foreground group-hover:text-primary-foreground">{s.time}</span>
               <span className="font-display text-xl md:text-2xl uppercase group-hover:text-primary-foreground">{s.title}</span>
               <span className="font-mono text-[10px] uppercase text-muted-foreground text-right group-hover:text-primary-foreground">{s.room}</span>
-            </div>
+            </motion.div>
           ))}
         </div>
       </section>
@@ -295,7 +302,15 @@ function Index() {
       <footer id="register" className="bg-primary text-primary-foreground py-24 px-6 text-center overflow-hidden relative">
         <div className="absolute top-0 left-0 w-full h-1 bg-background/30 animate-slide"></div>
         <div className="relative z-10 max-w-5xl mx-auto">
-          <h2 className="font-display text-6xl md:text-9xl uppercase tracking-tighter mb-8 leading-[0.85]">Claim Your Spot</h2>
+          <motion.h2
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.4 }}
+            transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
+            className="font-display text-6xl md:text-9xl uppercase tracking-tighter mb-8 leading-[0.85]"
+          >
+            Claim Your Spot
+          </motion.h2>
           <p className="max-w-[50ch] mx-auto mb-10 text-primary-foreground/80">Registration is open to all students from Cambridge and IB curriculums. Form your team of four and pick your tracks before slots fill up.</p>
           <div className="flex flex-col md:flex-row items-center justify-center gap-4">
             <a href="mailto:vibe@vaelsinternationalschool.com" className="w-full md:w-auto px-12 py-6 border-2 border-primary-foreground font-display text-xl uppercase hover:bg-primary-foreground hover:text-primary transition-all">
