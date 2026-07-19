@@ -9,7 +9,6 @@ import {
 } from "@tanstack/react-router";
 
 import appCss from "../styles.css?url";
-import { PageTransition } from "@/components/PageTransition";
 
 function NotFoundComponent() {
   return (
@@ -120,9 +119,7 @@ function RootComponent() {
   return (
     <QueryClientProvider client={queryClient}>
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
-      <PageTransition>
-        <Outlet />
-      </PageTransition>
+      <Outlet />
     </QueryClientProvider>
   );
 }
