@@ -132,3 +132,9 @@
   }
   ::selection { background: var(--color-primary); color: var(--color-background); }
 }
+
+.stroke-red {
+  color: transparent;
+  -webkit-text-stroke: 1.5px var(--color-primary);
+  text-shadow: 0 0 22px hsl(from var(--color-primary) h s l / 0.7), 0 0 44px hsl(from var(--color-primary) h s l / 0.4);
+}
