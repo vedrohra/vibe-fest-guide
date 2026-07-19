@@ -172,28 +172,37 @@ function Index() {
             let startX = 0;
             let scrollLeft = 0;
             let moved = false;
+            let capturedId: number | null = null;
             el.addEventListener('pointerdown', (e) => {
+              if (e.pointerType === 'touch') return; // let native touch scroll handle it
               isDown = true;
               moved = false;
               startX = e.pageX - el.offsetLeft;
               scrollLeft = el.scrollLeft;
-              el.setPointerCapture(e.pointerId);
             });
             el.addEventListener('pointermove', (e) => {
               if (!isDown) return;
               const x = e.pageX - el.offsetLeft;
               const walk = x - startX;
-              if (Math.abs(walk) > 5) moved = true;
-              el.scrollLeft = scrollLeft - walk;
+              if (Math.abs(walk) > 8) {
+                if (!moved) {
+                  moved = true;
+                  try { el.setPointerCapture(e.pointerId); capturedId = e.pointerId; } catch {}
+                }
+                el.scrollLeft = scrollLeft - walk;
+              }
             });
             const end = (e: PointerEvent) => {
               isDown = false;
-              try { el.releasePointerCapture(e.pointerId); } catch {}
+              if (capturedId !== null) {
+                try { el.releasePointerCapture(capturedId); } catch {}
+                capturedId = null;
+              }
             };
             el.addEventListener('pointerup', end);
             el.addEventListener('pointercancel', end);
             el.addEventListener('click', (e) => {
-              if (moved) { e.preventDefault(); e.stopPropagation(); }
+              if (moved) { e.preventDefault(); e.stopPropagation(); moved = false; }
             }, true);
           }}
           style={{ scrollbarWidth: 'none' }}
