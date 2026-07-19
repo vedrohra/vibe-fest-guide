@@ -161,39 +161,80 @@ function Index() {
           <p className="text-muted-foreground max-w-sm text-sm">Six distinct tracks built to test strategy, creativity, judgement, and nerve.</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-foreground/10 border border-foreground/10 overflow-hidden">
-          {events.map((e, i) => (
-            <Link
-              key={e.n}
-              to="/events/$slug"
-              params={{ slug: e.slug }}
-              data-reveal
-              data-reveal-delay={String(((i % 3) + 1) * 100)}
-              className="group relative bg-background p-8 aspect-[4/5] flex flex-col justify-between hover:bg-surface transition-colors overflow-hidden"
-            >
-              {(e as any).image && (
-                <>
-                  <img
-                    src={(e as any).image}
-                    alt={e.name}
-                    loading="lazy"
-                    className="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
-                </>
-              )}
-              <div className="relative flex items-center justify-between font-mono text-xs text-muted-foreground">
-                <span>{e.n} / 06</span>
-                <span className="opacity-0 group-hover:opacity-100 transition-opacity text-primary">View →</span>
-              </div>
-              <div className="relative">
-                <h3 className="font-display text-3xl uppercase mb-4 leading-none group-hover:text-primary transition-colors">{e.name}</h3>
-                <p className="text-sm text-muted-foreground">{e.desc}</p>
-              </div>
-
-            </Link>
-          ))}
+        <div
+          data-reveal
+          className="events-track relative -mx-6 px-6 overflow-x-auto overflow-y-hidden cursor-grab active:cursor-grabbing select-none"
+          ref={(el) => {
+            if (!el || (el as any).__dragBound) return;
+            (el as any).__dragBound = true;
+            let isDown = false;
+            let startX = 0;
+            let scrollLeft = 0;
+            let moved = false;
+            el.addEventListener('pointerdown', (e) => {
+              isDown = true;
+              moved = false;
+              startX = e.pageX - el.offsetLeft;
+              scrollLeft = el.scrollLeft;
+              el.setPointerCapture(e.pointerId);
+            });
+            el.addEventListener('pointermove', (e) => {
+              if (!isDown) return;
+              const x = e.pageX - el.offsetLeft;
+              const walk = x - startX;
+              if (Math.abs(walk) > 5) moved = true;
+              el.scrollLeft = scrollLeft - walk;
+            });
+            const end = (e: PointerEvent) => {
+              isDown = false;
+              try { el.releasePointerCapture(e.pointerId); } catch {}
+            };
+            el.addEventListener('pointerup', end);
+            el.addEventListener('pointercancel', end);
+            el.addEventListener('click', (e) => {
+              if (moved) { e.preventDefault(); e.stopPropagation(); }
+            }, true);
+          }}
+          style={{ scrollSnapType: 'x mandatory', scrollbarWidth: 'none' }}
+        >
+          <div className="flex gap-4 pb-4" style={{ width: 'max-content' }}>
+            {events.map((e, i) => (
+              <Link
+                key={e.n}
+                to="/events/$slug"
+                params={{ slug: e.slug }}
+                data-reveal
+                data-reveal-delay={String(((i % 3) + 1) * 100)}
+                draggable={false}
+                className="group relative bg-background border border-foreground/10 p-8 flex flex-col justify-between hover:bg-surface transition-colors overflow-hidden w-[80vw] sm:w-[380px] aspect-[4/5] shrink-0"
+                style={{ scrollSnapAlign: 'center' }}
+              >
+                {(e as any).image && (
+                  <>
+                    <img
+                      src={(e as any).image}
+                      alt={e.name}
+                      loading="lazy"
+                      draggable={false}
+                      className="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity pointer-events-none"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent pointer-events-none" />
+                  </>
+                )}
+                <div className="relative flex items-center justify-between font-mono text-xs text-muted-foreground">
+                  <span>{e.n} / 06</span>
+                  <span className="opacity-0 group-hover:opacity-100 transition-opacity text-primary">View →</span>
+                </div>
+                <div className="relative">
+                  <h3 className="font-display text-3xl uppercase mb-4 leading-none group-hover:text-primary transition-colors">{e.name}</h3>
+                  <p className="text-sm text-muted-foreground">{e.desc}</p>
+                </div>
+              </Link>
+            ))}
+          </div>
         </div>
+        <p className="mt-6 font-mono text-[10px] uppercase tracking-widest text-muted-foreground text-center">Drag / Swipe →</p>
+
       </section>
 
       {/* About */}
