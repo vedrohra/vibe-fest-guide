@@ -153,7 +153,7 @@ function Index() {
 
       {/* Events */}
       <section id="events" className="py-24 px-6 max-w-7xl mx-auto">
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-6">
+        <div data-reveal className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-6">
           <div>
             <span className="font-mono text-[10px] uppercase text-primary mb-2 block tracking-widest">01 // The Lineup</span>
             <h2 className="font-display text-5xl md:text-6xl uppercase">THE SIX EVENTS</h2>
@@ -162,11 +162,13 @@ function Index() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-foreground/10 border border-foreground/10 overflow-hidden">
-          {events.map((e) => (
+          {events.map((e, i) => (
             <Link
               key={e.n}
               to="/events/$slug"
               params={{ slug: e.slug }}
+              data-reveal
+              data-reveal-delay={String(((i % 3) + 1) * 100)}
               className="group relative bg-background p-8 aspect-[4/5] flex flex-col justify-between hover:bg-surface transition-colors overflow-hidden"
             >
               {(e as any).image && (
