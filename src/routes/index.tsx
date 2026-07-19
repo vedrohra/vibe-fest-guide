@@ -136,7 +136,7 @@ function Index() {
 
         <div className="relative z-10 text-center px-4 max-w-5xl">
           <div className="flex flex-col items-center">
-            <p className="font-mono text-xs uppercase tracking-[0.4em] text-primary mb-6 hero-fade-up [animation-delay:400ms]">Innovation · Synergy · Strategy</p>
+            <p className="font-mono text-xs uppercase tracking-[0.4em] text-primary mb-6 hero-fade-up [animation-delay:400ms]">MENS IMPERII • ARS MERCATUS</p>
             <h1 className="font-display text-6xl md:text-[9rem] leading-[0.85] uppercase tracking-tighter text-foreground hero-clip [animation-delay:600ms]">
               Where <span style={{ color: 'var(--vibe-yellow)' }}>Business</span><br/>Comes Alive
             </h1>
