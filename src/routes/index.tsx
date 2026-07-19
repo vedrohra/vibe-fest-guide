@@ -156,7 +156,7 @@ function Index() {
         <div data-reveal className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-6">
           <div>
             <span className="font-mono text-[10px] uppercase text-primary mb-2 block tracking-widest">01 // The Lineup</span>
-            <h2 className="font-display text-5xl md:text-6xl uppercase">THE SIX EVENTS</h2>
+            <h2 className="font-display text-5xl md:text-6xl uppercase">THE <span className="stroke-red">SIX EVENTS</span></h2>
           </div>
           <p className="text-muted-foreground max-w-sm text-sm">Six distinct tracks built to test strategy, creativity, judgement, and nerve.</p>
         </div>
