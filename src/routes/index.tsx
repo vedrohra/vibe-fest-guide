@@ -117,24 +117,32 @@ function Index() {
       {/* Hero */}
       <header className="relative min-h-[92vh] flex flex-col items-center justify-center pt-12 md:pt-16 pb-16 overflow-hidden border-b border-foreground/10">
 
+        {/* Corner meta labels */}
+        <div className="absolute top-6 left-6 md:top-10 md:left-10 font-mono text-[10px] md:text-xs tracking-[0.25em] text-foreground/60 hero-fade-left [animation-delay:100ms] z-10">
+          VIBE · 2026
+        </div>
+        <div className="absolute top-6 right-6 md:top-10 md:right-10 font-mono text-[10px] md:text-xs tracking-[0.25em] text-foreground/60 text-right hero-fade-right [animation-delay:100ms] z-10">
+          Vaels International School
+        </div>
+
         <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none flex items-center justify-center">
-          <div className="font-display text-[40vw] leading-none uppercase tracking-tighter select-none opacity-20">
+          <div className="font-display text-[40vw] leading-none uppercase tracking-tighter select-none opacity-20 hero-clip">
             <span style={{ color: 'var(--vibe-green)' }}>V</span><span style={{ color: 'var(--vibe-red)' }}>I</span><span style={{ color: 'var(--vibe-yellow)' }}>B</span><span style={{ color: 'var(--vibe-blue)' }}>E</span>
           </div>
         </div>
 
         <div className="relative z-10 text-center px-4 max-w-5xl">
           <div className="flex flex-col items-center">
-            <p className="animate-reveal font-mono text-xs uppercase tracking-[0.4em] text-primary mb-6">Innovation · Synergy · Strategy</p>
-            <h1 className="font-display text-6xl md:text-[9rem] leading-[0.85] uppercase tracking-tighter text-foreground animate-headline-fade">
+            <p className="font-mono text-xs uppercase tracking-[0.4em] text-primary mb-6 hero-fade-up [animation-delay:400ms]">Innovation · Synergy · Strategy</p>
+            <h1 className="font-display text-6xl md:text-[9rem] leading-[0.85] uppercase tracking-tighter text-foreground hero-clip [animation-delay:600ms]">
               Where <span style={{ color: 'var(--vibe-yellow)' }}>Business</span><br/>Comes Alive
             </h1>
           </div>
-          <div className="mt-10 animate-reveal [animation-delay:200ms]">
-            <p className="max-w-[52ch] mx-auto text-muted-foreground text-base md:text-lg text-pretty">
+          <div className="mt-10">
+            <p className="max-w-[52ch] mx-auto text-muted-foreground text-base md:text-lg text-pretty hero-fade-up [animation-delay:1400ms]">
               VIBE is Vaels International School's flagship business event. Six high-pressure tracks. One day to outthink, outpitch and outtrade everyone in the room.
             </p>
-            <p className="mt-6 font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground">By Vaels International School</p>
+            <p className="mt-6 font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground hero-fade-up [animation-delay:1700ms]">By Vaels International School</p>
           </div>
         </div>
       </header>
