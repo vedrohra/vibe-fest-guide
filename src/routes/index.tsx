@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import skyline from "@/assets/skyline.jpg";
-import vibeLogo from "@/assets/vibe-logo.png";
+import vibeLogo from "@/assets/vibe-logo-new.jpeg.asset.json";
 import vibeStage from "@/assets/vibe-stage.jpg";
 import crisisEvent from "@/assets/crisis-event.jpg.asset.json";
 import stockExchange from "@/assets/stock-exchange.jpg.asset.json";
