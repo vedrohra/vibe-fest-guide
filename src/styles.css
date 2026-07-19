@@ -85,7 +85,7 @@
   from { opacity: 0; transform: translateY(30px); filter: blur(8px); }
   to { opacity: 1; transform: translateY(0); filter: blur(0); }
 }
-.animate-headline-fade { animation: headline-fade 1.6s cubic-bezier(0.16,1,0.3,1) both; }
+.animate-headline-fade { animation: headline-fade 3s cubic-bezier(0.16,1,0.3,1) both; }
 
 @layer base {
   * { border-color: var(--color-border); }
