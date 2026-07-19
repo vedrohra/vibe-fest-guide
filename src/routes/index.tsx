@@ -158,8 +158,9 @@ function Index() {
             <span className="font-mono text-[10px] uppercase text-primary mb-4 block tracking-widest">01 // The Lineup</span>
             <h2 className="font-display text-6xl md:text-8xl lg:text-9xl uppercase leading-[0.9]">THE <span className="stroke-red">SIX EVENTS</span></h2>
           </div>
-          <p className="text-muted-foreground max-w-sm text-sm">Six distinct tracks built to test strategy, creativity, judgement, and nerve.</p>
+          <p className="text-muted-foreground max-w-sm text-sm px-6 md:px-0">Six distinct tracks built to test strategy, creativity, judgement, and nerve.</p>
         </div>
+
 
         <div
           data-reveal
