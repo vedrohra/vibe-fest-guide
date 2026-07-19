@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import skyline from "@/assets/skyline.jpg";
-import vibeLogo from "@/assets/vibe-logo.png";
+import vibeLogo from "@/assets/vibe-logo-new.jpeg.asset.json";
 import vibeStage from "@/assets/vibe-stage.jpg";
 import crisisEvent from "@/assets/crisis-event.jpg.asset.json";
 import stockExchange from "@/assets/stock-exchange.jpg.asset.json";
@@ -110,7 +110,7 @@ function Index() {
           <a href="#register" className="px-4 py-1.5 bg-primary text-primary-foreground font-mono text-[11px] font-bold uppercase tracking-wider hover:bg-foreground transition-colors">
             Register
           </a>
-          <img src={vibeLogo} alt="VIBE logo" className="h-12 md:h-14 w-auto" />
+          <img src={vibeLogo.url} alt="VIBE logo" className="h-12 md:h-14 w-auto" />
         </div>
       </nav>
 
