@@ -1,4 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { motion } from "motion/react";
+import { Reveal } from "@/components/Reveal";
 import skyline from "@/assets/skyline.jpg";
 import vibeLogo from "@/assets/vibe-logo-new.jpeg.asset.json";
 import vibeStage from "@/assets/vibe-stage.jpg";
