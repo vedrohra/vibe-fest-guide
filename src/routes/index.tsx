@@ -94,8 +94,10 @@ const schedule = [
 ];
 
 function Index() {
+  useRevealOnScroll();
   return (
     <main className="min-h-screen bg-background text-foreground font-body">
+
       {/* Nav */}
       <nav className="sticky top-0 z-50 flex items-center justify-between gap-4 px-6 py-4 bg-background/80 backdrop-blur-md border-b border-foreground/5">
         <div className="flex flex-col">
