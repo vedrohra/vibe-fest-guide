@@ -105,10 +105,8 @@ function Index() {
           <span className="hidden sm:inline font-mono text-[9px] uppercase tracking-widest text-muted-foreground mt-1">By Vaels International School</span>
         </div>
         <div className="hidden md:flex gap-8 text-[10px] font-mono uppercase tracking-widest">
-          <a href="#events" className="hover:text-primary transition-colors">The Events</a>
-          <a href="#about" className="hover:text-primary transition-colors">About</a>
-          <a href="#schedule" className="hover:text-primary transition-colors">Schedule</a>
-        </div>
+          <Link to="/about" className="hover:text-primary transition-colors">About</Link>
+
         <div className="flex items-center gap-4">
           <a href="https://docs.google.com/forms/d/10c97a4SHLpRkLieEP4qdQ9HTjMZNzIxao587kxrfamE/viewform?ts=6a58c3ca&edit_requested=true" target="_blank" rel="noopener noreferrer" className="px-4 py-1.5 bg-primary text-primary-foreground font-mono text-[11px] font-bold uppercase tracking-wider hover:bg-foreground transition-colors">
             Register
