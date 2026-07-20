@@ -52,6 +52,19 @@ function AboutPage() {
         </div>
       </header>
 
+      {/* Vision / Venture */}
+      <section className="py-24 px-6 border-b border-foreground/10">
+        <div className="max-w-7xl mx-auto">
+          <span className="font-mono text-[10px] uppercase text-primary mb-4 tracking-widest block">Why VIBE</span>
+          <h2 className="font-display text-5xl md:text-6xl uppercase leading-none mb-8">
+            WHERE VISION MEETS<br/><span className="text-muted-foreground italic font-body">VENTURE</span>
+          </h2>
+          <p className="text-lg text-muted-foreground max-w-2xl">
+            VIBE isn't a lecture or a workshop. It's a day where students step into the shoes of traders, founders, and crisis managers — and have to actually deliver. Built by students, for students who want more than a textbook.
+          </p>
+        </div>
+      </section>
+
       {/* Story */}
       <section className="py-24 px-6 border-b border-foreground/10">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12">
