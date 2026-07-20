@@ -9,6 +9,7 @@ import trivia from "@/assets/trivia.jpg.asset.json";
 import innovatorsHive from "@/assets/innovators-hive.jpg.asset.json";
 import productDevelopment from "@/assets/product-development.jpg.asset.json";
 import supplyChain from "@/assets/supply-chain.jpg.asset.json";
+import { CountdownTimer } from "@/components/CountdownTimer";
 
 
 
@@ -251,6 +252,16 @@ function Index() {
 
       {/* About stats */}
       <section id="about" className="bg-surface py-24 px-6 border-y border-foreground/5">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row md:items-end md:justify-between gap-10 pb-12 mb-4" data-reveal>
+          <div>
+            <span className="font-mono text-[10px] uppercase text-primary block tracking-widest mb-3">Venue</span>
+            <div className="font-display text-3xl md:text-5xl uppercase leading-none">Vaels International School</div>
+          </div>
+          <div className="md:text-right">
+            <span className="font-mono text-[10px] uppercase text-primary block tracking-widest mb-3">Countdown · Aug 28, 2026 · 09:00</span>
+            <CountdownTimer />
+          </div>
+        </div>
         <div className="max-w-7xl mx-auto grid grid-cols-3 gap-8 border-t border-foreground/10 pt-12" data-reveal>
           <div>
             <div className="font-display text-4xl mb-2">06</div>
