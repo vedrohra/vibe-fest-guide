@@ -249,41 +249,20 @@ function Index() {
 
       </section>
 
-      {/* About */}
+      {/* About stats */}
       <section id="about" className="bg-surface py-24 px-6 border-y border-foreground/5">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12">
-          <div className="md:col-span-5" data-reveal>
-            <img
-              src={vibeStage}
-              alt="VIBE event — Vaels International School welcomes the audience"
-              width={1280}
-              height={853}
-              loading="lazy"
-              className="w-full aspect-[4/5] object-cover border border-white/5"
-            />
+        <div className="max-w-7xl mx-auto grid grid-cols-3 gap-8 border-t border-foreground/10 pt-12" data-reveal>
+          <div>
+            <div className="font-display text-4xl mb-2">06</div>
+            <div className="font-mono text-[10px] uppercase text-muted-foreground">Events</div>
           </div>
-          <div className="md:col-span-7 flex flex-col justify-center" data-reveal data-reveal-delay="200">
-            <span className="font-mono text-[10px] uppercase text-primary mb-4 tracking-widest">Why VIBE</span>
-            <h2 className="font-display text-5xl md:text-6xl uppercase leading-none mb-8">
-              WHERE VISION MEETS<br/><span className="text-muted-foreground italic font-body">VENTURE</span>
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-xl mb-12">
-              VIBE isn't a lecture or a workshop. It's a day where students step into the shoes of traders, founders, and crisis managers — and have to actually deliver. Built by students, for students who want more than a textbook.
-            </p>
-            <div className="grid grid-cols-3 gap-8 border-t border-foreground/10 pt-12">
-              <div>
-                <div className="font-display text-4xl mb-2">06</div>
-                <div className="font-mono text-[10px] uppercase text-muted-foreground">Events</div>
-              </div>
-              <div>
-                <div className="font-display text-4xl mb-2">200+</div>
-                <div className="font-mono text-[10px] uppercase text-muted-foreground">Participants</div>
-              </div>
-              <div>
-                <div className="font-display text-4xl mb-2">01</div>
-                <div className="font-mono text-[10px] uppercase text-muted-foreground">Day to Win</div>
-              </div>
-            </div>
+          <div>
+            <div className="font-display text-4xl mb-2">200+</div>
+            <div className="font-mono text-[10px] uppercase text-muted-foreground">Participants</div>
+          </div>
+          <div>
+            <div className="font-display text-4xl mb-2">01</div>
+            <div className="font-mono text-[10px] uppercase text-muted-foreground">Day to Win</div>
           </div>
         </div>
       </section>
