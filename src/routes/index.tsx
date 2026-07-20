@@ -286,24 +286,8 @@ function Index() {
         </div>
       </section>
 
-      {/* Schedule */}
-      <section id="schedule" className="py-24">
-        <div className="px-6 max-w-7xl mx-auto mb-12 flex items-end justify-between" data-reveal>
-          <div>
-            <span className="font-mono text-[10px] uppercase text-primary mb-2 block tracking-widest">02 //&nbsp;</span>
-            <h2 className="font-display text-5xl md:text-6xl uppercase">Day Schedule</h2>
-          </div>
-        </div>
-        <div className="border-t border-foreground/10 max-w-7xl mx-auto">
-          {schedule.map((s) => (
-            <div key={s.time} data-reveal className="grid grid-cols-[80px_1fr_auto] md:grid-cols-[120px_1fr_140px] items-center gap-4 px-6 py-6 border-b border-foreground/5 group hover:bg-primary transition-colors cursor-default">
-              <span className="font-mono text-sm text-muted-foreground group-hover:text-primary-foreground">{s.time}</span>
-              <span className="font-display text-xl md:text-2xl uppercase group-hover:text-primary-foreground">{s.title}</span>
-              <span className="font-mono text-[10px] uppercase text-muted-foreground text-right group-hover:text-primary-foreground">{s.room}</span>
-            </div>
-          ))}
-        </div>
-      </section>
+
+
 
       {/* CTA */}
       <footer id="register" className="bg-primary text-primary-foreground py-24 px-6 text-center overflow-hidden relative">
