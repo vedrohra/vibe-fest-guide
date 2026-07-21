@@ -69,7 +69,7 @@ export const events = {
 
   "crisis": {
     n: "02",
-    name: "Crisis Management",
+    name: "Crisis",
     tagline: "Sharp decision-making and quick adaptability under pressure.",
     desc: "Your team takes over a business facing an unexpected crisis. You will diagnose the situation, weigh the trade-offs, and present a recovery plan that tests sharp decision-making and adaptability when everything is on the line.",
     format: "Teams of 3–4",
@@ -82,7 +82,7 @@ export const events = {
       "Judged on clarity, feasibility, and creativity of the response.",
     ],
     contact: {
-      role: "Director of Crisis Management",
+      role: "Director of Crisis",
       name: "Sahana Suryaprakash",
       phone: "9025727419",
     },
