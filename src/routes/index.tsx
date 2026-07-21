@@ -58,7 +58,7 @@ const events = [
   {
     n: "04",
     slug: "crisis",
-    name: "Crisis Management",
+    name: "Crisis",
     desc: "High-pressure scenarios that test sharp decision-making and quick adaptability when everything is on the line.",
     image: crisisEvent.url,
     contact: "Sahana Suryaprakash - 9025727419",
@@ -88,7 +88,7 @@ const schedule = [
   { time: "10:00", title: "Opening Ceremony", room: "Main Hall" },
   { time: "11:00", title: "Stock Exchange — Opens", room: "Trading Floor" },
   { time: "12:30", title: "Product Development", room: "Studio" },
-  { time: "13:30", title: "Crisis Management — Round 1", room: "Boardroom A" },
+  { time: "13:30", title: "Crisis — Round 1", room: "Boardroom A" },
   { time: "15:00", title: "Trivia — Prelims", room: "Auditorium" },
   { time: "16:30", title: "Innovator's Hive — Finale", room: "Main Hall" },
 
