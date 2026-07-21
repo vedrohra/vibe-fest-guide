@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as VseRulesRouteImport } from './routes/vse-rules'
+import { Route as ScmRulesRouteImport } from './routes/scm-rules'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as EventsSlugRouteImport } from './routes/events.$slug'
@@ -17,6 +18,11 @@ import { Route as EventsSlugRouteImport } from './routes/events.$slug'
 const VseRulesRoute = VseRulesRouteImport.update({
   id: '/vse-rules',
   path: '/vse-rules',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ScmRulesRoute = ScmRulesRouteImport.update({
+  id: '/scm-rules',
+  path: '/scm-rules',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AboutRoute = AboutRouteImport.update({
@@ -38,12 +44,14 @@ const EventsSlugRoute = EventsSlugRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/scm-rules': typeof ScmRulesRoute
   '/vse-rules': typeof VseRulesRoute
   '/events/$slug': typeof EventsSlugRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/scm-rules': typeof ScmRulesRoute
   '/vse-rules': typeof VseRulesRoute
   '/events/$slug': typeof EventsSlugRoute
 }
@@ -51,20 +59,28 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/scm-rules': typeof ScmRulesRoute
   '/vse-rules': typeof VseRulesRoute
   '/events/$slug': typeof EventsSlugRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/about' | '/vse-rules' | '/events/$slug'
+  fullPaths: '/' | '/about' | '/scm-rules' | '/vse-rules' | '/events/$slug'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/vse-rules' | '/events/$slug'
-  id: '__root__' | '/' | '/about' | '/vse-rules' | '/events/$slug'
+  to: '/' | '/about' | '/scm-rules' | '/vse-rules' | '/events/$slug'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/scm-rules'
+    | '/vse-rules'
+    | '/events/$slug'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
+  ScmRulesRoute: typeof ScmRulesRoute
   VseRulesRoute: typeof VseRulesRoute
   EventsSlugRoute: typeof EventsSlugRoute
 }
@@ -76,6 +92,13 @@ declare module '@tanstack/react-router' {
       path: '/vse-rules'
       fullPath: '/vse-rules'
       preLoaderRoute: typeof VseRulesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/scm-rules': {
+      id: '/scm-rules'
+      path: '/scm-rules'
+      fullPath: '/scm-rules'
+      preLoaderRoute: typeof ScmRulesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/about': {
@@ -105,6 +128,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
+  ScmRulesRoute: ScmRulesRoute,
   VseRulesRoute: VseRulesRoute,
   EventsSlugRoute: EventsSlugRoute,
 }
