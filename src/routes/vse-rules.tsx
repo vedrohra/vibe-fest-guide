@@ -158,7 +158,7 @@ function VseRulesPage() {
         <div className="relative max-w-5xl mx-auto">
           <p className="font-mono text-xs uppercase tracking-[0.4em] text-primary mb-6">Rules & Procedures</p>
           <h1 className="font-display text-4xl md:text-7xl leading-[0.9] uppercase tracking-tighter mb-8">
-            Welcome to the Vaels Stock Exchange
+            Welcome to the Vaels Stock Exchange Guide
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl">
             Please read the following information carefully so that you know exactly what this event requires from participants.
