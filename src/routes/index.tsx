@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useRevealOnScroll } from "@/hooks/use-reveal-on-scroll";
 import skyline from "@/assets/skyline.jpg";
 import vibeLogo from "@/assets/vibe-logo-new.jpeg.asset.json";
+import vaelsLogo from "@/assets/vaels-logo.jpeg.asset.json";
 import vibeStage from "@/assets/vibe-stage.jpg";
 import crisisEvent from "@/assets/crisis-event.jpg.asset.json";
 import stockExchange from "@/assets/stock-exchange.jpg.asset.json";
