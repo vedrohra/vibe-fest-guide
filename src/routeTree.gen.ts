@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as VseRulesRouteImport } from './routes/vse-rules'
 import { Route as ScmRulesRouteImport } from './routes/scm-rules'
 import { Route as PdRulesRouteImport } from './routes/pd-rules'
+import { Route as CrisisRulesRouteImport } from './routes/crisis-rules'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as EventsSlugRouteImport } from './routes/events.$slug'
@@ -29,6 +30,11 @@ const ScmRulesRoute = ScmRulesRouteImport.update({
 const PdRulesRoute = PdRulesRouteImport.update({
   id: '/pd-rules',
   path: '/pd-rules',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CrisisRulesRoute = CrisisRulesRouteImport.update({
+  id: '/crisis-rules',
+  path: '/crisis-rules',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AboutRoute = AboutRouteImport.update({
@@ -50,6 +56,7 @@ const EventsSlugRoute = EventsSlugRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/crisis-rules': typeof CrisisRulesRoute
   '/pd-rules': typeof PdRulesRoute
   '/scm-rules': typeof ScmRulesRoute
   '/vse-rules': typeof VseRulesRoute
@@ -58,6 +65,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/crisis-rules': typeof CrisisRulesRoute
   '/pd-rules': typeof PdRulesRoute
   '/scm-rules': typeof ScmRulesRoute
   '/vse-rules': typeof VseRulesRoute
@@ -67,6 +75,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/crisis-rules': typeof CrisisRulesRoute
   '/pd-rules': typeof PdRulesRoute
   '/scm-rules': typeof ScmRulesRoute
   '/vse-rules': typeof VseRulesRoute
@@ -77,6 +86,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/about'
+    | '/crisis-rules'
     | '/pd-rules'
     | '/scm-rules'
     | '/vse-rules'
@@ -85,6 +95,7 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/about'
+    | '/crisis-rules'
     | '/pd-rules'
     | '/scm-rules'
     | '/vse-rules'
@@ -93,6 +104,7 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/about'
+    | '/crisis-rules'
     | '/pd-rules'
     | '/scm-rules'
     | '/vse-rules'
@@ -102,6 +114,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
+  CrisisRulesRoute: typeof CrisisRulesRoute
   PdRulesRoute: typeof PdRulesRoute
   ScmRulesRoute: typeof ScmRulesRoute
   VseRulesRoute: typeof VseRulesRoute
@@ -131,6 +144,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PdRulesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/crisis-rules': {
+      id: '/crisis-rules'
+      path: '/crisis-rules'
+      fullPath: '/crisis-rules'
+      preLoaderRoute: typeof CrisisRulesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/about': {
       id: '/about'
       path: '/about'
@@ -158,6 +178,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
+  CrisisRulesRoute: CrisisRulesRoute,
   PdRulesRoute: PdRulesRoute,
   ScmRulesRoute: ScmRulesRoute,
   VseRulesRoute: VseRulesRoute,
