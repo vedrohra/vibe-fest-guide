@@ -102,9 +102,12 @@ function Index() {
 
       {/* Nav */}
       <nav className="sticky top-0 z-50 flex items-center justify-between gap-4 px-6 py-4 bg-background/80 backdrop-blur-md border-b border-foreground/5">
-        <div className="flex flex-col">
-          <span className="font-display text-2xl leading-none tracking-tighter uppercase">Vibe</span>
-          <span className="hidden sm:inline font-mono text-[9px] uppercase tracking-widest text-muted-foreground mt-1">By Vaels International School</span>
+        <div className="flex items-center gap-3">
+          <img src={vibeLogo.url} alt="VIBE logo" className="h-12 md:h-14 w-auto shrink-0" />
+          <div className="flex flex-col min-w-0">
+            <span className="font-display text-2xl leading-none tracking-tighter uppercase">Vibe</span>
+            <span className="hidden sm:inline font-mono text-[9px] uppercase tracking-widest text-muted-foreground mt-1">By Vaels International School</span>
+          </div>
         </div>
         <div className="hidden md:flex gap-8 text-[10px] font-mono uppercase tracking-widest">
           <a href="#events" className="hover:text-primary transition-colors">The Events</a>
@@ -118,7 +121,7 @@ function Index() {
           <a href="https://docs.google.com/forms/d/10c97a4SHLpRkLieEP4qdQ9HTjMZNzIxao587kxrfamE/viewform?ts=6a58c3ca&edit_requested=true" target="_blank" rel="noopener noreferrer" className="px-4 py-1.5 bg-primary text-primary-foreground font-mono text-[11px] font-bold uppercase tracking-wider hover:bg-foreground transition-colors">
             Register
           </a>
-          <img src={vibeLogo.url} alt="VIBE logo" className="h-12 md:h-14 w-auto" />
+          <img src={vaelsLogo.url} alt="Vaels International School logo" className="h-12 md:h-14 w-auto shrink-0" />
         </div>
       </nav>
 
