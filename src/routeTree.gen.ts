@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as VseRulesRouteImport } from './routes/vse-rules'
+import { Route as TriviaRulesRouteImport } from './routes/trivia-rules'
 import { Route as ScmRulesRouteImport } from './routes/scm-rules'
 import { Route as PdRulesRouteImport } from './routes/pd-rules'
 import { Route as CrisisRulesRouteImport } from './routes/crisis-rules'
@@ -20,6 +21,11 @@ import { Route as EventsSlugRouteImport } from './routes/events.$slug'
 const VseRulesRoute = VseRulesRouteImport.update({
   id: '/vse-rules',
   path: '/vse-rules',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TriviaRulesRoute = TriviaRulesRouteImport.update({
+  id: '/trivia-rules',
+  path: '/trivia-rules',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ScmRulesRoute = ScmRulesRouteImport.update({
@@ -59,6 +65,7 @@ export interface FileRoutesByFullPath {
   '/crisis-rules': typeof CrisisRulesRoute
   '/pd-rules': typeof PdRulesRoute
   '/scm-rules': typeof ScmRulesRoute
+  '/trivia-rules': typeof TriviaRulesRoute
   '/vse-rules': typeof VseRulesRoute
   '/events/$slug': typeof EventsSlugRoute
 }
@@ -68,6 +75,7 @@ export interface FileRoutesByTo {
   '/crisis-rules': typeof CrisisRulesRoute
   '/pd-rules': typeof PdRulesRoute
   '/scm-rules': typeof ScmRulesRoute
+  '/trivia-rules': typeof TriviaRulesRoute
   '/vse-rules': typeof VseRulesRoute
   '/events/$slug': typeof EventsSlugRoute
 }
@@ -78,6 +86,7 @@ export interface FileRoutesById {
   '/crisis-rules': typeof CrisisRulesRoute
   '/pd-rules': typeof PdRulesRoute
   '/scm-rules': typeof ScmRulesRoute
+  '/trivia-rules': typeof TriviaRulesRoute
   '/vse-rules': typeof VseRulesRoute
   '/events/$slug': typeof EventsSlugRoute
 }
@@ -89,6 +98,7 @@ export interface FileRouteTypes {
     | '/crisis-rules'
     | '/pd-rules'
     | '/scm-rules'
+    | '/trivia-rules'
     | '/vse-rules'
     | '/events/$slug'
   fileRoutesByTo: FileRoutesByTo
@@ -98,6 +108,7 @@ export interface FileRouteTypes {
     | '/crisis-rules'
     | '/pd-rules'
     | '/scm-rules'
+    | '/trivia-rules'
     | '/vse-rules'
     | '/events/$slug'
   id:
@@ -107,6 +118,7 @@ export interface FileRouteTypes {
     | '/crisis-rules'
     | '/pd-rules'
     | '/scm-rules'
+    | '/trivia-rules'
     | '/vse-rules'
     | '/events/$slug'
   fileRoutesById: FileRoutesById
@@ -117,6 +129,7 @@ export interface RootRouteChildren {
   CrisisRulesRoute: typeof CrisisRulesRoute
   PdRulesRoute: typeof PdRulesRoute
   ScmRulesRoute: typeof ScmRulesRoute
+  TriviaRulesRoute: typeof TriviaRulesRoute
   VseRulesRoute: typeof VseRulesRoute
   EventsSlugRoute: typeof EventsSlugRoute
 }
@@ -128,6 +141,13 @@ declare module '@tanstack/react-router' {
       path: '/vse-rules'
       fullPath: '/vse-rules'
       preLoaderRoute: typeof VseRulesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/trivia-rules': {
+      id: '/trivia-rules'
+      path: '/trivia-rules'
+      fullPath: '/trivia-rules'
+      preLoaderRoute: typeof TriviaRulesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/scm-rules': {
@@ -181,6 +201,7 @@ const rootRouteChildren: RootRouteChildren = {
   CrisisRulesRoute: CrisisRulesRoute,
   PdRulesRoute: PdRulesRoute,
   ScmRulesRoute: ScmRulesRoute,
+  TriviaRulesRoute: TriviaRulesRoute,
   VseRulesRoute: VseRulesRoute,
   EventsSlugRoute: EventsSlugRoute,
 }
