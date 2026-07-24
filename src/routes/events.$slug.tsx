@@ -295,6 +295,14 @@ function EventPage() {
                 For full information about the event — click here →
               </Link>
             )}
+            {slug === "trivia" && (
+              <Link
+                to="/trivia-rules"
+                className="mt-10 inline-flex items-center gap-3 px-6 py-3 bg-primary text-primary-foreground font-mono text-[11px] font-bold uppercase tracking-widest hover:bg-foreground transition-colors"
+              >
+                For full information about the event — click here →
+              </Link>
+            )}
           </div>
         </div>
       </section>
