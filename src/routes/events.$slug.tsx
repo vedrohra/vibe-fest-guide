@@ -172,7 +172,7 @@ export const events = {
     name: "Supply Chain Management",
     tagline: "Design, optimise, and manage the flow from source to delivery.",
     desc: "Teams take on the role of supply chain managers for a business. They must design a sourcing and distribution network, respond to disruptions, balance cost against speed, and present a resilient supply chain strategy.",
-    format: "Teams of 3\u20134",
+    format: "Teams of 3",
     duration: "60 minutes",
     venue: "Boardroom B",
     rules: [
