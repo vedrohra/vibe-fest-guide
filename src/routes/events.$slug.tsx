@@ -241,10 +241,9 @@ function EventPage() {
 
       {/* Meta strip */}
       <section className="border-b border-foreground/10">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-foreground/10">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-foreground/10">
           {[
             { label: "Format", value: event.format },
-            { label: "Duration", value: event.duration },
             { label: "Venue", value: event.venue },
           ].map((m) => (
             <div key={m.label} className="p-8">
