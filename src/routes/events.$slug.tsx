@@ -107,6 +107,7 @@ export const events = {
       role: "Director of Trivia",
       name: "Thrivid Narain",
       phone: "9380562232",
+      email: "trivia.vibe26@vaelsinternationalschool.com",
     },
   },
   "shark-tank": {
