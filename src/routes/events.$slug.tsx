@@ -64,6 +64,7 @@ export const events = {
       role: "Director of VSE",
       name: "Ved Rohra",
       phone: "9345990041",
+      email: "vse.vibe26@vaelsinternationalschool.com",
     },
   },
 
