@@ -372,6 +372,17 @@ function EventPage() {
                       >
                         {(event as any).contact.phone}
                       </a>
+                      {(event as any).contact.email ? (
+                        <div className="mt-5">
+                          <div className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground mb-2">Email</div>
+                          <a
+                            href={`mailto:${(event as any).contact.email}`}
+                            className="font-mono text-sm md:text-base text-foreground hover:text-primary transition-colors break-all"
+                          >
+                            {(event as any).contact.email}
+                          </a>
+                        </div>
+                      ) : null}
                     </div>
                     <a
                       href={`tel:${(event as any).contact.phone}`}
