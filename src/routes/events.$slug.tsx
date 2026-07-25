@@ -138,6 +138,7 @@ export const events = {
       role: "Director of Innovator's Hive",
       name: "Taher Mohamed",
       phone: "9043603343",
+      email: "Innovatorshive.vibe26@vaelsinternationalschool.com",
     },
   },
   "product-development": {
