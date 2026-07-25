@@ -115,8 +115,6 @@ function AboutPage() {
                 image: makingImg.url,
                 moments: [
                   "Plotting the unthinkable",
-                  "Time. Less. Redundancies.",
-                  "Hard-working ladies meeting",
                   "Important discussions",
                   "None of these were staged, I swear!",
                 ],
@@ -142,8 +140,7 @@ function AboutPage() {
                 image: executionImg.url,
                 moments: [
                   "The whole gang putting in the work",
-                  "On our way to spread VIBE",
-                  "Spreading VIBE across schools",
+                  "On our way to spread the word about VIBE",
                   "P.S. Us trying to get famous",
                 ],
               },
