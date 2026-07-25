@@ -133,8 +133,8 @@ export const events = {
     ],
     contact: {
       role: "Director of Innovator's Hive",
-      name: "Ayush Mishra",
-      phone: "7358249609",
+      name: "Taher Mohamed",
+      phone: "9043603343",
     },
   },
   "product-development": {
