@@ -328,7 +328,7 @@ function Index() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-[10px] font-mono uppercase tracking-widest border-t border-primary-foreground/20 pt-8">
               <span>VIBE Organising Committee</span>
               <span>© 2026 · School Business Council</span>
-              <a href="mailto:vibe@vaelsinternationalschool.com" className="underline">vibe@vaelsinternationalschool.com</a>
+              <br />
             </div>
           </div>
         </div>
