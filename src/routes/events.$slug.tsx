@@ -169,6 +169,7 @@ export const events = {
       role: "Director of Product Development",
       name: "Zoya Hassan",
       phone: "7200074702",
+      email: "ProductDevelopment.vibe26@vaelsinternationalschool.com",
     },
   },
   "supply-chain-management": {
