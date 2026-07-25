@@ -310,16 +310,19 @@ function Index() {
                 <span className="text-primary-foreground/50">CEO</span>
                 <span>Ved Rohra</span>
                 <span className="text-primary-foreground/70">9345990041</span>
+                <a href="mailto:ceo.vibe26@vaelsinternationalschool.com" className="text-primary-foreground/70 underline break-all normal-case">ceo.vibe26@vaelsinternationalschool.com</a>
               </div>
               <div className="flex flex-col gap-1">
                 <span className="text-primary-foreground/50">COO</span>
                 <span>Sahana Suryaprakash</span>
                 <span className="text-primary-foreground/70">9025727419</span>
+                <a href="mailto:coo.vibe26@vaelsinternationalschool.com" className="text-primary-foreground/70 underline break-all normal-case">coo.vibe26@vaelsinternationalschool.com</a>
               </div>
               <div className="flex flex-col gap-1">
                 <span className="text-primary-foreground/50">CFO</span>
                 <span>Thrivid Narain</span>
-                <span className="text-primary-foreground/70">9380562232</span>
+                <span className="text-primary-foreground/70">9176803000</span>
+                <a href="mailto:cfo.vibe26@vaelsinternationalschool.com" className="text-primary-foreground/70 underline break-all normal-case">cfo.vibe26@vaelsinternationalschool.com</a>
               </div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-[10px] font-mono uppercase tracking-widest border-t border-primary-foreground/20 pt-8">
