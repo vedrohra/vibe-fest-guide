@@ -262,46 +262,36 @@ function EventPage() {
           </div>
           <div className="md:col-span-8">
             <p className="text-2xl md:text-3xl font-display uppercase leading-tight">{event.desc}</p>
-            {slug === "vaels-stock-exchange" && (
-              <Link
-                to="/vse-rules"
-                className="mt-10 inline-flex items-center gap-3 px-6 py-3 bg-primary text-primary-foreground font-mono text-[11px] font-bold uppercase tracking-widest hover:bg-foreground transition-colors"
-              >
-                For full information about the event — click here →
-              </Link>
-            )}
-            {slug === "supply-chain-management" && (
-              <Link
-                to="/scm-rules"
-                className="mt-10 inline-flex items-center gap-3 px-6 py-3 bg-primary text-primary-foreground font-mono text-[11px] font-bold uppercase tracking-widest hover:bg-foreground transition-colors"
-              >
-                For full information about the event — click here →
-              </Link>
-            )}
-            {slug === "product-development" && (
-              <Link
-                to="/pd-rules"
-                className="mt-10 inline-flex items-center gap-3 px-6 py-3 bg-primary text-primary-foreground font-mono text-[11px] font-bold uppercase tracking-widest hover:bg-foreground transition-colors"
-              >
-                For full information about the event — click here →
-              </Link>
-            )}
-            {slug === "crisis" && (
-              <Link
-                to="/crisis-rules"
-                className="mt-10 inline-flex items-center gap-3 px-6 py-3 bg-primary text-primary-foreground font-mono text-[11px] font-bold uppercase tracking-widest hover:bg-foreground transition-colors"
-              >
-                For full information about the event — click here →
-              </Link>
-            )}
-            {slug === "trivia" && (
-              <Link
-                to="/trivia-rules"
-                className="mt-10 inline-flex items-center gap-3 px-6 py-3 bg-primary text-primary-foreground font-mono text-[11px] font-bold uppercase tracking-widest hover:bg-foreground transition-colors"
-              >
-                For full information about the event — click here →
-              </Link>
-            )}
+            {(() => {
+              const guideMap: Record<string, string> = {
+                "vaels-stock-exchange": "/vse-rules",
+                "supply-chain-management": "/scm-rules",
+                "product-development": "/pd-rules",
+                "crisis": "/crisis-rules",
+                "trivia": "/trivia-rules",
+              };
+              const to = guideMap[slug as string];
+              if (!to) return null;
+              return (
+                <Link
+                  to={to}
+                  className="group mt-10 inline-flex items-center gap-4 pl-6 pr-2 py-2 rounded-full border border-primary/40 bg-primary/10 hover:bg-primary hover:border-primary text-foreground hover:text-primary-foreground transition-all duration-300 shadow-[0_0_0_0_hsl(var(--primary)/0.4)] hover:shadow-[0_0_30px_0_hsl(var(--primary)/0.5)]"
+                >
+                  <span className="flex flex-col leading-tight">
+                    <span className="font-mono text-[9px] uppercase tracking-[0.2em] text-primary group-hover:text-primary-foreground/80">
+                      Rules of Procedure
+                    </span>
+                    <span className="font-display text-sm uppercase tracking-wider">
+                      Read the full guide
+                    </span>
+                  </span>
+                  <span className="ml-2 flex h-10 w-10 items-center justify-center rounded-full bg-primary text-primary-foreground group-hover:bg-primary-foreground group-hover:text-primary transition-colors">
+                    →
+                  </span>
+                </Link>
+              );
+            })()}
+
           </div>
         </div>
       </section>
