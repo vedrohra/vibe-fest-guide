@@ -64,6 +64,7 @@ export const events = {
       role: "Director of VSE",
       name: "Ved Rohra",
       phone: "9345990041",
+      email: "vse.vibe26@vaelsinternationalschool.com",
     },
   },
 
@@ -85,6 +86,7 @@ export const events = {
       role: "Director of Crisis",
       name: "Sahana Suryaprakash",
       phone: "9025727419",
+      email: "crisis.vibe26@vaelsinternationalschool.com",
     },
   },
   "trivia": {
@@ -105,6 +107,7 @@ export const events = {
       role: "Director of Trivia",
       name: "Thrivid Narain",
       phone: "9380562232",
+      email: "trivia.vibe26@vaelsinternationalschool.com",
     },
   },
   "shark-tank": {
@@ -135,6 +138,7 @@ export const events = {
       role: "Director of Innovator's Hive",
       name: "Taher Mohamed",
       phone: "9043603343",
+      email: "Innovatorshive.vibe26@vaelsinternationalschool.com",
     },
   },
   "product-development": {
@@ -165,6 +169,7 @@ export const events = {
       role: "Director of Product Development",
       name: "Zoya Hassan",
       phone: "7200074702",
+      email: "ProductDevelopment.vibe26@vaelsinternationalschool.com",
     },
   },
   "supply-chain-management": {
@@ -185,6 +190,7 @@ export const events = {
       role: "Director of Supply Chain Management",
       name: "Aditi Kartik",
       phone: "6380487841",
+      email: "scm.vibe26@vaelsinternationalschool.com",
     },
   },
 
@@ -366,6 +372,17 @@ function EventPage() {
                       >
                         {(event as any).contact.phone}
                       </a>
+                      {(event as any).contact.email ? (
+                        <div className="mt-5">
+                          <div className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground mb-2">Email</div>
+                          <a
+                            href={`mailto:${(event as any).contact.email}`}
+                            className="font-mono text-sm md:text-base text-foreground hover:text-primary transition-colors break-all"
+                          >
+                            {(event as any).contact.email}
+                          </a>
+                        </div>
+                      ) : null}
                     </div>
                     <a
                       href={`tel:${(event as any).contact.phone}`}
