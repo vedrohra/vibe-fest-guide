@@ -86,6 +86,7 @@ export const events = {
       role: "Director of Crisis",
       name: "Sahana Suryaprakash",
       phone: "9025727419",
+      email: "crisis.vibe26@vaelsinternationalschool.com",
     },
   },
   "trivia": {
