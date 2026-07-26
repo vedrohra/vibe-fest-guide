@@ -78,7 +78,7 @@ export const events = {
     venue: "Multi Purpose Hall",
     rules: [
       "Each team receives the same crisis brief at the same time.",
-      "No internet access during prep — only the provided dossier.",
+      "Internet access is permitted for research, but all work must be original and completed without the aid of AI tools.",
       "Pitch must cover the diagnosis, the plan, and the trade-offs.",
       "Judged on clarity, feasibility, and creativity of the response.",
     ],
