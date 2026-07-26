@@ -77,11 +77,24 @@ export const events = {
     duration: "60 minutes prep + 5 minute pitch",
     venue: "Multi Purpose Hall",
     rules: [
-      "Each team receives the same crisis brief at the same time.",
+      "Teams of 3 act as the Board of Directors of an assigned fictional company; only one designated speaker presents the final response.",
+      "Every team starts with an equal amount of company funds and reputation points, which rise or fall with performance.",
+      "Each crisis round gives teams 10–15 minutes to respond to the crisis shown on screen.",
       "Internet access is permitted for research, but all work must be original and completed without the aid of AI tools.",
-      "Pitch must cover the diagnosis, the plan, and the trade-offs.",
-      "Judged on clarity, feasibility, and creativity of the response.",
+      "Time limits are strict, the jury's decisions are final, and foul language is subject to disciplinary action.",
     ],
+    info: [
+      "Companies are assigned arbitrarily and revealed before the event, each with its own values, culture, competitors, allies and current affairs.",
+      "Strategic actions carry a financial cost expressed as a percentage of the team's current funds; reasonable actions beyond the listed options are free.",
+      "Reputation Points represent public trust and move up or down based on the effectiveness and execution of your decisions.",
+      "After the presentation, a jury of 4–5 questions the team on its decisions, use of funds, impact and risks.",
+    ],
+    judging: [
+      "Successful execution earns the applicable Reputation Point reward plus a jury bonus on remaining funds.",
+      "Unsuccessful execution costs Reputation Points, and the team continues with whatever funds remain after action costs.",
+      "The top 3 teams are those that best balance financial stability, strategic decision-making and corporate reputation under pressure.",
+    ],
+
     contact: {
       role: "Director of Crisis",
       name: "Sahana Suryaprakash",
