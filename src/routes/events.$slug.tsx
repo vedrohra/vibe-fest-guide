@@ -207,11 +207,25 @@ export const events = {
     duration: "60 minutes",
     venue: "Boardroom B",
     rules: [
-      "Teams receive a business scenario with supplier, factory, and market data.",
-      "Design a supply chain network that meets demand at the lowest total cost.",
-      "Live disruption cards will force teams to adapt their plan during the round.",
-      "Final strategy is judged on cost, resilience, and presentation clarity.",
+      "Teams of 3 are formed randomly through a chit draw and assigned one of three market roles: Raw Material Suppliers, Retail/Business, or Consumers.",
+      "Devices are strictly prohibited for the entire duration of the event.",
+      "All trades are settled physically with tokens and logged on each team's tracking sheet.",
+      "Foul language is strictly prohibited and subject to immediate disciplinary action.",
     ],
+    info: [
+      "Suppliers sit at the base of the chain — they buy tiered raw materials from the Executive Board and sell to businesses at a sustainable margin.",
+      "Retail/Business act as middlemen — converting raw materials into finished goods and managing inventory, pricing and promotions.",
+      "Consumers close the chain — their preferences and buying power drive production and distribution across the market.",
+      "Tokens represent money and raw material units; cards represent finished products and macro-environmental events.",
+      "The round runs in five phases: Planning → Negotiation → Production & Sales → Event → Review and Analysis.",
+      "During the Event Phase the Executive Board draws an unpredictable market disruption card, forcing teams to pivot instantly.",
+    ],
+    judging: [
+      "Suppliers: net profit generated, delivery commitment fulfillment rate, and raw material inventory management.",
+      "Businesses: net profit generated, gross sales volume, and finished product inventory optimisation.",
+      "Consumers: total purchasing satisfaction — the best balance of quality, price, and product availability.",
+    ],
+
     contact: {
       role: "Director of Supply Chain Management",
       name: "Aditi Kartik",
