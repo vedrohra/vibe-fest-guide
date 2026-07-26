@@ -77,11 +77,24 @@ export const events = {
     duration: "60 minutes prep + 5 minute pitch",
     venue: "Multi Purpose Hall",
     rules: [
-      "Each team receives the same crisis brief at the same time.",
+      "Teams of 3 act as the Board of Directors of an assigned fictional company; only one designated speaker presents the final response.",
+      "Every team starts with an equal amount of company funds and reputation points, which rise or fall with performance.",
+      "Each crisis round gives teams 10–15 minutes to respond to the crisis shown on screen.",
       "Internet access is permitted for research, but all work must be original and completed without the aid of AI tools.",
-      "Pitch must cover the diagnosis, the plan, and the trade-offs.",
-      "Judged on clarity, feasibility, and creativity of the response.",
+      "Time limits are strict, the jury's decisions are final, and foul language is subject to disciplinary action.",
     ],
+    info: [
+      "Companies are assigned arbitrarily and revealed before the event, each with its own values, culture, competitors, allies and current affairs.",
+      "Strategic actions carry a financial cost expressed as a percentage of the team's current funds; reasonable actions beyond the listed options are free.",
+      "Reputation Points represent public trust and move up or down based on the effectiveness and execution of your decisions.",
+      "After the presentation, a jury of 4–5 questions the team on its decisions, use of funds, impact and risks.",
+    ],
+    judging: [
+      "Successful execution earns the applicable Reputation Point reward plus a jury bonus on remaining funds.",
+      "Unsuccessful execution costs Reputation Points, and the team continues with whatever funds remain after action costs.",
+      "The top 3 teams are those that best balance financial stability, strategic decision-making and corporate reputation under pressure.",
+    ],
+
     contact: {
       role: "Director of Crisis",
       name: "Sahana Suryaprakash",
@@ -98,11 +111,24 @@ export const events = {
     duration: "45 minutes",
     venue: "Auditorium",
     rules: [
-      "Only 1 team will be permitted per school.",
-      "Each team must consist of 3 members.",
-      "Teams answer questions in rounds.",
+      "Only 1 team will be permitted per school, and each team must consist of 3 members.",
       "A preliminary pen and paper round will be conducted, and the top 6 teams will move to the finals.",
+      "The final is played across four rounds of increasing pressure.",
+      "No discussion with other teams is allowed at any point during the rounds.",
     ],
+    content: [
+      "Round 1 — The Logo Rush: brand recognition across Easy, Medium and Hard sub-rounds.",
+      "Round 2 — Guess Who?: progressive clues revealing a company, founder or economist.",
+      "Round 3 — Business Vault: a jeopardy-style board across Marketing, HR, Strategy and Finance, with point values chosen by a dart throw.",
+      "Round 4 — Business Blitz: 30 seconds of rapid-fire questions per team; questions may be passed.",
+    ],
+    judging: [
+      "Logo Rush: 10 points per correct answer in every sub-round.",
+      "Guess Who?: 25 / 15 / 10 / 5 points depending on how many clues were needed.",
+      "Business Vault: 25, 50, 100 or 150 point tiers, with negative marking equal to the value of the question.",
+      "Business Blitz: 25 points per correct answer, no negative marking for wrong answers, but passing carries a penalty.",
+    ],
+
     contact: {
       role: "Director of Trivia",
       name: "Thrivid Narain",
@@ -181,11 +207,25 @@ export const events = {
     duration: "60 minutes",
     venue: "Boardroom B",
     rules: [
-      "Teams receive a business scenario with supplier, factory, and market data.",
-      "Design a supply chain network that meets demand at the lowest total cost.",
-      "Live disruption cards will force teams to adapt their plan during the round.",
-      "Final strategy is judged on cost, resilience, and presentation clarity.",
+      "Teams of 3 are formed randomly through a chit draw and assigned one of three market roles: Raw Material Suppliers, Retail/Business, or Consumers.",
+      "Devices are strictly prohibited for the entire duration of the event.",
+      "All trades are settled physically with tokens and logged on each team's tracking sheet.",
+      "Foul language is strictly prohibited and subject to immediate disciplinary action.",
     ],
+    info: [
+      "Suppliers sit at the base of the chain — they buy tiered raw materials from the Executive Board and sell to businesses at a sustainable margin.",
+      "Retail/Business act as middlemen — converting raw materials into finished goods and managing inventory, pricing and promotions.",
+      "Consumers close the chain — their preferences and buying power drive production and distribution across the market.",
+      "Tokens represent money and raw material units; cards represent finished products and macro-environmental events.",
+      "The round runs in five phases: Planning → Negotiation → Production & Sales → Event → Review and Analysis.",
+      "During the Event Phase the Executive Board draws an unpredictable market disruption card, forcing teams to pivot instantly.",
+    ],
+    judging: [
+      "Suppliers: net profit generated, delivery commitment fulfillment rate, and raw material inventory management.",
+      "Businesses: net profit generated, gross sales volume, and finished product inventory optimisation.",
+      "Consumers: total purchasing satisfaction — the best balance of quality, price, and product availability.",
+    ],
+
     contact: {
       role: "Director of Supply Chain Management",
       name: "Aditi Kartik",
