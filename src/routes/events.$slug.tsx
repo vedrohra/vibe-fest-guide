@@ -109,7 +109,7 @@ export const events = {
     desc: "A team-format business quiz spanning markets, brands, founders, and the moments that shaped modern commerce. Teams battle through a written prelim, and the top 6 advance to the live final.",
     format: "Teams of 3",
     duration: "45 minutes",
-    venue: "Auditorium",
+    venue: "Room No. 65 (Second Floor)",
     rules: [
       "Only 1 team will be permitted per school, and each team must consist of 3 members.",
       "A preliminary pen and paper round will be conducted, and the top 6 teams will move to the finals.",
