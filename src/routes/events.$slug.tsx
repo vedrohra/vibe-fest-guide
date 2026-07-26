@@ -111,11 +111,24 @@ export const events = {
     duration: "45 minutes",
     venue: "Auditorium",
     rules: [
-      "Only 1 team will be permitted per school.",
-      "Each team must consist of 3 members.",
-      "Teams answer questions in rounds.",
+      "Only 1 team will be permitted per school, and each team must consist of 3 members.",
       "A preliminary pen and paper round will be conducted, and the top 6 teams will move to the finals.",
+      "The final is played across four rounds of increasing pressure.",
+      "No discussion with other teams is allowed at any point during the rounds.",
     ],
+    content: [
+      "Round 1 — The Logo Rush: brand recognition across Easy, Medium and Hard sub-rounds.",
+      "Round 2 — Guess Who?: progressive clues revealing a company, founder or economist.",
+      "Round 3 — Business Vault: a jeopardy-style board across Marketing, HR, Strategy and Finance, with point values chosen by a dart throw.",
+      "Round 4 — Business Blitz: 30 seconds of rapid-fire questions per team; questions may be passed.",
+    ],
+    judging: [
+      "Logo Rush: 10 points per correct answer in every sub-round.",
+      "Guess Who?: 25 / 15 / 10 / 5 points depending on how many clues were needed.",
+      "Business Vault: 25, 50, 100 or 150 point tiers, with negative marking equal to the value of the question.",
+      "Business Blitz: 25 points per correct answer, no negative marking for wrong answers, but passing carries a penalty.",
+    ],
+
     contact: {
       role: "Director of Trivia",
       name: "Thrivid Narain",
