@@ -213,7 +213,7 @@ export const events = {
       "Foul language is strictly prohibited and subject to immediate disciplinary action.",
     ],
     info: [
-      "The simulation is played over 3 rounds, with each round running the full five-phase cycle.",
+      "The event is played over 3 rounds, with each round running the full five-phase cycle.",
       "Suppliers sit at the base of the chain — they buy tiered raw materials from the Executive Board and sell to businesses at a sustainable margin.",
       "Retail/Business act as middlemen — converting raw materials into finished goods and managing inventory, pricing and promotions.",
       "Consumers close the chain — their preferences and buying power drive production and distribution across the market.",
