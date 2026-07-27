@@ -205,7 +205,7 @@ export const events = {
     desc: "Teams take on the role of supply chain managers for a business. They must design a sourcing and distribution network, respond to disruptions, balance cost against speed, and present a resilient supply chain strategy.",
     format: "Teams of 3",
     duration: "60 minutes",
-    venue: "Boardroom B",
+    venue: "LIBRARY\u00a0",
     rules: [
       "Teams of 3 are formed randomly through a chit draw and assigned one of three market roles: Raw Material Suppliers, Retail/Business, or Consumers.",
       "Devices are strictly prohibited for the entire duration of the event.",
