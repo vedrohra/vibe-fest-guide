@@ -174,7 +174,7 @@ export const events = {
     desc: "Teams will be provided with a product by the judges and tasked with improving it through creativity, innovation, and problem-solving. During the event, judges will introduce obstacles requiring teams to adapt their approach and develop effective solutions in real time.",
     format: "Teams of 3",
     duration: "45 min design + 10 min research",
-    venue: "Studio",
+    venue: "Fashion Designing Room (Second Floor)",
     rules: [
       "Maximum 1–2 teams per school.",
       "AI is forbidden throughout the event.",
