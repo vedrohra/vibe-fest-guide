@@ -316,6 +316,7 @@ function EventPage() {
                 "product-development": "/pd-rules",
                 "crisis": "/crisis-rules",
                 "trivia": "/trivia-rules",
+                "shark-tank": "/ih-rules",
               };
               const to = guideMap[slug as string];
               if (!to) return null;

@@ -13,6 +13,7 @@ import { Route as VseRulesRouteImport } from './routes/vse-rules'
 import { Route as TriviaRulesRouteImport } from './routes/trivia-rules'
 import { Route as ScmRulesRouteImport } from './routes/scm-rules'
 import { Route as PdRulesRouteImport } from './routes/pd-rules'
+import { Route as IhRulesRouteImport } from './routes/ih-rules'
 import { Route as CrisisRulesRouteImport } from './routes/crisis-rules'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
@@ -36,6 +37,11 @@ const ScmRulesRoute = ScmRulesRouteImport.update({
 const PdRulesRoute = PdRulesRouteImport.update({
   id: '/pd-rules',
   path: '/pd-rules',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IhRulesRoute = IhRulesRouteImport.update({
+  id: '/ih-rules',
+  path: '/ih-rules',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CrisisRulesRoute = CrisisRulesRouteImport.update({
@@ -63,6 +69,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/crisis-rules': typeof CrisisRulesRoute
+  '/ih-rules': typeof IhRulesRoute
   '/pd-rules': typeof PdRulesRoute
   '/scm-rules': typeof ScmRulesRoute
   '/trivia-rules': typeof TriviaRulesRoute
@@ -73,6 +80,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/crisis-rules': typeof CrisisRulesRoute
+  '/ih-rules': typeof IhRulesRoute
   '/pd-rules': typeof PdRulesRoute
   '/scm-rules': typeof ScmRulesRoute
   '/trivia-rules': typeof TriviaRulesRoute
@@ -84,6 +92,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/crisis-rules': typeof CrisisRulesRoute
+  '/ih-rules': typeof IhRulesRoute
   '/pd-rules': typeof PdRulesRoute
   '/scm-rules': typeof ScmRulesRoute
   '/trivia-rules': typeof TriviaRulesRoute
@@ -96,6 +105,7 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/crisis-rules'
+    | '/ih-rules'
     | '/pd-rules'
     | '/scm-rules'
     | '/trivia-rules'
@@ -106,6 +116,7 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/crisis-rules'
+    | '/ih-rules'
     | '/pd-rules'
     | '/scm-rules'
     | '/trivia-rules'
@@ -116,6 +127,7 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/crisis-rules'
+    | '/ih-rules'
     | '/pd-rules'
     | '/scm-rules'
     | '/trivia-rules'
@@ -127,6 +139,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
   CrisisRulesRoute: typeof CrisisRulesRoute
+  IhRulesRoute: typeof IhRulesRoute
   PdRulesRoute: typeof PdRulesRoute
   ScmRulesRoute: typeof ScmRulesRoute
   TriviaRulesRoute: typeof TriviaRulesRoute
@@ -164,6 +177,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PdRulesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/ih-rules': {
+      id: '/ih-rules'
+      path: '/ih-rules'
+      fullPath: '/ih-rules'
+      preLoaderRoute: typeof IhRulesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/crisis-rules': {
       id: '/crisis-rules'
       path: '/crisis-rules'
@@ -199,6 +219,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   CrisisRulesRoute: CrisisRulesRoute,
+  IhRulesRoute: IhRulesRoute,
   PdRulesRoute: PdRulesRoute,
   ScmRulesRoute: ScmRulesRoute,
   TriviaRulesRoute: TriviaRulesRoute,
