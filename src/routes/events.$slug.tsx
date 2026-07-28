@@ -375,9 +375,10 @@ function EventPage() {
                       {String(group.items.length).padStart(2, "0")} items
                     </span>
                   </div>
-                  <ol className="space-y-px bg-foreground/10 border border-foreground/10">
+                  <ol className="bg-background border border-foreground/10">
                     {group.items.map((r, i) => (
-                      <li key={i} className="bg-background p-6 flex gap-6">
+                      <li key={i} className="bg-background p-6 flex gap-6 border-t border-foreground/10 first:border-t-0">
+
                         <span className="font-mono text-xs text-primary shrink-0">{String(i + 1).padStart(2, "0")}</span>
                         <span className="text-base md:text-lg">{r}</span>
                       </li>
