@@ -138,9 +138,10 @@ function Index() {
 
         <div className="relative z-10 text-center px-4 max-w-5xl flex flex-col items-center w-full">
           {/* Big background V */}
-          <div aria-hidden className="pointer-events-none absolute inset-x-0 -top-[6vw] flex justify-center">
-            <span className="vibe-bigv text-[70vw] md:text-[52vw] opacity-25 select-none">V</span>
+          <div aria-hidden className="pointer-events-none absolute inset-x-0 -top-[26vw] flex justify-center">
+            <span className="vibe-bigv text-[80vw] md:text-[62vw] opacity-45 select-none" style={{ transform: 'scaleX(1.5)' }}>V</span>
           </div>
+
           <p className="relative z-10 font-mono text-xs uppercase tracking-[0.4em] text-primary mb-8 hero-fade-up [animation-delay:400ms]">INNOVATION•SYNERGY•STRATEGY</p>
           <h1 className="relative z-10 hero-wordmark vibe-script text-[30vw] md:text-[26vw] leading-[0.8] tracking-[0.02em] select-none hero-clip [animation-delay:600ms]">
             VIBE
