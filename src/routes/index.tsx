@@ -25,7 +25,7 @@ export const Route = createFileRoute("/")({
     links: [
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "" },
-      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Anton&family=Caveat:wght@700&family=Inter:wght@400;500;700&family=JetBrains+Mono:wght@400;700&display=swap" },
+      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;700&family=JetBrains+Mono:wght@400;700&display=swap" },
     ],
   }),
   component: Index,
@@ -136,17 +136,11 @@ function Index() {
           Vaels International School
         </div>
 
-        <div className="relative z-10 text-center px-4 max-w-5xl flex flex-col items-center w-full">
-          {/* Big background V */}
-          <div aria-hidden className="pointer-events-none absolute inset-x-0 -top-[26vw] flex justify-center">
-            <span className="vibe-bigv text-[80vw] md:text-[62vw] opacity-20 select-none" style={{ transform: 'scaleX(1.5)' }}>V</span>
-          </div>
-
-          <p className="relative z-10 font-mono text-xs uppercase tracking-[0.4em] text-primary mb-8 hero-fade-up [animation-delay:400ms]">INNOVATION•SYNERGY•STRATEGY</p>
-          <h1 className="relative z-10 hero-wordmark vibe-script text-[30vw] md:text-[26vw] leading-[0.8] tracking-[0.02em] select-none hero-clip [animation-delay:600ms]">
-            VIBE
+        <div className="relative z-10 text-center px-4 max-w-5xl flex flex-col items-center">
+          <p className="font-mono text-xs uppercase tracking-[0.4em] text-primary mb-8 hero-fade-up [animation-delay:400ms]">INNOVATION•SYNERGY•STRATEGY</p>
+          <h1 className="hero-wordmark font-display text-[30vw] md:text-[26vw] leading-[0.8] uppercase tracking-[-0.01em] select-none hero-clip [animation-delay:600ms]">
+            <span style={{ color: 'var(--vibe-green)' }}>V</span><span style={{ color: 'var(--vibe-red)' }}>I</span><span style={{ color: 'var(--vibe-yellow)' }}>B</span><span style={{ color: 'var(--vibe-blue)' }}>E</span>
           </h1>
-
           <div className="mt-10">
             <p className="max-w-[52ch] mx-auto text-muted-foreground text-base md:text-lg text-pretty hero-fade-up [animation-delay:1400ms]">
               &nbsp;Vaels international Business Excellence (VIBE) is Vaels International School's flagship business event. Six high-pressure tracks. One day to outthink, outpitch and outtrade everyone in the room.
