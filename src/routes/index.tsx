@@ -143,7 +143,7 @@ function Index() {
           </h1>
           <div className="mt-10">
             <p className="max-w-[52ch] mx-auto text-muted-foreground text-base md:text-lg text-pretty hero-fade-up [animation-delay:1400ms]">
-              VIBE is Vaels International School's flagship business event. Six high-pressure tracks. One day to outthink, outpitch and outtrade everyone in the room.
+              &nbsp;Vaels international Business Excellence (VIBE) is Vaels International School's flagship business event. Six high-pressure tracks. One day to outthink, outpitch and outtrade everyone in the room.
             </p>
             
           </div>
