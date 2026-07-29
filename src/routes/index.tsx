@@ -138,7 +138,7 @@ function Index() {
 
         <div className="relative z-10 text-center px-4 max-w-5xl flex flex-col items-center">
           <p className="font-mono text-xs uppercase tracking-[0.4em] text-primary mb-8 hero-fade-up [animation-delay:400ms]">INNOVATION•SYNERGY•STRATEGY</p>
-          <h1 className="hero-wordmark font-display text-[24vw] md:text-[20vw] leading-[0.8] uppercase tracking-tighter select-none hero-clip [animation-delay:600ms]">
+          <h1 className="hero-wordmark font-display text-[30vw] md:text-[26vw] leading-[0.8] uppercase tracking-tighter select-none hero-clip [animation-delay:600ms]">
             <span style={{ color: 'var(--vibe-green)' }}>V</span><span style={{ color: 'var(--vibe-red)' }}>I</span><span style={{ color: 'var(--vibe-yellow)' }}>B</span><span style={{ color: 'var(--vibe-blue)' }}>E</span>
           </h1>
           <div className="mt-10">
