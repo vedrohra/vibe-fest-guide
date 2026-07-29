@@ -27,23 +27,6 @@ type Section = {
 const sections: Section[] = [
   {
     id: "i",
-    title: "Executive Board & Facilitation",
-    blocks: [
-      {
-        items: [
-          "Director of Program: Aditi Karthik",
-          "Director of Program: Neha Vijayakannan",
-          "Director of Program: Shaarvin Nagari",
-          "Asst. Director: Sparsh",
-        ],
-      },
-      {
-        body: "The Directors will strictly guide the event, ensure all rules are followed, facilitate negotiations, and utilize the whiteboard/projector to track overall game progress and key metrics.",
-      },
-    ],
-  },
-  {
-    id: "ii",
     title: "Core Philosophy & Objective",
     intro:
       "This event simulates supply chain dynamics and strategic decision-making processes across a replicated real-world marketplace. By managing variables under high-pressure scenarios, participants will learn how localized changes ripple across an entire network, requiring effective planning and coordination to meet demand, optimize costs, and maintain market stability.",
