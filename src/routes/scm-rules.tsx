@@ -27,29 +27,12 @@ type Section = {
 const sections: Section[] = [
   {
     id: "i",
-    title: "Executive Board & Facilitation",
-    blocks: [
-      {
-        items: [
-          "Director of Program: Aditi Karthik",
-          "Director of Program: Neha Vijayakannan",
-          "Director of Program: Shaarvin Nagari",
-          "Asst. Director: Sparsh",
-        ],
-      },
-      {
-        body: "The Directors will strictly guide the event, ensure all rules are followed, facilitate negotiations, and utilize the whiteboard/projector to track overall game progress and key metrics.",
-      },
-    ],
-  },
-  {
-    id: "ii",
     title: "Core Philosophy & Objective",
     intro:
       "This event simulates supply chain dynamics and strategic decision-making processes across a replicated real-world marketplace. By managing variables under high-pressure scenarios, participants will learn how localized changes ripple across an entire network, requiring effective planning and coordination to meet demand, optimize costs, and maintain market stability.",
   },
   {
-    id: "iii",
+    id: "ii",
     title: "General Rules & Regulations",
     blocks: [
       {
@@ -61,7 +44,7 @@ const sections: Section[] = [
     ],
   },
   {
-    id: "iv",
+    id: "iii",
     title: "Market Roles & Core Objectives",
     intro:
       "Participants will be split into multiple designated teams randomly via a chit-draw system during the game setup, with three people each.",
@@ -94,7 +77,7 @@ const sections: Section[] = [
     ],
   },
   {
-    id: "v",
+    id: "iv",
     title: "Game Materials & Setup",
     blocks: [
       {
@@ -109,7 +92,7 @@ const sections: Section[] = [
     ],
   },
   {
-    id: "vi",
+    id: "v",
     title: "The 5-Phase Event Timeline",
     intro:
       "Planning (10–15 min) → Negotiation (10–15 min) → Production & Sales (10–15 min) → Event (5 min) → Review and Analysis (5–10 min)",
@@ -137,7 +120,7 @@ const sections: Section[] = [
     ],
   },
   {
-    id: "vii",
+    id: "vi",
     title: "Scoring Matrix",
     intro: "Directors will award points based on the following metrics:",
     blocks: [
