@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { RegisterButton } from "@/components/RegisterButton";
 
 export const Route = createFileRoute("/vse-rules")({
   head: () => ({
@@ -145,9 +146,9 @@ function VseRulesPage() {
         >
           ← Back to VSE
         </Link>
-        <a href="https://docs.google.com/forms/d/10c97a4SHLpRkLieEP4qdQ9HTjMZNzIxao587kxrfamE/viewform?ts=6a58c3ca&edit_requested=true" target="_blank" rel="noopener noreferrer" className="px-4 py-1.5 bg-primary text-primary-foreground font-mono text-[11px] font-bold uppercase tracking-wider hover:bg-foreground transition-colors">
+        <RegisterButton className="px-4 py-1.5 bg-primary text-primary-foreground font-mono text-[11px] font-bold uppercase tracking-wider hover:bg-foreground transition-colors">
           Register
-        </a>
+        </RegisterButton>
       </nav>
 
       {/* Hero */}
@@ -259,15 +260,10 @@ function VseRulesPage() {
             <div className="font-mono text-[10px] uppercase text-muted-foreground tracking-widest mb-4">← Back</div>
             <div className="font-display text-3xl uppercase group-hover:text-primary transition-colors">VSE Event Page</div>
           </Link>
-          <a
-            href="https://docs.google.com/forms/d/10c97a4SHLpRkLieEP4qdQ9HTjMZNzIxao587kxrfamE/viewform?ts=6a58c3ca&edit_requested=true"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group block p-10 bg-primary text-primary-foreground hover:bg-foreground transition-colors"
-          >
+          <RegisterButton className="group block p-10 bg-primary text-primary-foreground hover:bg-foreground transition-colors">
             <div className="font-mono text-[10px] uppercase tracking-widest mb-4 opacity-80">Ready?</div>
             <div className="font-display text-3xl uppercase">Register your team</div>
-          </a>
+          </RegisterButton>
         </div>
       </section>
     </main>
