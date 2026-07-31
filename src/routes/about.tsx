@@ -4,6 +4,7 @@ import makingImg from "@/assets/journey-making.jpg.asset.json";
 import marketingImg from "@/assets/journey-marketing.jpg.asset.json";
 import executionImg from "@/assets/journey-execution.jpg.asset.json";
 import posterImg from "@/assets/journey-poster.jpg.asset.json";
+import { RegisterButton } from "@/components/RegisterButton";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -31,9 +32,9 @@ function AboutPage() {
         <Link to="/" className="px-4 py-1.5 border border-foreground/20 bg-background font-mono text-[11px] font-bold uppercase tracking-widest hover:bg-foreground hover:text-background transition-colors">
           ← Home
         </Link>
-        <a href="https://docs.google.com/forms/d/10c97a4SHLpRkLieEP4qdQ9HTjMZNzIxao587kxrfamE/viewform?ts=6a58c3ca&edit_requested=true" target="_blank" rel="noopener noreferrer" className="px-4 py-1.5 bg-primary text-primary-foreground font-mono text-[11px] font-bold uppercase tracking-wider hover:bg-foreground transition-colors">
+        <RegisterButton className="px-4 py-1.5 bg-primary text-primary-foreground font-mono text-[11px] font-bold uppercase tracking-wider hover:bg-foreground transition-colors">
           Register
-        </a>
+        </RegisterButton>
       </nav>
 
       {/* Hero */}
@@ -271,9 +272,9 @@ function AboutPage() {
       {/* CTA back */}
       <section className="border-t border-foreground/10 px-6 py-16 text-center">
         <div className="flex flex-wrap gap-4 justify-center">
-          <a href="https://docs.google.com/forms/d/10c97a4SHLpRkLieEP4qdQ9HTjMZNzIxao587kxrfamE/viewform?ts=6a58c3ca&edit_requested=true" target="_blank" rel="noopener noreferrer" className="inline-block px-8 py-4 bg-primary text-primary-foreground font-display text-xl uppercase hover:bg-foreground transition-colors">
+          <RegisterButton className="inline-block px-8 py-4 bg-primary text-primary-foreground font-display text-xl uppercase hover:bg-foreground transition-colors">
             Register your team
-          </a>
+          </RegisterButton>
           <Link to="/" hash="events" className="inline-block px-8 py-4 border-2 border-foreground text-foreground font-display text-xl uppercase hover:bg-foreground hover:text-background transition-colors">
             View Events
           </Link>

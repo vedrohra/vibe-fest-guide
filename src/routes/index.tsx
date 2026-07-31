@@ -11,6 +11,7 @@ import innovatorsHive from "@/assets/innovators-hive.jpg.asset.json";
 import productDevelopment from "@/assets/product-development.jpg.asset.json";
 import supplyChain from "@/assets/supply-chain.jpg.asset.json";
 import { CountdownTimer } from "@/components/CountdownTimer";
+import { RegisterButton } from "@/components/RegisterButton";
 
 
 
@@ -118,9 +119,9 @@ function Index() {
           <Link to="/about" className="font-mono text-[11px] uppercase tracking-widest hover:text-primary transition-colors">
             About
           </Link>
-          <a href="https://docs.google.com/forms/d/10c97a4SHLpRkLieEP4qdQ9HTjMZNzIxao587kxrfamE/viewform?ts=6a58c3ca&edit_requested=true" target="_blank" rel="noopener noreferrer" className="px-4 py-1.5 bg-primary text-primary-foreground font-mono text-[11px] font-bold uppercase tracking-wider hover:bg-foreground transition-colors">
+          <RegisterButton className="px-4 py-1.5 bg-primary text-primary-foreground font-mono text-[11px] font-bold uppercase tracking-wider hover:bg-foreground transition-colors">
             Register
-          </a>
+          </RegisterButton>
           <img src={vaelsLogo.url} alt="Vaels International School logo" className="h-12 md:h-14 w-auto shrink-0" />
         </div>
       </nav>
@@ -284,9 +285,9 @@ function Index() {
           <h2 className="font-display text-6xl md:text-9xl uppercase tracking-tighter mb-8 leading-[0.85]">Claim Your Spot</h2>
           <p className="max-w-[50ch] mx-auto mb-10 text-primary-foreground/80">Registrations are open to all students in grade X – XII. Form your teams and pick your tracks before slots fill up.</p>
           <div className="flex flex-col md:flex-row items-center justify-center gap-4">
-            <a href="https://docs.google.com/forms/d/10c97a4SHLpRkLieEP4qdQ9HTjMZNzIxao587kxrfamE/viewform?ts=6a58c3ca&edit_requested=true" target="_blank" rel="noopener noreferrer" className="w-full md:w-auto px-12 py-6 border-2 border-primary-foreground font-display text-xl uppercase hover:bg-primary-foreground hover:text-primary transition-all">
+            <RegisterButton className="w-full md:w-auto px-12 py-6 border-2 border-primary-foreground font-display text-xl uppercase hover:bg-primary-foreground hover:text-primary transition-all">
               Register Team
-            </a>
+            </RegisterButton>
             <a href="#events" className="w-full md:w-auto px-12 py-6 bg-primary-foreground text-primary font-display text-xl uppercase hover:bg-foreground hover:text-primary-foreground transition-all">
               View Events
             </a>
