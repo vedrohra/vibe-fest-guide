@@ -255,7 +255,7 @@ function Index() {
             <div className="font-display text-3xl md:text-5xl uppercase leading-none">Vaels International School</div>
           </div>
           <div className="md:text-right">
-            <span className="font-mono text-[10px] uppercase text-primary block tracking-widest mb-3">COUNTDOWN · AUG 28, 2026&nbsp;</span>
+            <span className="font-mono text-[10px] uppercase text-primary block tracking-widest mb-3">COUNTDOWN · AUG 29, 2026&nbsp;</span>
             <CountdownTimer />
           </div>
         </div>
