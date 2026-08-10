@@ -112,9 +112,6 @@ export const events = {
     duration: "45 minutes",
     venue: "Room No. 65 (Second Floor)",
     rules: [
-      "Only 1 team will be permitted per school, and each team must consist of 2 members.",
-      "A preliminary pen and paper round will be conducted, and the top 6 teams will move to the finals.",
-      "The final is played across four rounds of increasing pressure.",
       "No discussion with other teams is allowed at any point during the rounds.",
     ],
     content: [
