@@ -74,7 +74,7 @@ export const events = {
     name: "Crisis",
     tagline: "Sharp decision-making and quick adaptability under pressure.",
     desc: "Your team takes over a business facing an unexpected crisis. You will diagnose the situation, weigh the trade-offs, and present a recovery plan that tests sharp decision-making and adaptability when everything is on the line.",
-    format: "Teams of 3–4",
+    format: "Teams of 3",
     duration: "60 minutes prep + 5 minute pitch",
     venue: "Multi Purpose Hall",
     rules: [
