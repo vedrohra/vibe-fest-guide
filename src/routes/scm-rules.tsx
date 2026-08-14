@@ -28,114 +28,275 @@ type Section = {
 const sections: Section[] = [
   {
     id: "i",
-    title: "Core Philosophy & Objective",
+    title: "Executive Board & Facilitation",
     intro:
-      "This event simulates supply chain dynamics and strategic decision-making processes across a replicated real-world marketplace. By managing variables under high-pressure scenarios, participants will learn how localized changes ripple across an entire network, requiring effective planning and coordination to meet demand, optimize costs, and maintain market stability.",
-  },
-  {
-    id: "ii",
-    title: "General Rules & Regulations",
+      "The Executive Board (EB) is the main authority, central bank, and game facilitator. The EB controls the circulation of money and raw materials, provides resources to teams, conducts market events, tracks performance, and resolves disputes.",
     blocks: [
       {
-        items: [
-          "Device Restrictions: Participants are not allowed to use devices during this event. It is strictly prohibited.",
-          "Conduct: Any use of foul language is strictly prohibited and subject to immediate disciplinary action.",
-        ],
+        heading: "Directors of Program",
+        items: ["Aditi Karthik", "Neha Vijayakannan", "Shaarvin Nagari"],
+      },
+      {
+        heading: "Associates / Consumer Agents",
+        items: ["Sparsh", "Jivitesh", "Yaswanth"],
+      },
+      {
+        body: "The Associates act as Consumer Agents and participate primarily during the Panic Rush Hour. They are not competing teams.",
       },
     ],
   },
   {
-    id: "iii",
-    title: "Market Roles & Core Objectives",
+    id: "ii",
+    title: "Core Objective",
     intro:
-      "Participants will be split into multiple designated teams randomly via a chit-draw system during the game setup, with three people each.",
+      "The event simulates a real-world supply chain where decisions made by Suppliers and Businesses affect the entire market. Teams must manage procurement and supply, production and inventory, pricing and negotiation, cash flow and profitability, sudden changes in market demand, and unexpected supply-chain disruptions.",
+  },
+  {
+    id: "iii",
+    title: "General Rules",
     blocks: [
       {
-        heading: "📦 Track A: Raw Material Suppliers",
-        body: "Suppliers act at the base of the supply chain, providing the essential components or raw materials needed to manufacture goods. Their dependability, skills, and pricing models dictate the production capacities and costs of the entire market downstream.",
         items: [
-          "Maintain strong, reliable business relationships with the Retail/Business sector.",
-          "Secure a sufficient profit margin to sustainably run the supply enterprise.",
-          "Invest in the right materials to purchase and sell to retailers/businesses.",
-        ],
-      },
-      {
-        heading: "🏪 Track B: Retail / Business",
-        body: "Acting as the crucial market middlemen, these companies purchase raw materials from suppliers, convert them into finished consumer goods, and resell them to the public. They handle inventory management, pricing, promotions, and logistics.",
-        items: [
-          "Maintain healthy commercial relationships with both suppliers and consumers.",
-          "Maximize business profitability and operational efficiency.",
-        ],
-      },
-      {
-        heading: "👤 Track C: Consumers",
-        body: "Positioned at the definitive end of the supply chain, consumers represent the final users of the goods. Their fluctuating preferences, behaviors, and buying power drive the production and distribution planning of the entire market.",
-        items: [
-          "Acquire appropriate quality products at a price point that matches their marginal utility.",
-          "Optimize purchasing satisfaction based on availability and cost.",
+          "No electronic devices are permitted during the event.",
+          "Foul language, abusive behavior, or misconduct is prohibited.",
+          "All transactions must be recorded on tracking sheets.",
+          "All money and resource movements must use tokens authorized by the EB.",
+          "Teams may not create, destroy, or secretly transfer tokens.",
+          "EB decisions regarding disputes and gameplay are final.",
         ],
       },
     ],
   },
   {
     id: "iv",
-    title: "Game Materials & Setup",
+    title: "Market Roles",
+    intro: "Participants are split into competing teams and assigned one of two market roles.",
     blocks: [
       {
+        heading: "📦 Track A: Raw Material Suppliers",
+        body: "Suppliers operate at the beginning of the supply chain. They purchase raw materials from the EB and sell them to Businesses at profitable prices.",
         items: [
-          "Tokens: Utilized to simulate liquid currency (money) and physical units of raw materials.",
-          "Cards: Represent the finished market products and unpredictable macro-environmental event cards.",
-          "Tracking Sheets: Provided to each team to log inventory levels, outstanding orders, and financial statements.",
-          "Initial Endowment: Upon randomized team distribution, teams receive their starting assets — Suppliers receive raw materials and tokens; Businesses and Consumers receive a starting allocation of money tokens.",
-          "Suppliers Set-up: Different tiers of raw materials that can be purchased (in the form of tokens) by suppliers throughout the different stages of the event from the Executive Board, with each increasing tier having higher prices.",
+          "Purchase raw materials from the EB.",
+          "Sell raw materials to Businesses at profitable prices.",
+          "Maintain reliable delivery commitments.",
+          "Manage inventory efficiently.",
+          "Maximize net profit.",
+          "Build strong Business relationships.",
+        ],
+      },
+      {
+        heading: "🏪 Track B: Retail / Business",
+        body: "Businesses purchase raw materials from Suppliers, convert them into finished products, and sell them in the market.",
+        items: [
+          "Secure raw materials at competitive prices.",
+          "Manage production and inventory.",
+          "Set profitable prices.",
+          "Maximize sales and net profit.",
+          "Maintain Supplier relationships.",
+          "Respond quickly to demand changes and market events.",
+        ],
+      },
+      {
+        heading: "👤 Consumer Agents — EB Associates",
+        body: "The Associates are not competing teams. Sparsh, Jivitesh, and Yaswanth act as Consumer Agents controlled by the EB.",
+        items: [
+          "Purchase finished products from Businesses.",
+          "Compare prices, quality, and availability.",
+          "Create sudden demand.",
+          "Participate in the Panic Rush Hour.",
+          "Make purchasing decisions without revealing their complete strategy beforehand.",
         ],
       },
     ],
   },
   {
     id: "v",
-    title: "The 5-Phase Event Timeline",
-    intro:
-      "Planning (10–15 min) → Negotiation (10–15 min) → Production & Sales (10–15 min) → Event (5 min) → Review and Analysis (5–10 min)",
+    title: "Executive Board as the Central Bank",
+    intro: "The EB is the main bank of the entire simulation.",
     blocks: [
       {
-        heading: "1. Planning Phase (5–10 minutes)",
-        body: "Teams strategize internally. Suppliers set pricing, supply volumes and decide the materials they are going to purchase from the EB; Businesses plan production quotas and pricing; Consumers determine their strict buying criteria.",
+        heading: "EB Controls",
+        items: ["Money tokens.", "Raw-material tokens/cards.", "Event cards.", "Emergency resources."],
       },
       {
-        heading: "2. Negotiation Phase (10–15 minutes)",
-        body: "Open market trading. Suppliers and Businesses negotiate raw material contracts; Businesses pitch to Consumers to secure product purchase agreements.",
+        heading: "Money & Resource Flow",
+        body: "The EB provides the initial money allocation to teams and supplies Suppliers with raw materials. Flow: EB → Suppliers → Businesses → Consumer Agents. The EB may also inject additional money into teams through starting allocations, bonuses, subsidies, emergency funding, and special market events. No team may independently generate money.",
       },
       {
-        heading: "3. Production and Sales Phase (10–15 minutes)",
-        body: "Execution phase. Businesses track the conversion of raw materials into products on inventory sheets, and transactions are physically settled using tokens.",
+        heading: "Supplier Purchasing",
+        body: "Suppliers purchase different tiers of raw materials directly from the EB. Higher tiers may cost more but provide greater production or product-value advantages. The EB determines the prices and characteristics of each tier.",
       },
       {
-        heading: "4. Event Phase (5 minutes)",
-        body: "The Executive Board draws an unpredictable market Event Card (e.g., 'Supply Chain Disruption via Natural Disaster'). Teams are forced to instantly pivot prices, manage resource scarcity, and adapt strategies.",
-      },
-      {
-        heading: "5. Review and Analysis Phase (5–10 minutes)",
-        body: "Financial reconciliation. Teams assess their inventory sheets, cash flow balances, and structural performance to analyze the macro-impact of their choices.",
+        heading: "EB Record Keeping",
+        items: [
+          "Money issued and collected.",
+          "Raw materials issued.",
+          "Major transactions.",
+          "Bonuses and penalties.",
+          "Event-based payments.",
+          "Final balances.",
+        ],
       },
     ],
   },
   {
     id: "vi",
+    title: "Game Materials",
+    intro: "The EB provides the following materials for the simulation:",
+    blocks: [
+      {
+        items: ["Money tokens.", "Raw-material tokens/cards.", "Finished-product cards.", "Market-event cards.", "Tracking sheets."],
+      },
+      {
+        heading: "Initial Endowment",
+        items: [
+          "Suppliers: Starting money + raw materials.",
+          "Businesses: Starting money + any initial inventory specified by the EB.",
+        ],
+      },
+    ],
+  },
+  {
+    id: "vii",
+    title: "Five-Phase Event Timeline",
+    blocks: [
+      {
+        heading: "Phase 1 — Planning | 5–10 minutes",
+        body: "Suppliers decide pricing, quantities, material purchases, and target Businesses. Businesses decide production, pricing, procurement requirements, and inventory strategy.",
+      },
+      {
+        heading: "Phase 2 — Negotiation | 10–15 minutes",
+        body: "Open-market trading begins. Suppliers negotiate raw-material prices, quantities, and delivery commitments with Businesses. Businesses negotiate product prices, quality, availability, and potential purchases with Consumer Agents.",
+      },
+      {
+        heading: "Phase 3 — Production & Sales | 10–15 minutes",
+        body: "Businesses convert raw materials into finished products and conduct sales. All transactions must be physically settled using tokens and recorded on tracking sheets. Suppliers track materials sold, revenue, remaining inventory, and outstanding commitments. Businesses track materials purchased, production, sales, revenue, and remaining inventory.",
+      },
+    ],
+  },
+  {
+    id: "viii",
+    title: "Panic Rush Hour",
+    intro:
+      'The EB announces: "PANIC RUSH HOUR — CONSUMER DEMAND SPIKE!" The Associates immediately enter the market as Consumer Agents and begin purchasing finished products.',
+    blocks: [
+      {
+        heading: "Consumer Agent Actions",
+        items: [
+          "Buy large quantities.",
+          "Compare Business prices.",
+          "Move between Businesses.",
+          "Prefer available or higher-quality products.",
+          "Reject overpriced products.",
+          "Create intense competition for limited inventory.",
+        ],
+      },
+      {
+        heading: "Business Reactions",
+        items: [
+          "Adjust prices.",
+          "Adapt sales strategy.",
+          "Reallocate inventory.",
+          "Shift production priorities.",
+          "Reopen Supplier negotiations.",
+        ],
+      },
+      {
+        body: "If Businesses run short of raw materials, Suppliers may conduct emergency sales at their discretion. The supply-chain effect cascades: Consumer Panic → Demand Spike → Business Inventory Shortage → Emergency Supplier Demand → Price Changes → Market Instability. The EB may introduce additional money, resources, or restrictions during Panic Rush Hour if specified by the event.",
+      },
+    ],
+  },
+  {
+    id: "ix",
+    title: "Market Event Phase | ~5 minutes",
+    intro: "The EB draws an unpredictable Market Event Card. Teams must immediately adapt.",
+    blocks: [
+      {
+        items: [
+          "Natural Disaster — supply disruption.",
+          "Transportation Breakdown — delivery delays.",
+          "Demand Explosion — increased demand for a product.",
+          "Market Crash — reduced purchasing power.",
+          "Production Failure — reduced Business production.",
+          "Raw Material Shortage — increased material costs.",
+          "Quality Boom — increased preference for premium products.",
+        ],
+      },
+    ],
+  },
+  {
+    id: "x",
+    title: "Review & Analysis | 5–10 minutes",
+    intro: "Teams reconcile their accounts. The EB verifies the final accounts and calculates rankings.",
+    blocks: [
+      {
+        items: [
+          "Final cash balance.",
+          "Inventory.",
+          "Purchases.",
+          "Sales.",
+          "Net profit.",
+          "Unfulfilled commitments.",
+          "Market-event performance.",
+          "Panic Rush Hour performance.",
+        ],
+      },
+    ],
+  },
+  {
+    id: "xi",
     title: "Scoring Matrix",
     intro: "Directors will award points based on the following metrics:",
     blocks: [
       {
-        heading: "Suppliers",
-        body: "Scored on net profit generated, delivery commitment fulfillment rate, and raw material inventory management.",
+        heading: "📦 Suppliers",
+        items: [
+          "Net profit.",
+          "Delivery fulfillment rate.",
+          "Raw-material inventory management.",
+          "Contract performance.",
+          "Response to market disruptions.",
+        ],
       },
       {
-        heading: "Businesses",
-        body: "Scored on net profit generated, gross sales volume, and finished product inventory optimization.",
+        heading: "🏪 Businesses",
+        items: [
+          "Net profit.",
+          "Gross sales volume.",
+          "Finished-product inventory optimization.",
+          "Consumer-Agent sales performance.",
+          "Panic Rush Hour performance.",
+          "Adaptability to market events.",
+        ],
+      },
+    ],
+  },
+  {
+    id: "xii",
+    title: "Awards",
+    blocks: [
+      {
+        heading: "🥇 Market Leader — First Place",
+        body: "Best overall profitability, strategic decision-making, and ability to survive market disruptions.",
       },
       {
-        heading: "Consumers",
-        body: "Scored on total purchasing satisfaction metrics — attaining the best balance of quality, pricing, and product availability.",
+        heading: "🥈 Operations Pinnacle — Second Place",
+        body: "Strong profitability, negotiation, inventory management, and operational efficiency.",
+      },
+      {
+        heading: "🥉 Elite Analysts — Third Place",
+        body: "Consistent performance, analytical decision-making, and efficient resource utilization.",
+      },
+    ],
+  },
+  {
+    id: "xiii",
+    title: "Final Market Structure",
+    intro:
+      "Throughout the game, the EB controls the money supply, resource availability, market events, Consumer Agents, and overall game balance. The winning strategy is not simply to make the most money — it is to anticipate the market, manage risk, negotiate intelligently, and adapt faster than everyone else.",
+    blocks: [
+      {
+        body: "🏦 Executive Board — Central Bank & Market Authority → provides money & raw materials → Suppliers → sell raw materials → Businesses → produce & sell finished products → Consumer Agents — Associates → create demand, especially during Panic Rush Hour.",
       },
     ],
   },
