@@ -33,10 +33,6 @@ const sections: Section[] = [
       "The Executive Board (EB) is the main authority, central bank, and game facilitator. The EB controls the circulation of money and raw materials, provides resources to teams, conducts market events, tracks performance, and resolves disputes.",
     blocks: [
       {
-        heading: "Directors of Program",
-        items: ["Aditi Karthik", "Neha Vijayakannan", "Shaarvin Nagari"],
-      },
-      {
         heading: "Associates / Consumer Agents",
         items: ["Sparsh", "Jivitesh", "Yaswanth"],
       },
