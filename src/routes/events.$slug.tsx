@@ -237,7 +237,7 @@ export const events = {
 
     contact: {
       role: "Director of Supply Chain Management",
-      name: "Aditi Kartik",
+      name: "Aditi Karthik",
       phone: "6380487841",
       email: "scm.vibe26@vaelsinternationalschool.com",
     },
