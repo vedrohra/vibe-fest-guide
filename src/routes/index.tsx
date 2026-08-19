@@ -77,7 +77,7 @@ const events = [
     n: "06",
     slug: "supply-chain-management",
     name: "Supply Chain Management",
-    desc: "Teams of 3 run a business's supply chain across three rounds — build the network, absorb disruptions, and balance cost against speed.",
+    desc: "Teams of 2 run a business's supply chain across three rounds — build the network, absorb disruptions, and balance cost against speed.",
     image: supplyChain.url,
     contact: "Aditi Kartik - 6380487841",
   },
