@@ -209,7 +209,7 @@ export const events = {
     name: "Supply Chain Management",
     tagline: "Design, optimise, and manage the flow from source to delivery.",
     desc: "A live supply-chain simulation where teams operate as Suppliers or Businesses inside a market controlled by the Executive Board. Manage procurement, pricing, production, and sales while reacting to sudden demand spikes during Panic Rush Hour and unpredictable Market Event cards.",
-    format: "Teams of 3",
+    format: "Teams of 2",
     duration: "60 minutes",
     venue: "LIBRARY\u00a0",
     rules: [
@@ -221,7 +221,7 @@ export const events = {
       "EB decisions regarding disputes and gameplay are final.",
     ],
     info: [
-      "Teams of 3 are randomly assigned one of two market roles: Raw Material Suppliers or Retail/Businesses.",
+      "Teams of 2 are randomly assigned one of two market roles: Raw Material Suppliers or Retail/Businesses.",
       "Suppliers purchase tiered raw materials from the EB and sell them to Businesses at profitable prices.",
       "Businesses convert raw materials into finished products and sell them to Consumer Agents during the simulation.",
       "The event runs through five phases: Planning → Negotiation → Production & Sales → Panic Rush Hour / Market Event → Review & Analysis.",
