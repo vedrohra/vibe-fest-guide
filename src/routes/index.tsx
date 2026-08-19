@@ -283,7 +283,7 @@ function Index() {
         <div className="absolute top-0 left-0 w-full h-1 bg-background/30 animate-slide"></div>
         <div className="relative z-10 max-w-5xl mx-auto">
           <h2 className="font-display text-6xl md:text-9xl uppercase tracking-tighter mb-8 leading-[0.85]">Claim Your Spot</h2>
-          <p className="max-w-[50ch] mx-auto mb-10 text-primary-foreground/80">Registrations are open to all students in grade X – XII. Form your teams and pick your tracks before slots fill up.</p>
+          <p className="max-w-[50ch] mx-auto mb-10 text-primary-foreground/80">Registrations are open to all students in grade&nbsp;IX – XII. Form your teams and pick your tracks before slots fill up.</p>
           <div className="flex flex-col md:flex-row items-center justify-center gap-4">
             <RegisterButton className="w-full md:w-auto px-12 py-6 border-2 border-primary-foreground font-display text-xl uppercase hover:bg-primary-foreground hover:text-primary transition-all">
               Register Team
